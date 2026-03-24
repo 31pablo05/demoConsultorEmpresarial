@@ -1,4 +1,8 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
+
+/* ── Tailwind v4: Escanear archivos para generar utilidades ── */
+@source "../**/*.astro";
+@source "../**/*.jsx";
 
 /* ── Tailwind v4: registrar tokens de color y tipografía ── */
 @theme {
@@ -27,42 +31,44 @@
   --line:    rgb(94 158 114 / 0.18);
 }
 
-/* ── Base Reset ── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ── Base Reset & Element Styles ── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans);
-  font-weight: 300;
-  line-height: 1.7;
-}
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.7;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 300;
-  line-height: 1.15;
-  color: var(--text);
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--text);
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-img {
-  max-width: 100%;
-  display: block;
+  img {
+    max-width: 100%;
+    display: block;
+  }
 }
 
 /* ── Scroll Reveal ── */
