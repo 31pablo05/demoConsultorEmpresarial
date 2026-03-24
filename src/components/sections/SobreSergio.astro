@@ -1,7 +1,7 @@
 ---
 ---
 
-<section id="sobre" class="bg-(--bg) py-24 md:py-32">
+<section id="sobre" class="bg-bg py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -9,19 +9,19 @@
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-5">
           <div class="reveal eyebrow">Sobre mí</div>
-          <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl font-light text-(--text)">
+          <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-light text-text">
             Estrategia que se<br />
-            <em class="italic text-(--accent2)">implementa</em> de verdad.
+            <em class="italic text-accent2">implementa</em> de verdad.
           </h2>
         </div>
 
         <div class="reveal reveal-delay-2 flex flex-col gap-4">
-          <p class="font-sans text-base font-light text-(--muted) leading-relaxed">
+          <p class="font-sans text-base font-light text-muted leading-relaxed">
             Trabajo con empresas que necesitan claridad para avanzar. No soy el consultor
             que entrega un informe y desaparece: me involucro en el proceso real de
             implementación, junto al equipo directivo, hasta que los resultados se concretan.
           </p>
-          <p class="font-sans text-base font-light text-(--muted) leading-relaxed">
+          <p class="font-sans text-base font-light text-muted leading-relaxed">
             En doce años de práctica he acompañado a más de cuarenta organizaciones en
             sectores tan distintos como industria, retail, servicios profesionales y tecnología.
             Lo que aprendí es que los problemas estratégicos son más parecidos entre sí de
@@ -37,8 +37,8 @@
             'Docente en [Universidad / Escuela de negocios]',
             'Miembro de [organismo / asociación del sector]',
           ].map((cred) => (
-            <li class="flex items-start gap-3 font-sans text-sm font-light text-(--muted)">
-              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-(--accent) flex-shrink-0"></span>
+            <li class="flex items-start gap-3 font-sans text-sm font-light text-muted">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
               {cred}
             </li>
           ))}
@@ -49,7 +49,7 @@
       <div class="reveal reveal-delay-2 flex flex-col gap-8">
         <!-- Photo placeholder -->
         <div class="relative">
-          <div class="w-full aspect-[4/5] bg-(--bg3) border border-(--line) flex items-center justify-center overflow-hidden">
+          <div class="w-full aspect-[4/3] lg:aspect-[4/5] bg-bg3 border border-line flex items-center justify-center overflow-hidden">
             <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="grid-sobre" width="32" height="32" patternUnits="userSpaceOnUse">
@@ -58,18 +58,18 @@
               </defs>
               <rect width="100%" height="100%" fill="url(#grid-sobre)"/>
             </svg>
-            <span class="font-sans text-xs text-(--muted) tracking-widest uppercase z-10 relative">Foto de Sergio</span>
+            <span class="font-sans text-xs text-muted tracking-widest uppercase z-10 relative">Foto de Sergio</span>
           </div>
           <!-- Decorative accent -->
-          <div class="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-(--accent)/40"></div>
+          <div class="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-accent/40"></div>
         </div>
 
         <!-- Pull quote -->
-        <blockquote class="border-l-2 border-(--accent) pl-6 py-2">
-          <p class="font-serif text-lg md:text-xl font-light italic text-(--text) leading-relaxed">
+        <blockquote class="border-l-2 border-accent pl-6 py-2">
+          <p class="font-serif text-lg md:text-xl font-light italic text-text leading-relaxed">
             "La estrategia no es un documento, es una decisión permanente sobre dónde poner la energía."
           </p>
-          <footer class="mt-3 font-sans text-xs font-medium tracking-widest uppercase text-(--muted)">
+          <footer class="mt-3 font-sans text-xs font-medium tracking-widest uppercase text-muted">
             — Sergio Valenti
           </footer>
         </blockquote>

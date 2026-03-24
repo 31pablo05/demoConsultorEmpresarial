@@ -1,21 +1,6 @@
 @import "tailwindcss";
-@source "../components/**/*.{astro,jsx,tsx}";
-@source "../pages/**/*.{astro,tsx}";
-@source "../layouts/**/*.astro";
 
-/* ── CSS Variables ── */
-:root {
-  --bg:     #0A0F0D;
-  --bg2:    #0F1610;
-  --bg3:    #141C15;
-  --accent:  #5E9E72;
-  --accent2: #85C49A;
-  --text:   #DDE8E0;
-  --muted:  #6A7D6E;
-  --line:   rgba(94, 158, 114, 0.18);
-}
-
-/* ── Tailwind v4 theme tokens ── */
+/* ── Tailwind v4: registrar tokens de color y tipografía ── */
 @theme {
   --color-bg:      #0A0F0D;
   --color-bg2:     #0F1610;
@@ -24,10 +9,22 @@
   --color-accent2: #85C49A;
   --color-text:    #DDE8E0;
   --color-muted:   #6A7D6E;
-  --color-line:    rgba(94, 158, 114, 0.18);
+  --color-line:    rgb(94 158 114 / 0.18);
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'Outfit', system-ui, sans-serif;
+}
+
+/* ── CSS Variables (para uso directo con var()) ── */
+:root {
+  --bg:      #0A0F0D;
+  --bg2:     #0F1610;
+  --bg3:     #141C15;
+  --accent:  #5E9E72;
+  --accent2: #85C49A;
+  --text:    #DDE8E0;
+  --muted:   #6A7D6E;
+  --line:    rgb(94 158 114 / 0.18);
 }
 
 /* ── Base Reset ── */

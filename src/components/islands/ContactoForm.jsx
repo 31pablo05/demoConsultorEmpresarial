@@ -54,14 +54,14 @@ export default function ContactoForm() {
   };
 
   const inputClass =
-    'w-full bg-(--bg3) border border-(--line) text-(--text) placeholder:text-(--muted) font-sans font-light text-sm px-4 py-3 outline-none focus:border-(--accent) transition-colors duration-200';
+    'w-full bg-bg3 border border-line text-text placeholder:text-muted font-sans font-light text-sm px-4 py-3 outline-none focus:border-accent transition-colors duration-200';
 
   const errorClass = 'text-red-400 text-xs mt-1 font-sans';
 
   if (submitted) {
     return (
       <div className="flex flex-col items-start gap-4 py-12">
-        <div className="w-12 h-12 border border-(--accent) flex items-center justify-center">
+        <div className="w-12 h-12 border border-accent flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -72,15 +72,15 @@ export default function ContactoForm() {
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-(--accent)"
+            className="text-accent"
           >
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <h3 className="font-serif text-2xl font-light text-(--text)">
+        <h3 className="font-serif text-2xl font-light text-text">
           Mensaje enviado.
         </h3>
-        <p className="font-sans text-sm font-light text-(--muted)">
+        <p className="font-sans text-sm font-light text-muted">
           Gracias por escribirme. Voy a estar en contacto en las próximas 24–48 horas.
         </p>
       </div>
@@ -133,13 +133,13 @@ export default function ContactoForm() {
           name="servicio"
           value={form.servicio}
           onChange={handleChange}
-          className={`${inputClass} appearance-none cursor-pointer ${!form.servicio ? 'text-(--muted)' : ''}`}
+          className={`${inputClass} appearance-none cursor-pointer ${!form.servicio ? 'text-muted' : ''}`}
         >
           <option value="" disabled>
             ¿En qué podría ayudarte? *
           </option>
           {OPCIONES.map((op) => (
-            <option key={op} value={op} className="bg-(--bg3) text-(--text)">
+            <option key={op} value={op} className="bg-bg3 text-text">
               {op}
             </option>
           ))}
@@ -163,7 +163,7 @@ export default function ContactoForm() {
       <button
         type="submit"
         disabled={loading}
-        className="self-start flex items-center gap-3 px-8 py-3 bg-(--accent) text-(--bg) font-sans text-sm font-medium hover:bg-(--accent2) transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+        className="self-start flex items-center gap-3 px-8 py-3 bg-accent text-bg font-sans text-sm font-medium hover:bg-accent2 transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {loading ? 'Enviando...' : 'Enviar mensaje'}
         {!loading && (

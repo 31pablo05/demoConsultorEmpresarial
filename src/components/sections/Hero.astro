@@ -1,14 +1,14 @@
 ---
 ---
 
-<section id="inicio" class="relative min-h-screen flex items-center bg-(--bg) overflow-hidden pt-16">
+<section id="inicio" class="relative min-h-screen flex items-center bg-bg overflow-hidden pt-16">
   <!-- Subtle background gradient -->
   <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-(--accent)/5 blur-3xl"></div>
-    <div class="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full bg-(--accent)/3 blur-3xl"></div>
+    <div class="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
+    <div class="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full bg-accent/3 blur-3xl"></div>
   </div>
 
-  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 w-full py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 w-full pt-16 pb-20 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
     <!-- Left: Text -->
     <div class="flex flex-col gap-8">
       <!-- Eyebrow -->
@@ -17,13 +17,13 @@
       </div>
 
       <!-- Headline -->
-      <h1 class="reveal reveal-delay-1 font-serif text-5xl md:text-6xl xl:text-7xl font-light leading-[1.1] text-(--text)">
+      <h1 class="reveal reveal-delay-1 font-serif text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-light leading-[1.1] text-text">
         Claridad estratégica<br />
-        para <em class="italic text-(--accent2) not-italic" style="font-style: italic;">crecer</em> con foco.
+        para <em class="italic text-accent2 not-italic" style="font-style: italic;">crecer</em> con foco.
       </h1>
 
       <!-- Subheading -->
-      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light text-(--muted) max-w-md leading-relaxed">
+      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light text-muted max-w-md leading-relaxed">
         Acompaño a empresas y equipos directivos a definir su rumbo,
         tomar mejores decisiones y ejecutar con resultados concretos.
       </p>
@@ -32,13 +32,13 @@
       <div class="reveal reveal-delay-3 flex flex-wrap gap-4 items-center">
         <a
           href="#contacto"
-          class="inline-flex items-center gap-2 px-7 py-3.5 bg-(--accent) text-(--bg) font-sans text-sm font-medium hover:bg-(--accent2) transition-colors duration-300"
+          class="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-bg font-sans text-sm font-medium hover:bg-accent2 transition-colors duration-300"
         >
           Agendá una llamada
         </a>
         <a
           href="#articulos"
-          class="inline-flex items-center gap-2 px-7 py-3.5 font-sans text-sm font-light text-(--muted) hover:text-(--text) border border-transparent hover:border-(--line) transition-all duration-300"
+          class="inline-flex items-center gap-2 px-7 py-3.5 font-sans text-sm font-light text-muted hover:text-text border border-transparent hover:border-line transition-all duration-300"
         >
           Ver artículos →
         </a>
@@ -48,12 +48,12 @@
     <!-- Right: Image placeholder with decorative frame -->
     <div class="reveal reveal-delay-2 relative flex justify-center lg:justify-end">
       <!-- Outer decorative border (offset) -->
-      <div class="relative">
-        <div class="absolute -top-4 -right-4 w-full h-full border border-(--accent)/30 z-0"></div>
-        <div class="absolute -top-2 -right-2 w-full h-full border border-(--accent)/15 z-0"></div>
+      <div class="relative w-full max-w-sm lg:max-w-none lg:w-auto">
+        <div class="absolute -top-4 -right-4 w-full h-full border border-accent/30 z-0"></div>
+        <div class="absolute -top-2 -right-2 w-full h-full border border-accent/15 z-0"></div>
 
         <!-- Image placeholder -->
-        <div class="relative z-10 w-80 h-96 md:w-96 md:h-[480px] bg-(--bg3) border border-(--line) flex items-center justify-center overflow-hidden">
+        <div class="relative z-10 w-full h-64 sm:h-80 lg:w-96 lg:h-[480px] bg-bg3 border border-line flex items-center justify-center overflow-hidden">
           <!-- Decorative pattern -->
           <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -63,24 +63,24 @@
             </defs>
             <rect width="100%" height="100%" fill="url(#grid-hero)"/>
           </svg>
-          <span class="font-sans text-xs text-(--muted) tracking-widest uppercase z-10">Foto de Sergio</span>
+          <span class="font-sans text-xs text-muted tracking-widest uppercase z-10">Foto de Sergio</span>
         </div>
 
         <!-- Stats floating card -->
-        <div class="absolute -bottom-6 -left-6 z-20 bg-(--bg2) border border-(--line) px-6 py-4 flex gap-6">
+        <div class="absolute -bottom-8 left-0 lg:-bottom-6 lg:-left-6 z-20 bg-bg2 border border-line px-4 py-3 lg:px-6 lg:py-4 flex gap-4 lg:gap-6">
           <div class="flex flex-col items-center">
-            <span class="font-serif text-2xl font-light text-(--accent2)">+40</span>
-            <span class="font-sans text-xs text-(--muted) font-light">empresas</span>
+            <span class="font-serif text-xl lg:text-2xl font-light text-accent2">+40</span>
+            <span class="font-sans text-xs text-muted font-light">empresas</span>
           </div>
-          <div class="w-px bg-(--line)"></div>
+          <div class="w-px bg-line"></div>
           <div class="flex flex-col items-center">
-            <span class="font-serif text-2xl font-light text-(--accent2)">12</span>
-            <span class="font-sans text-xs text-(--muted) font-light">años</span>
+            <span class="font-serif text-xl lg:text-2xl font-light text-accent2">12</span>
+            <span class="font-sans text-xs text-muted font-light">años</span>
           </div>
-          <div class="w-px bg-(--line)"></div>
+          <div class="w-px bg-line"></div>
           <div class="flex flex-col items-center">
-            <span class="font-serif text-2xl font-light text-(--accent2)">8</span>
-            <span class="font-sans text-xs text-(--muted) font-light">industrias</span>
+            <span class="font-serif text-xl lg:text-2xl font-light text-accent2">8</span>
+            <span class="font-sans text-xs text-muted font-light">industrias</span>
           </div>
         </div>
       </div>

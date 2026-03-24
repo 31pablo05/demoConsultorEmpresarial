@@ -50,7 +50,7 @@ export default function NavbarScroll({ siteName }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-(--bg)/90 backdrop-blur-md border-b border-(--line)'
+          ? 'bg-bg/95 backdrop-blur-md border-b border-line'
           : 'bg-transparent'
       }`}
     >
@@ -59,7 +59,7 @@ export default function NavbarScroll({ siteName }) {
         <a
           href="#inicio"
           onClick={(e) => handleNav(e, '#inicio')}
-          className="font-serif text-xl font-light tracking-wide text-(--accent2) hover:text-(--accent) transition-colors"
+          className="font-serif text-xl font-light tracking-wide text-accent2 hover:text-accent transition-colors"
         >
           {siteName}
         </a>
@@ -76,8 +76,8 @@ export default function NavbarScroll({ siteName }) {
                   onClick={(e) => handleNav(e, item.href)}
                   className={`font-sans text-sm font-light tracking-wide transition-colors duration-200 ${
                     isActive
-                      ? 'text-(--accent2)'
-                      : 'text-(--muted) hover:text-(--text)'
+                      ? 'text-accent2'
+                      : 'text-muted hover:text-text'
                   }`}
                 >
                   {item.label}
@@ -91,7 +91,7 @@ export default function NavbarScroll({ siteName }) {
         <a
           href="#contacto"
           onClick={(e) => handleNav(e, '#contacto')}
-          className="hidden md:inline-flex items-center px-5 py-2 border border-(--accent) text-(--accent) text-sm font-light font-sans rounded-none hover:bg-(--accent) hover:text-(--bg) transition-all duration-300"
+          className="hidden md:inline-flex items-center px-5 py-2 border border-accent text-accent text-sm font-light font-sans rounded-none hover:bg-accent hover:text-bg transition-all duration-300"
         >
           Hablemos
         </a>
@@ -99,7 +99,7 @@ export default function NavbarScroll({ siteName }) {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2 text-(--text)"
+          className="md:hidden flex flex-col gap-1.5 p-2 text-text"
           aria-label="Abrir menú"
         >
           <span
@@ -116,7 +116,7 @@ export default function NavbarScroll({ siteName }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-(--bg2) border-t border-(--line) px-6 py-6">
+        <div className="md:hidden bg-bg2 border-t border-line px-6 py-6">
           <ul className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => {
               const id = item.href.replace('#', '');
@@ -127,7 +127,7 @@ export default function NavbarScroll({ siteName }) {
                     href={item.href}
                     onClick={(e) => handleNav(e, item.href)}
                     className={`font-sans text-base font-light transition-colors ${
-                      isActive ? 'text-(--accent2)' : 'text-(--muted) hover:text-(--text)'
+                      isActive ? 'text-accent2' : 'text-muted hover:text-text'
                     }`}
                   >
                     {item.label}
@@ -139,7 +139,7 @@ export default function NavbarScroll({ siteName }) {
               <a
                 href="#contacto"
                 onClick={(e) => handleNav(e, '#contacto')}
-                className="inline-flex items-center px-5 py-2 border border-(--accent) text-(--accent) text-sm font-light font-sans hover:bg-(--accent) hover:text-(--bg) transition-all duration-300"
+                className="inline-flex items-center px-5 py-2 border border-accent text-accent text-sm font-light font-sans hover:bg-accent hover:text-bg transition-all duration-300"
               >
                 Hablemos
               </a>
