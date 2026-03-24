@@ -1,0 +1,60 @@
+---
+import { siteConfig } from '../../data/siteConfig';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-(--line) bg-(--bg2)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <!-- Marca -->
+      <div class="flex flex-col gap-3">
+        <span class="font-serif text-xl font-light text-(--accent2)">{siteConfig.name}</span>
+        <p class="font-sans text-sm font-light text-(--muted) leading-relaxed max-w-xs">
+          {siteConfig.description}
+        </p>
+      </div>
+
+      <!-- Nav links -->
+      <div class="flex flex-col gap-3">
+        <span class="font-sans text-xs font-medium tracking-widest uppercase text-(--muted)">Secciones</span>
+        <nav class="flex flex-col gap-2">
+          {['#inicio', '#servicios', '#sobre', '#proceso', '#articulos', '#contacto'].map((href) => (
+            <a
+              href={href}
+              class="font-sans text-sm font-light text-(--muted) hover:text-(--text) transition-colors w-fit"
+            >
+              {href.replace('#', '').charAt(0).toUpperCase() + href.replace('#', '').slice(1).replace('sobre', 'Sobre mí')}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <!-- Contacto -->
+      <div class="flex flex-col gap-3">
+        <span class="font-sans text-xs font-medium tracking-widest uppercase text-(--muted)">Contacto</span>
+        <div class="flex flex-col gap-2">
+          <a href={`mailto:${siteConfig.email}`} class="font-sans text-sm font-light text-(--muted) hover:text-(--accent2) transition-colors">
+            {siteConfig.email}
+          </a>
+          <a href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-(--muted) hover:text-(--accent2) transition-colors">
+            {siteConfig.whatsapp}
+          </a>
+          <a href={`https://${siteConfig.linkedin}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-(--muted) hover:text-(--accent2) transition-colors">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-6 border-t border-(--line) flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="font-sans text-xs font-light text-(--muted)">
+        &copy; {year} {siteConfig.name}. Todos los derechos reservados.
+      </p>
+      <p class="font-sans text-xs font-light text-(--muted)">
+        Construido con <span class="text-(--accent)">Astro</span> + Tailwind
+      </p>
+    </div>
+  </div>
+</footer>

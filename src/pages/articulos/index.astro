@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/layout/Navbar.astro';
+import Footer from '../../components/layout/Footer.astro';
+
+const articulos = await getCollection('articulos');
+const sorted = articulos.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
+}
+---
+
+<Layout title="Artículos — Sergio Valenti" description="Ideas y perspectivas sobre estrategia, liderazgo y gestión empresarial.">
+  <Navbar />
+  <main class="pt-16">
+    <section class="bg-(--bg) py-24 md:py-32 min-h-screen">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <!-- Header -->
+        <div class="flex flex-col gap-5 mb-16">
+          <div class="eyebrow">Ideas y perspectivas</div>
+          <h1 class="font-serif text-4xl md:text-5xl font-light text-(--text)">Todos los artículos</h1>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sorted.map((art, i) => (
+            <a
+              href={`/articulos/${art.id}`}
+              class="group flex flex-col bg-(--bg3) border border-(--line) overflow-hidden hover:border-(--accent)/40 transition-colors duration-300"
+            >
+              <!-- Image placeholder -->
+              <div class="relative h-40 bg-(--bg2) flex items-center justify-center overflow-hidden">
+                <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id={`pat-list-${i}`} width="28" height="28" patternUnits="userSpaceOnUse">
+                      <circle cx="14" cy="14" r="1" fill="#5E9E72"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill={`url(#pat-list-${i})`}/>
+                </svg>
+                <span class="absolute top-3 left-3 z-10 font-sans text-xs font-medium tracking-widest uppercase bg-(--accent)/20 text-(--accent2) px-2 py-0.5">
+                  {art.data.category}
+                </span>
+              </div>
+              <!-- Content -->
+              <div class="flex flex-col gap-3 p-6 flex-1">
+                <div class="flex items-center gap-2 font-sans text-xs font-light text-(--muted)">
+                  <time>{formatDate(art.data.date)}</time>
+                  <span>·</span>
+                  <span>{art.data.readTime} min de lectura</span>
+                </div>
+                <h2 class="font-serif text-lg font-light text-(--text) group-hover:text-(--accent2) transition-colors duration-300 leading-snug">
+                  {art.data.title}
+                </h2>
+                <p class="font-sans text-sm font-light text-(--muted) leading-relaxed line-clamp-3 flex-1">
+                  {art.data.excerpt}
+                </p>
+                <span class="font-sans text-xs font-light text-(--accent) flex items-center gap-2 mt-2">
+                  Leer artículo →
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

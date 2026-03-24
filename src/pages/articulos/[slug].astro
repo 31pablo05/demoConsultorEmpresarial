@@ -1,0 +1,81 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/layout/Navbar.astro';
+import Footer from '../../components/layout/Footer.astro';
+
+export async function getStaticPaths() {
+  const articulos = await getCollection('articulos');
+  return articulos.map((art) => ({
+    params: { slug: art.id },
+    props: { art },
+  }));
+}
+
+const { art } = Astro.props;
+const { Content } = await render(art);
+
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
+}
+---
+
+<Layout title={`${art.data.title} — Sergio Valenti`} description={art.data.excerpt}>
+  <Navbar />
+  <main class="pt-16">
+    <article class="bg-(--bg) py-24 md:py-32 min-h-screen">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+        <!-- Back link -->
+        <a
+          href="/articulos"
+          class="inline-flex items-center gap-2 font-sans text-sm font-light text-(--muted) hover:text-(--accent2) transition-colors mb-10"
+        >
+          ← Volver a artículos
+        </a>
+
+        <!-- Category + meta -->
+        <div class="flex flex-wrap items-center gap-4 mb-8">
+          <span class="font-sans text-xs font-medium tracking-widest uppercase bg-(--accent)/20 text-(--accent2) px-3 py-1">
+            {art.data.category}
+          </span>
+          <div class="flex items-center gap-3 font-sans text-xs font-light text-(--muted)">
+            <time>{formatDate(art.data.date)}</time>
+            <span>·</span>
+            <span>{art.data.readTime} min de lectura</span>
+          </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-serif text-3xl md:text-5xl font-light text-(--text) leading-tight mb-8">
+          {art.data.title}
+        </h1>
+
+        <!-- Excerpt / lead -->
+        <p class="font-sans text-base md:text-lg font-light text-(--muted) leading-relaxed border-l-2 border-(--accent) pl-5 mb-12">
+          {art.data.excerpt}
+        </p>
+
+        <!-- Divider -->
+        <div class="w-full h-px bg-(--line) mb-12"></div>
+
+        <!-- Body content -->
+        <div class="prose-article">
+          <Content />
+        </div>
+
+        <!-- Footer nav -->
+        <div class="mt-16 pt-8 border-t border-(--line)">
+          <a
+            href="/articulos"
+            class="inline-flex items-center gap-2 font-sans text-sm font-light text-(--accent) hover:text-(--accent2) transition-colors"
+          >
+            ← Ver todos los artículos
+          </a>
+        </div>
+
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>

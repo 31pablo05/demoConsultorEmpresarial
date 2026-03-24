@@ -1,0 +1,83 @@
+---
+import ContactoForm from '../islands/ContactoForm.jsx';
+import { siteConfig } from '../../data/siteConfig';
+---
+
+<section id="contacto" class="bg-(--bg) py-24 md:py-32 border-t border-(--line)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+      <!-- Left: Info -->
+      <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-5">
+          <div class="reveal eyebrow">Contacto</div>
+          <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl font-light text-(--text)">
+            ¿Hablamos sobre<br />
+            <em class="italic text-(--accent2)">tu empresa</em>?
+          </h2>
+          <p class="reveal reveal-delay-2 font-sans text-base font-light text-(--muted) max-w-sm leading-relaxed">
+            Contame en qué está tu empresa y analizamos juntos si puedo ayudarte.
+            Primera conversación sin cargo ni compromiso.
+          </p>
+        </div>
+
+        <!-- Contact items -->
+        <div class="reveal reveal-delay-3 flex flex-col gap-4">
+          <!-- Email -->
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 border border-(--line) bg-(--bg3) flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-(--accent)">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-sans text-xs font-light text-(--muted) uppercase tracking-widest mb-0.5">Email</p>
+              <a href={`mailto:${siteConfig.email}`} class="font-sans text-sm font-light text-(--text) hover:text-(--accent2) transition-colors">
+                {siteConfig.email}
+              </a>
+            </div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 border border-(--line) bg-(--bg3) flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-(--accent)">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.45 2 2 0 0 1 3.57 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.63a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-sans text-xs font-light text-(--muted) uppercase tracking-widest mb-0.5">WhatsApp</p>
+              <a href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-(--text) hover:text-(--accent2) transition-colors">
+                {siteConfig.whatsapp}
+              </a>
+            </div>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 border border-(--line) bg-(--bg3) flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-(--accent)">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect width="4" height="12" x="2" y="9"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-sans text-xs font-light text-(--muted) uppercase tracking-widest mb-0.5">LinkedIn</p>
+              <a href={`https://${siteConfig.linkedin}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-(--text) hover:text-(--accent2) transition-colors">
+                {siteConfig.linkedin}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form island -->
+      <div class="reveal reveal-delay-2">
+        <ContactoForm client:load />
+      </div>
+
+    </div>
+  </div>
+</section>
