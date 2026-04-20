@@ -1,0 +1,124 @@
+---
+const pilares = [
+  {
+    numero: '01',
+    titulo: 'Dirección y Norte Estratégico',
+    descripcion:
+      'Sincronizamos el pensamiento de los dueños con el pulso de la organización. Definimos criterios rectores y prioridades reales que orientan a toda la empresa.',
+    icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" x2="12" y1="8" y2="8"/><line x1="3.95" x2="8.54" y1="6.06" y2="14"/><line x1="10.88" x2="15.46" y1="21.94" y2="14"/></svg>`,
+  },
+  {
+    numero: '02',
+    titulo: 'Traducción Organizacional',
+    descripcion:
+      'Diseñamos herramientas usables, no documentos que mueren en un cajón. Traducimos el norte estratégico en procesos, instructivos y formularios que se usan de verdad.',
+    icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>`,
+  },
+  {
+    numero: '03',
+    titulo: 'Confianza y Liderazgo',
+    descripcion:
+      'Transformamos el control vertical en espacios de claridad y participación. Los líderes dejan de vigilar para empezar a guiar.',
+    icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  },
+  {
+    numero: '04',
+    titulo: 'Comunicación y Coordinación',
+    descripcion:
+      'Ordenamos la ejecución cotidiana para eliminar fricción y desgaste. Definimos responsables claros y compromisos concretos.',
+    icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+  },
+];
+---
+
+<section id="metodo" class="bg-bg py-28 md:py-40">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-5 mb-16">
+      <div class="reveal eyebrow">Nuestra filosofía de ejecución</div>
+      <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text max-w-3xl">
+        De la imaginación a la práctica: el Método Nogolí.
+      </h2>
+      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light text-muted max-w-2xl leading-loose">
+        Una forma de trabajo usable, conectada y viva, diseñada para que tu
+        operación no dependa siempre de vos.
+      </p>
+    </div>
+
+    <!-- Flow diagram -->
+    <div class="reveal reveal-delay-2 flex flex-col sm:flex-row items-center justify-center gap-0 mb-16 overflow-hidden">
+      {['VISIÓN', 'PROCESOS', 'EJECUCIÓN DIARIA'].map((step, i) => (
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex flex-col items-center gap-2 px-6 py-4 border border-line bg-bg2 min-w-35 text-center">
+            <span class="font-sans text-[10px] font-medium tracking-[0.2em] uppercase text-muted">{String(i + 1).padStart(2,'0')}</span>
+            <span class="font-serif text-lg font-light text-text">{step}</span>
+          </div>
+          {i < 2 && (
+            <div class="flex items-center sm:flex-row flex-col">
+              <!-- Mobile: vertical arrow -->
+              <div class="sm:hidden w-px h-6 bg-accent/50"></div>
+              <!-- Desktop: horizontal arrow -->
+              <svg class="hidden sm:block" width="40" height="2" viewBox="0 0 40 2">
+                <line x1="0" y1="1" x2="36" y2="1" stroke="var(--accent)" stroke-width="1.5"/>
+                <polyline points="30,0 36,1 30,2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+              </svg>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <!-- Principle blockquote -->
+    <blockquote class="reveal reveal-delay-2 border-l-2 border-accent pl-8 py-2 mb-16 max-w-2xl">
+      <p class="font-serif text-2xl md:text-3xl font-light italic text-text leading-relaxed">
+        "La confianza precede al rendimiento."
+      </p>
+      <footer class="mt-3 font-sans text-xs font-medium tracking-[0.2em] uppercase text-muted">
+        — Principio rector del Método Nogolí
+      </footer>
+    </blockquote>
+
+    <!-- 4 Pillars grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-line mb-14">
+      {pilares.map((pilar, i) => (
+        <article class={`reveal reveal-delay-${i + 1} group relative bg-bg2 hover:bg-bg3 transition-colors duration-400 p-10 lg:p-12 flex flex-col gap-5`}>
+          <!-- Number background decoration -->
+          <span
+            class="absolute top-4 right-6 font-serif font-light leading-none select-none pointer-events-none text-[5rem]"
+            style="color: rgba(201,168,76,0.07);"
+          >
+            {pilar.numero}
+          </span>
+
+          <!-- Icon -->
+          <div class="text-accent" set:html={pilar.icono} />
+
+          <!-- Content -->
+          <div class="flex flex-col gap-3">
+            <h3 class="font-serif text-xl lg:text-2xl font-light text-text">
+              {pilar.titulo}
+            </h3>
+            <p class="font-sans text-sm font-light text-muted leading-loose">
+              {pilar.descripcion}
+            </p>
+          </div>
+
+          <!-- Bottom accent line on hover -->
+          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
+        </article>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal reveal-delay-3 flex justify-center">
+      <a
+        href="/metodo"
+        class="inline-flex items-center gap-2 px-8 py-4 border border-accent text-accent font-sans text-sm font-light tracking-wide hover:bg-accent hover:text-bg transition-all duration-300"
+      >
+        Conocé el Método completo →
+      </a>
+    </div>
+
+  </div>
+</section>

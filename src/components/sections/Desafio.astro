@@ -1,0 +1,59 @@
+---
+const sintomas = [
+  'Sobrecarga del dueño o gerentes',
+  'Decisiones que no suceden a tiempo',
+  'Compromisos poco visibles',
+  'Reuniones largas sin cierre',
+  'Retrabajo constante',
+  'Proyectos sin seguimiento claro',
+];
+---
+
+<section id="desafio" class="bg-bg2 py-28 md:py-40">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- Header -->
+    <div class="flex flex-col gap-5 mb-14 text-center max-w-3xl mx-auto">
+      <div class="reveal eyebrow justify-center">El problema que resolvemos</div>
+      <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text">
+        Lo que antes funcionaba,<br />
+        hoy no te deja crecer.
+      </h2>
+      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light text-muted leading-loose">
+        La organización creció y aparecieron síntomas típicos: sobrecarga del dueño/gerentes,
+        decisiones que no suceden a tiempo, compromisos poco visibles, reuniones largas sin cierre,
+        retrabajo y proyectos sin visibilidad por hitos, riesgos y responsables.
+      </p>
+    </div>
+
+    <!-- Symptoms grid -->
+    <div class="reveal reveal-delay-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      {sintomas.map((sintoma) => (
+        <div class="flex items-start gap-4 p-5 border border-line bg-bg hover:border-accent/40 transition-colors duration-300">
+          <!-- Warning icon in accent -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-accent shrink-0 mt-0.5"
+          >
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+            <path d="M12 9v4"/>
+            <path d="M12 17h.01"/>
+          </svg>
+          <span class="font-sans text-sm font-light text-text leading-snug">{sintoma}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Closing statement -->
+    <p class="reveal reveal-delay-3 font-serif text-xl md:text-2xl font-light text-text text-center mt-14 max-w-2xl mx-auto leading-relaxed">
+      El desorden no aparece de golpe: crece en silencio mientras la empresa avanza.
+    </p>
+  </div>
+</section>

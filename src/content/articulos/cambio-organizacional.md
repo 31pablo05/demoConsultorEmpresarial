@@ -1,33 +1,58 @@
+﻿---
+title: "Cómo adaptar las daily stand-up meetings a equipos que no son de tecnología"
+date: 2025-11-15
+category: Gestión
+excerpt: "Las daily stand-up surgieron en el mundo ágil del software, pero su lógica —revisión rápida, foco en bloqueos y compromisos visibles— aplica a cualquier equipo operativo."
+readTime: 6
 ---
-title: "El error más frecuente de los equipos directivos ante el cambio"
-date: 2025-03-02
-category: Liderazgo
-excerpt: "Gestionar el cambio no es hacer una presentación. Es un trabajo de comunicación y acompañamiento que la mayoría de los líderes subestima."
-readTime: 5
----
 
-## El error que se repite
+## El origen del problema
 
-Cuando una empresa decide transformarse —cambiar su modelo de negocio, reorganizar áreas, implementar nueva tecnología— la dirección suele hacer lo mismo: preparar una presentación, comunicarla en una reunión general y esperar que la gente "se alinee".
+Las reuniones de coordinación en equipos no técnicos suelen tener un patrón reconocible: duran demasiado, no terminan con compromisos claros y se repiten sin resolver los mismos temas una y otra vez.
 
-No funciona así. Nunca funcionó así.
+La daily stand-up —esa reunión de 15 minutos que usan los equipos de software— tiene una estructura que resuelve exactamente ese problema. Pero cuando se intenta trasladarla a equipos de operaciones, logística, ventas o administración, suele fallar. No porque la idea sea mala, sino porque se aplica sin adaptar.
 
-## La resistencia no es el problema
+## Qué es una daily stand-up y por qué funciona
 
-El primer error es interpretar que la resistencia al cambio es el obstáculo. La resistencia es una señal, no el problema en sí. Cuando las personas se resisten, están diciendo algo: "No entiendo por qué", "No confío en que esto salga bien", "Tengo miedo de quedar afuera".
+La estructura original es simple. Cada integrante responde tres preguntas:
 
-Ignorar esa señal o tratarla como un problema de actitud es la receta para el fracaso.
+1. ¿Qué hice ayer?
+2. ¿Qué voy a hacer hoy?
+3. ¿Qué me está bloqueando?
 
-## Lo que los líderes subestiman
+Su poder no está en las preguntas en sí, sino en lo que generan: visibilidad de compromisos, detección temprana de obstáculos y coordinación horizontal sin pasar por el jefe en cada paso.
 
-La gestión del cambio requiere tres cosas que muchos líderes no están dispuestos a dar:
+## Por qué falla en contextos no técnicos
 
-- **Tiempo**: El cambio necesita ser comunicado múltiples veces, de múltiples formas, antes de que la gente lo internalice.
-- **Escucha real**: No sesiones de "preguntas y respuestas" donde en realidad se refuerza el mensaje. Espacios donde las preocupaciones genuinas tienen peso.
-- **Coherencia**: Los líderes tienen que comportarse de acuerdo al cambio que piden. Si no lo hacen, la organización lee que el cambio es solo para los demás.
+Los equipos de tecnología trabajan con tareas discretas, bien definidas y de corta duración. Un desarrollador puede decir "terminé el módulo de login" con precisión. Un operador de logística, un vendedor o un analista administrativo no siempre trabaja así: sus tareas son más difusas, más largas o más reactivas.
 
-## La pregunta correcta
+Aplicar la misma estructura sin adaptación produce respuestas genéricas, reuniones que se alargan y sensación de que "esto no sirve para nosotros".
 
-Antes de iniciar cualquier proceso de cambio, la pregunta no es "¿cómo comunicamos esto?". La pregunta es: "¿Estamos dispuestos a hacer el trabajo que requiere que esto funcione?".
+## Cómo adaptar el formato
 
-Si la respuesta es sí, bien. Si es no, es mejor saberlo antes.
+**1. Cambiar las preguntas**
+
+En lugar de "¿qué hice ayer?", preguntar: "¿qué compromiso de ayer cerraste o avanzaste?". En lugar de "¿qué harás hoy?", preguntar: "¿qué compromiso concreto tomás hoy?". La diferencia es sutil pero importante: fuerza a hablar de compromisos, no de actividad.
+
+**2. Definir el alcance correcto**
+
+No todas las reuniones daily tienen sentido a nivel de toda el área. A veces funciona mejor por célula de trabajo o por proyecto. El criterio es simple: el grupo tiene que tener interdependencias reales. Si cada uno trabaja de forma completamente independiente, la reunión no aporta.
+
+**3. Establecer un tablero visible**
+
+La daily pierde mucho valor sin un sistema de seguimiento visible. Puede ser físico (pizarra, post-its) o digital (Trello, Notion, una hoja de cálculo). Lo importante es que los compromisos queden registrados y que todos puedan ver el estado real del equipo.
+
+**4. Fijar un facilitador rotativo**
+
+En equipos no técnicos, la reunión suele depender del jefe para avanzar. Rotar el rol de facilitador distribuye la responsabilidad y desarrolla capacidad de coordinación en el equipo.
+
+**5. Separar lo operativo de lo estratégico**
+
+Si aparece un tema complejo que requiere discusión, no resolverlo en la daily. Anotarlo y agendarlo aparte. La reunión tiene que mantenerse corta: 15 a 20 minutos máximo.
+
+## El resultado esperable
+
+Cuando la adaptación está bien hecha, los equipos reportan tres cambios concretos: menos interrupciones al líder durante el día, mayor visibilidad de quién está haciendo qué, y problemas detectados antes de que escalen.
+
+No es magia. Es estructura. Y la estructura, bien aplicada, libera energía para lo que importa.
+

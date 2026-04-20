@@ -1,78 +1,85 @@
 ---
+const formacion = [
+  'Licenciado en Organización Industrial — UTN',
+  'MBA — UTN',
+  'Inglés B1 — Wall Street Institute',
+];
 ---
 
 <section id="sobre" class="bg-bg py-28 md:py-40">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
       <!-- Left: Text -->
       <div class="flex flex-col gap-10">
         <div class="flex flex-col gap-6">
-          <div class="reveal eyebrow">Sobre mí</div>
+          <div class="reveal eyebrow">Quién soy</div>
           <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text">
-            Estrategia que se<br />
-            <em class="gradient-text">implementa</em> de verdad.
+            Un consultor que trabaja dentro,<br />
+            <em class="gradient-text">no desde afuera.</em>
           </h2>
         </div>
 
         <div class="reveal reveal-delay-2 flex flex-col gap-5">
           <p class="font-sans text-base font-light text-muted leading-loose">
-            Trabajo con empresas que necesitan claridad para avanzar. No soy el consultor
-            que entrega un informe y desaparece: me involucro en el proceso real de
-            implementación, junto al equipo directivo, hasta que los resultados se concretan.
+            Soy Sergio Celuch, consultor especializado en ayudar a empresas a ordenar
+            su operación para que puedan crecer sin sumar burocracia.
           </p>
           <p class="font-sans text-base font-light text-muted leading-loose">
-            En doce años de práctica he acompañado a más de cuarenta organizaciones en
-            sectores tan distintos como industria, retail, servicios profesionales y tecnología.
-            Lo que aprendí es que los problemas estratégicos son más parecidos entre sí de
-            lo que parecen, y que las soluciones requieren contexto, no recetas.
+            Después de años trabajando en corporaciones, liderando proyectos, supply chain,
+            operaciones y equipos en contextos complejos, entendí algo muy simple: muchas
+            empresas no pueden crecer porque no logran ordenar sus procesos. Tienen personas
+            valiosas, empuje y conocimiento técnico, pero pierden tiempo, foco y rentabilidad
+            en reuniones improductivas, responsabilidades difusas y decisiones que dependen
+            siempre de los mismos.
+          </p>
+          <p class="font-sans text-base font-light text-muted leading-loose">
+            A través de Nogolí Consulting acompaño a dueños, directores y líderes a
+            transformar ese desorden en una forma de trabajo clara, usable y sostenible,
+            sin sumar burocracia.
           </p>
         </div>
 
-        <!-- Credentials -->
-        <ul class="reveal reveal-delay-3 flex flex-col gap-4">
-          {[
-            'Licenciado en Administración de Empresas — [Universidad]',
-            'MBA — [Institución]',
-            'Docente en [Universidad / Escuela de negocios]',
-            'Miembro de [organismo / asociación del sector]',
-          ].map((cred) => (
+        <!-- Quote -->
+        <blockquote class="reveal reveal-delay-3 border-l-2 border-accent pl-7 py-2">
+          <p class="font-serif text-xl md:text-2xl font-light italic text-text leading-relaxed">
+            "No se trata de documentar por cumplir, sino de alinear dirección,
+            procesos, liderazgo y comunicación."
+          </p>
+        </blockquote>
+
+        <!-- Formación -->
+        <ul class="reveal reveal-delay-3 flex flex-col gap-3">
+          {formacion.map((cred) => (
             <li class="flex items-start gap-4 font-sans text-sm font-light text-muted">
-              <span class="mt-2 w-1 h-1 rounded-full bg-accent flex-shrink-0"></span>
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
               {cred}
             </li>
           ))}
         </ul>
       </div>
 
-      <!-- Right: Photo + Quote -->
-      <div class="reveal reveal-delay-2 flex flex-col gap-10">
-        <!-- Photo placeholder -->
-        <div class="relative">
-          <div class="w-full aspect-[4/3] lg:aspect-[4/5] bg-bg3 border border-line flex items-center justify-center overflow-hidden">
-            <svg class="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="grid-sobre" width="32" height="32" patternUnits="userSpaceOnUse">
-                  <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#C4974E" stroke-width="0.5"/>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid-sobre)"/>
-            </svg>
-            <span class="font-sans text-xs text-muted tracking-[0.2em] uppercase z-10 relative">Foto de Sergio</span>
-          </div>
-          <!-- Decorative accent -->
-          <div class="absolute -bottom-4 -right-4 w-20 h-20 border-b border-r border-accent/35"></div>
+      <!-- Right: Photo -->
+      <div class="reveal reveal-delay-2 relative">
+        <!-- Decorative border offset -->
+        <div class="absolute -top-4 -right-4 w-full h-full border border-accent/25 z-0"></div>
+
+        <!-- Photo -->
+        <div class="relative z-10 w-full aspect-3/4 bg-bg3 overflow-hidden">
+          <img
+            src="/fotos/sergio-sobre.jpg"
+            alt="Sergio Martín Celuch — Nogolí Consulting"
+            class="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(44,26,14,0.12) 0%, transparent 60%);"></div>
         </div>
 
-        <!-- Pull quote -->
-        <blockquote class="border-l border-accent/60 pl-7 py-2">
-          <p class="font-serif text-xl md:text-2xl font-light italic text-text leading-relaxed">
-            "La estrategia no es un documento, es una decisión permanente sobre dónde poner la energía."
-          </p>
-          <footer class="mt-4 font-sans text-xs font-medium tracking-[0.2em] uppercase text-muted">
-            — Sergio Valenti
-          </footer>
-        </blockquote>
+        <!-- Name tag -->
+        <div class="absolute -bottom-5 left-5 z-20 bg-bg border border-line px-5 py-3">
+          <p class="font-serif text-base font-light text-text">Sergio Martín Celuch</p>
+          <p class="font-sans text-[10px] text-muted uppercase tracking-widest">Founder, Nogolí Consulting</p>
+        </div>
       </div>
 
     </div>

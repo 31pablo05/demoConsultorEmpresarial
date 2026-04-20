@@ -8,21 +8,21 @@ export const proceso: PasoProceso[] = [
   {
     numero: 1,
     titulo: "Diagnóstico",
-    descripcion: "Entrevistas, análisis de datos y observación directa.",
+    descripcion: "Entiendo la realidad operativa actual de tu empresa.",
   },
   {
     numero: 2,
-    titulo: "Estrategia",
-    descripcion: "Definimos juntos el rumbo, objetivos y prioridades.",
+    titulo: "Diseño",
+    descripcion: "Definimos el sistema de trabajo que necesita tu organización.",
   },
   {
     numero: 3,
     titulo: "Implementación",
-    descripcion: "Acompañamiento activo durante la ejecución.",
+    descripcion: "Instalamos el sistema con el equipo, no para el equipo.",
   },
   {
     numero: 4,
     titulo: "Seguimiento",
-    descripcion: "Medición de resultados y revisión periódica.",
+    descripcion: "Auditorías livianas para que el sistema se sostenga.",
   },
 ];

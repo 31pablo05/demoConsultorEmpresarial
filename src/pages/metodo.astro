@@ -1,0 +1,252 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/layout/Footer.astro';
+
+const pilares = [
+  {
+    numero: '01',
+    titulo: 'Dirección y Norte Estratégico',
+    descripcion: `Muchas organizaciones tienen visión, pero no tienen dirección operativa. La visión dice hacia dónde ir; la dirección dice cómo orientar las decisiones cotidianas para llegar ahí.
+
+En esta capa del Método trabajamos en sincronizar el pensamiento del liderazgo con la realidad del equipo. Definimos criterios rectores: aquellas reglas de decisión que, cuando están claras, permiten que cada persona en la organización pueda actuar con autonomía y alineación al mismo tiempo.
+
+El resultado es un norte compartido que no vive solo en la cabeza del dueño, sino que circula en la organización y orienta el trabajo de todos.`,
+    items: [
+      'Definición de criterios rectores y prioridades reales',
+      'Sincronización entre visión del liderazgo y operación',
+      'Prioridades que el equipo puede usar sin consultar en cada paso',
+    ],
+  },
+  {
+    numero: '02',
+    titulo: 'Traducción Organizacional',
+    descripcion: `El norte estratégico necesita traducirse en herramientas concretas que el equipo pueda usar. No documentos que cumplan un requisito formal, sino procesos, instructivos y formularios que se usan de verdad porque son entendibles, prácticos y útiles.
+
+En esta capa diseñamos la arquitectura operativa de la organización: quién hace qué, cómo se documenta, qué se registra y qué no. El criterio siempre es el mismo: si no lo van a usar, no lo diseñamos.
+
+La traducción organizacional es la diferencia entre tener un organigrama bonito y tener una estructura que funciona.`,
+    items: [
+      'Diseño de procesos usables, no documentos formales',
+      'Instructivos y formularios que el equipo adopta de forma natural',
+      'Definición clara de roles, responsabilidades y flujos de trabajo',
+    ],
+  },
+  {
+    numero: '03',
+    titulo: 'Confianza y Liderazgo',
+    descripcion: `El liderazgo que controla todo no puede escalar. La organización queda atrapada en la capacidad de atención de una persona: el dueño, el gerente, o el líder de cada área.
+
+En esta capa trabajamos la transición del control vertical hacia la confianza operativa. No se trata de soltar sin preparar, sino de construir las condiciones para que el equipo pueda actuar con autonomía real.
+
+Los líderes dejan de vigilar para empezar a guiar. Y el equipo deja de esperar instrucciones para empezar a tomar iniciativa dentro de un marco claro.`,
+    items: [
+      'Desarrollo de autonomía con alineación en el equipo',
+      'Transición del liderazgo operativo al liderazgo estratégico',
+      'Creación de espacios de claridad y participación real',
+    ],
+  },
+  {
+    numero: '04',
+    titulo: 'Comunicación y Coordinación',
+    descripcion: `La ejecución cotidiana es donde el sistema se prueba. En este nivel ordenamos cómo el equipo se coordina día a día: qué reuniones tienen sentido, cómo se registran los compromisos, cómo se comunica el avance y cómo se detectan los desvíos a tiempo.
+
+Diseñamos rituales de gestión concretos: espacios de coordinación simples, breves y con propósito definido. No reuniones para reunirse, sino instancias que mantienen el sistema vivo sin agregar burocracia.
+
+El resultado es un equipo que sabe qué está pasando, sabe qué se espera de él y puede coordinarse sin depender siempre de la misma persona.`,
+    items: [
+      'Rituales de coordinación simples y con propósito claro',
+      'Sistema de registro de compromisos y seguimiento de avance',
+      'Comunicación que reduce escalamientos y urgencias evitables',
+    ],
+  },
+];
+
+const diferenciales = [
+  {
+    titulo: 'No documentamos por cumplir: ordenamos para que funcione',
+    descripcion:
+      'Cada herramienta que diseñamos pasa por un filtro simple: ¿el equipo la va a usar? Si la respuesta es no, no la diseñamos. Priorizamos la adopción sobre la formalidad.',
+  },
+  {
+    titulo: 'Integración total: no separamos estrategia, operación y liderazgo',
+    descripcion:
+      'Los cuatro pilares del Método trabajan juntos. No tiene sentido definir un norte estratégico si la estructura operativa no puede soportarlo, ni construir confianza si la comunicación sigue siendo caótica.',
+  },
+  {
+    titulo: 'Sistemas usables: entendibles, vivos, no para cumplir formalidades',
+    descripcion:
+      'Un sistema que nadie entiende o que queda obsoleto en tres meses no es un sistema: es un gasto de energía. Diseñamos para la realidad del equipo, no para el manual.',
+  },
+];
+---
+
+<Layout
+  title="El Método Nogolí — Consultoría Operacional"
+  description="Una forma de trabajo usable, conectada y viva, diseñada para que tu operación no dependa siempre de vos. Conocé los 4 pilares del Método Nogolí."
+>
+  <!-- Simple navbar for internal page -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-bg/95 backdrop-blur-md border-b border-line">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center">
+        <img
+          src="/logo-nogoli.png"
+          alt="Nogolí Consulting"
+          class="h-8 w-auto"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+        />
+        <span class="font-serif text-xl font-light text-accent2 hidden">Nogolí Consulting</span>
+      </a>
+      <a
+        href="/"
+        class="font-sans text-sm font-light text-muted hover:text-text transition-colors flex items-center gap-2"
+      >
+        ← Volver al inicio
+      </a>
+    </div>
+  </header>
+
+  <!-- Progress bar -->
+  <div id="scroll-progress"></div>
+
+  <main class="pt-16">
+    <!-- Hero -->
+    <section class="bg-bg py-28 md:py-40">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="reveal eyebrow mb-6">Nuestra filosofía de ejecución</div>
+          <h1 class="reveal reveal-delay-1 font-serif text-5xl md:text-6xl lg:text-7xl font-light text-text mb-8">
+            El Método Nogolí.
+          </h1>
+          <p class="reveal reveal-delay-2 font-sans text-base md:text-xl font-light text-muted leading-loose max-w-2xl">
+            Una forma de trabajo usable, conectada y viva, diseñada para que tu
+            operación no dependa siempre de vos. Cuatro pilares que actúan juntos
+            para transformar el desorden en capacidad real de entrega.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principio rector -->
+    <section class="bg-bg2 py-20">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 flex justify-center">
+        <blockquote class="reveal max-w-2xl border-l-2 border-accent pl-10 py-4">
+          <p class="font-serif text-3xl md:text-4xl font-light italic text-text leading-relaxed">
+            "La confianza precede al rendimiento."
+          </p>
+          <footer class="mt-5 font-sans text-xs font-medium tracking-[0.2em] uppercase text-muted">
+            — Principio rector del Método Nogolí
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Flow diagram -->
+    <section class="bg-bg py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-0 max-w-3xl mx-auto">
+          {['VISIÓN', 'PROCESOS', 'EJECUCIÓN DIARIA'].map((step, i) => (
+            <div class="flex flex-col sm:flex-row items-center">
+              <div class="flex flex-col items-center gap-2 px-8 py-5 border border-line bg-bg2 min-w-40 text-center">
+                <span class="font-sans text-[10px] font-medium tracking-[0.2em] uppercase text-muted">{String(i + 1).padStart(2, '0')}</span>
+                <span class="font-serif text-xl font-light text-text">{step}</span>
+              </div>
+              {i < 2 && (
+                <svg class="hidden sm:block rotate-0" width="48" height="2" viewBox="0 0 48 2">
+                  <line x1="0" y1="1" x2="44" y2="1" stroke="var(--accent)" stroke-width="1.5"/>
+                  <polyline points="38,0 44,1 38,2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                </svg>
+              )}
+              {i < 2 && (
+                <div class="sm:hidden w-px h-6 bg-accent/50"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Pillars detail -->
+    {pilares.map((pilar, idx) => (
+      <section class={`py-24 md:py-32 ${idx % 2 === 0 ? 'bg-bg2' : 'bg-bg'}`}>
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="font-sans text-xs font-medium tracking-widest uppercase text-accent">{pilar.numero}</span>
+                <div class="w-8 h-px bg-accent/50"></div>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-text mb-6">
+                {pilar.titulo}
+              </h2>
+              {pilar.descripcion.split('\n\n').map((para) => (
+                <p class="font-sans text-base font-light text-muted leading-loose mb-4">
+                  {para}
+                </p>
+              ))}
+            </div>
+            <div class="reveal reveal-delay-1 flex flex-col gap-4 pt-2 lg:pt-16">
+              {pilar.items.map((item) => (
+                <div class="flex items-start gap-4 p-5 border border-line bg-bg3 hover:border-accent/40 transition-colors duration-300">
+                  <span class="mt-1 w-2 h-2 rounded-full bg-accent shrink-0"></span>
+                  <span class="font-sans text-sm font-light text-text leading-snug">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <!-- Diferenciales -->
+    <section class="bg-bg2 py-28 md:py-40">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col gap-5 mb-14">
+          <div class="reveal eyebrow">Por qué es diferente</div>
+          <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl font-light text-text max-w-2xl">
+            No es consultoría tradicional.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-line">
+          {diferenciales.map((d, i) => (
+            <div class={`reveal reveal-delay-${i + 1} bg-bg2 hover:bg-bg3 transition-colors duration-300 p-8 lg:p-10 flex flex-col gap-4`}>
+              <div class="w-8 h-px bg-accent mb-2"></div>
+              <h3 class="font-serif text-xl font-light text-text">{d.titulo}</h3>
+              <p class="font-sans text-sm font-light text-muted leading-loose">{d.descripcion}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="bg-bg py-28 md:py-40 border-t border-line">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center gap-8">
+        <div class="reveal eyebrow justify-center">El siguiente paso</div>
+        <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text max-w-2xl">
+          Hablemos sobre tu empresa.
+        </h2>
+        <p class="reveal reveal-delay-2 font-sans text-base font-light text-muted max-w-xl leading-loose">
+          Te propongo una charla corta. Revisamos tu situación y te digo si el
+          Método Nogolí aplica y por dónde empezar.
+        </p>
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-4 justify-center">
+          <a
+            href="/#contacto"
+            class="btn-shimmer inline-flex items-center gap-2 px-8 py-4 bg-accent text-bg font-sans text-sm font-medium tracking-wide hover:bg-accent2 transition-colors duration-500"
+          >
+            Hablemos
+          </a>
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide text-muted border border-line hover:border-accent hover:text-text transition-all duration-500"
+          >
+            ← Volver al inicio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

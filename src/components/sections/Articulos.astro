@@ -1,22 +1,13 @@
----
-import { getCollection } from 'astro:content';
+﻿---
+import ArticuloCard from '../ArticuloCard.astro';
+import { getAllPosts } from '../../lib/posts';
 
-const allArticulos = await getCollection('articulos');
-const articulos = allArticulos
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
-
-type ArticuloEntry = (typeof articulos)[number];
-
-function formatDate(date: Date) {
-  return new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
-}
+const articulos = (await getAllPosts()).slice(0, 3);
 ---
 
-<section id="articulos" class="bg-bg py-24 md:py-32">
+<section id="articulos" class="bg-bg2 py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
 
-    <!-- Header -->
     <div class="reveal flex flex-wrap items-end justify-between gap-6 mb-14">
       <div class="flex flex-col gap-4">
         <div class="eyebrow">Ideas y perspectivas</div>
@@ -30,94 +21,24 @@ function formatDate(date: Date) {
       </a>
     </div>
 
-    <!-- Asymmetric grid -->
     {articulos.length > 0 && (
       <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-6">
-
-        <!-- Featured article (large) -->
         {articulos[0] && (
-          <a
-            href={`/articulos/${articulos[0].id}`}
-            class="reveal group relative flex flex-col bg-bg3 border border-line overflow-hidden hover:border-accent/40 transition-colors duration-300"
-          >
-            <!-- Image placeholder -->
-            <div class="relative h-56 md:h-72 bg-bg2 flex items-center justify-center overflow-hidden">
-              <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="art-pattern-0" width="28" height="28" patternUnits="userSpaceOnUse">
-                    <circle cx="14" cy="14" r="1" fill="#5E9E72"/>
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#art-pattern-0)"/>
-              </svg>
-              <!-- Category tag -->
-              <span class="absolute top-4 left-4 z-10 font-sans text-xs font-medium tracking-widest uppercase bg-accent/20 text-accent2 px-3 py-1">
-                {articulos[0].data.category}
-              </span>
-            </div>
-            <!-- Content -->
-            <div class="flex flex-col gap-4 p-8">
-              <div class="flex items-center gap-3 font-sans text-xs font-light text-muted">
-                <time>{formatDate(articulos[0].data.date)}</time>
-                <span>·</span>
-                <span>{articulos[0].data.readTime} min de lectura</span>
-              </div>
-              <h3 class="font-serif text-2xl md:text-3xl font-light text-text group-hover:text-accent2 transition-colors duration-300 leading-snug">
-                {articulos[0].data.title}
-              </h3>
-              <p class="font-sans text-sm font-light text-muted leading-relaxed line-clamp-3">
-                {articulos[0].data.excerpt}
-              </p>
-              <span class="font-sans text-sm font-light text-accent group-hover:gap-3 flex items-center gap-2 transition-all duration-300 mt-auto">
-                Leer artículo →
-              </span>
-            </div>
-          </a>
+          <div class="reveal">
+            <ArticuloCard post={articulos[0]} featured={true} className="h-full" />
+          </div>
         )}
 
-        <!-- Remaining articles (stacked) -->
         <div class="flex flex-col gap-6">
           {articulos.slice(1).map((art, i) => (
-            <a
-              href={`/articulos/${art.id}`}
-              class={`reveal reveal-delay-${i + 1} group flex flex-col bg-bg3 border border-line overflow-hidden hover:border-accent/40 transition-colors duration-300 flex-1`}
-            >
-              <!-- Image placeholder mini -->
-              <div class="relative h-36 bg-bg2 flex items-center justify-center overflow-hidden">
-                <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id={`art-pattern-${i + 1}`} width="28" height="28" patternUnits="userSpaceOnUse">
-                      <circle cx="14" cy="14" r="1" fill="#5E9E72"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill={`url(#art-pattern-${i + 1})`}/>
-                </svg>
-                <span class="absolute top-3 left-3 z-10 font-sans text-xs font-medium tracking-widest uppercase bg-accent/20 text-accent2 px-2 py-0.5">
-                  {art.data.category}
-                </span>
-              </div>
-              <!-- Content -->
-              <div class="flex flex-col gap-3 p-6">
-                <div class="flex items-center gap-2 font-sans text-xs font-light text-muted">
-                  <time>{formatDate(art.data.date)}</time>
-                  <span>·</span>
-                  <span>{art.data.readTime} min</span>
-                </div>
-                <h3 class="font-serif text-lg font-light text-text group-hover:text-accent2 transition-colors duration-300 leading-snug">
-                  {art.data.title}
-                </h3>
-                <p class="font-sans text-sm font-light text-muted leading-relaxed line-clamp-2">
-                  {art.data.excerpt}
-                </p>
-                <span class="font-sans text-xs font-light text-accent flex items-center gap-2 mt-auto">
-                  Leer artículo →
-                </span>
-              </div>
-            </a>
+            <div class={`reveal reveal-delay-${i + 1}`}>
+              <ArticuloCard post={art} />
+            </div>
           ))}
         </div>
-
       </div>
     )}
   </div>
 </section>
+
+

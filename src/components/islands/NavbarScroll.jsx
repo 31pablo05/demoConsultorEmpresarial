@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react';
 
 const NAV_ITEMS = [
   { label: 'Inicio', href: '#inicio' },
+  { label: 'Método', href: '#metodo' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Sobre mí', href: '#sobre' },
-  { label: 'Proceso', href: '#proceso' },
-  { label: 'Artículos', href: '#articulos' },
+  { label: 'Artículos', href: '/articulos' },
   { label: 'Contacto', href: '#contacto' },
 ];
 
-const SECTION_IDS = ['inicio', 'servicios', 'sobre', 'proceso', 'articulos', 'contacto'];
+const SECTION_IDS = ['inicio', 'metodo', 'servicios', 'sobre', 'articulos', 'contacto'];
 
-export default function NavbarScroll({ siteName }) {
+export default function NavbarScroll({ logoSrc }) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,12 +37,17 @@ export default function NavbarScroll({ siteName }) {
   }, []);
 
   const handleNav = (e, href) => {
-    e.preventDefault();
-    const id = href.replace('#', '');
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const id = href.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+      setMenuOpen(false);
+      return;
     }
+
     setMenuOpen(false);
   };
 
@@ -50,7 +55,7 @@ export default function NavbarScroll({ siteName }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-bg/95 backdrop-blur-md border-b border-line'
+          ? 'bg-bg/95 backdrop-blur-md border-b border-line shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -59,9 +64,16 @@ export default function NavbarScroll({ siteName }) {
         <a
           href="#inicio"
           onClick={(e) => handleNav(e, '#inicio')}
-          className="font-serif text-xl font-light tracking-wide text-accent2 hover:text-accent transition-colors"
+          className="flex items-center"
+          aria-label="Nogolí Consulting — inicio"
         >
-          {siteName}
+          {logoSrc ? (
+            <img src={logoSrc} alt="Nogolí Consulting" className="h-8 w-auto" />
+          ) : (
+            <span className="font-serif text-xl font-light tracking-wide text-accent2">
+              Nogolí Consulting
+            </span>
+          )}
         </a>
 
         {/* Desktop nav */}
@@ -91,7 +103,7 @@ export default function NavbarScroll({ siteName }) {
         <a
           href="#contacto"
           onClick={(e) => handleNav(e, '#contacto')}
-          className="hidden md:inline-flex items-center px-5 py-2 border border-accent text-accent text-sm font-light font-sans rounded-none hover:bg-accent hover:text-bg transition-all duration-300"
+          className="hidden md:inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-light font-sans hover:bg-accent2 transition-all duration-300"
         >
           Hablemos
         </a>
@@ -116,7 +128,7 @@ export default function NavbarScroll({ siteName }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-bg2 border-t border-line px-6 py-6">
+        <div className="md:hidden bg-bg border-t border-line px-6 py-6 shadow-lg">
           <ul className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => {
               const id = item.href.replace('#', '');
@@ -139,7 +151,7 @@ export default function NavbarScroll({ siteName }) {
               <a
                 href="#contacto"
                 onClick={(e) => handleNav(e, '#contacto')}
-                className="inline-flex items-center px-5 py-2 border border-accent text-accent text-sm font-light font-sans hover:bg-accent hover:text-bg transition-all duration-300"
+                className="inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-light font-sans hover:bg-accent2 transition-all duration-300"
               >
                 Hablemos
               </a>

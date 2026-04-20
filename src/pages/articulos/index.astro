@@ -1,71 +1,138 @@
----
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/layout/Navbar.astro';
+﻿---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import BlogHeader from '../../components/blog/BlogHeader.astro';
 import Footer from '../../components/layout/Footer.astro';
+import ArticuloCard from '../../components/ArticuloCard.astro';
+import { getAllPosts } from '../../lib/posts';
 
-const articulos = await getCollection('articulos');
-const sorted = articulos.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-function formatDate(date: Date) {
-  return new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
-}
+const posts = await getAllPosts();
 ---
 
-<Layout title="Artículos — Sergio Valenti" description="Ideas y perspectivas sobre estrategia, liderazgo y gestión empresarial.">
-  <Navbar />
-  <main class="pt-16">
-    <section class="bg-bg py-24 md:py-32 min-h-screen">
+<BlogLayout
+  title="Articulos sobre estrategia empresarial - Sergio Valenti"
+  description="Reflexiones practicas sobre estrategia, liderazgo y gestion para equipos y organizaciones que quieren crecer con foco."
+>
+  <BlogHeader />
+
+  <main class="bg-bg min-h-screen">
+    <section class="border-b border-line bg-bg2/30">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+        <div class="eyebrow mb-6">Ideas y perspectivas</div>
+        <h1 class="max-w-4xl font-serif text-4xl md:text-6xl font-light leading-tight text-text">
+          Articulos sobre estrategia empresarial
+        </h1>
+        <p class="mt-8 max-w-3xl font-sans text-base md:text-lg font-light leading-relaxed text-muted">
+          Reflexiones practicas sobre estrategia, liderazgo y gestion
+          para equipos y organizaciones que quieren crecer con foco.
+        </p>
+        <div class="mt-12 h-px w-full bg-line"></div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-10 border-b border-line">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <!-- Header -->
-        <div class="flex flex-col gap-5 mb-16">
-          <div class="eyebrow">Ideas y perspectivas</div>
-          <h1 class="font-serif text-4xl md:text-5xl font-light text-text">Todos los artículos</h1>
+        <div class="flex flex-wrap items-center gap-3" data-filter-group>
+          <button type="button" data-filter="Todos" class="rounded-none border px-4 py-2 text-xs tracking-[0.18em] uppercase transition-colors duration-200 border-accent bg-accent/20 text-accent2">Todos</button>
+          <button type="button" data-filter="Estrategia" class="rounded-none border px-4 py-2 text-xs tracking-[0.18em] uppercase transition-colors duration-200 border-line text-muted hover:text-text">Estrategia</button>
+          <button type="button" data-filter="Liderazgo" class="rounded-none border px-4 py-2 text-xs tracking-[0.18em] uppercase transition-colors duration-200 border-line text-muted hover:text-text">Liderazgo</button>
+          <button type="button" data-filter="Gestión" class="rounded-none border px-4 py-2 text-xs tracking-[0.18em] uppercase transition-colors duration-200 border-line text-muted hover:text-text">Gestión</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-14">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-posts-grid>
+          {posts.map((post, index) => (
+            <ArticuloCard post={post} cardIndex={index} hidden={index >= 9} />
+          ))}
         </div>
 
-        <!-- Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sorted.map((art, i) => (
-            <a
-              href={`/articulos/${art.id}`}
-              class="group flex flex-col bg-bg3 border border-line overflow-hidden hover:border-accent/40 transition-colors duration-300"
-            >
-              <!-- Image placeholder -->
-              <div class="relative h-40 bg-bg2 flex items-center justify-center overflow-hidden">
-                <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id={`pat-list-${i}`} width="28" height="28" patternUnits="userSpaceOnUse">
-                      <circle cx="14" cy="14" r="1" fill="#5E9E72"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill={`url(#pat-list-${i})`}/>
-                </svg>
-                <span class="absolute top-3 left-3 z-10 font-sans text-xs font-medium tracking-widest uppercase bg-accent/20 text-accent2 px-2 py-0.5">
-                  {art.data.category}
-                </span>
-              </div>
-              <!-- Content -->
-              <div class="flex flex-col gap-3 p-6 flex-1">
-                <div class="flex items-center gap-2 font-sans text-xs font-light text-muted">
-                  <time>{formatDate(art.data.date)}</time>
-                  <span>·</span>
-                  <span>{art.data.readTime} min de lectura</span>
-                </div>
-                <h2 class="font-serif text-lg font-light text-text group-hover:text-accent2 transition-colors duration-300 leading-snug">
-                  {art.data.title}
-                </h2>
-                <p class="font-sans text-sm font-light text-muted leading-relaxed line-clamp-3 flex-1">
-                  {art.data.excerpt}
-                </p>
-                <span class="font-sans text-xs font-light text-accent flex items-center gap-2 mt-2">
-                  Leer artículo →
-                </span>
-              </div>
-            </a>
-          ))}
+        <div class="mt-12 flex justify-center">
+          <button
+            type="button"
+            data-load-more
+            class="border border-accent px-6 py-3 font-sans text-sm font-light text-accent hover:bg-accent hover:text-bg transition-colors duration-300"
+          >
+            Cargar mas
+          </button>
         </div>
       </div>
     </section>
   </main>
+
   <Footer />
-</Layout>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = Array.from(document.querySelectorAll('[data-post-card]'));
+      const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
+      const loadMoreButton = document.querySelector('[data-load-more]');
+
+      if (!cards.length || !filterButtons.length || !loadMoreButton) return;
+
+      const normalize = (value) =>
+        value
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '');
+
+      const pageSize = 9;
+      let activeFilter = 'Todos';
+      let visibleCount = pageSize;
+
+      const updateFilterButtons = () => {
+        filterButtons.forEach((button) => {
+          const isActive = button.dataset.filter === activeFilter;
+          button.classList.toggle('border-accent', isActive);
+          button.classList.toggle('bg-accent/20', isActive);
+          button.classList.toggle('text-accent2', isActive);
+          button.classList.toggle('border-line', !isActive);
+          button.classList.toggle('text-muted', !isActive);
+        });
+      };
+
+      const applyState = () => {
+        let totalMatches = 0;
+        let visibleMatches = 0;
+
+        cards.forEach((card) => {
+          const category = card.dataset.category || '';
+          const matchesFilter =
+            activeFilter === 'Todos' || normalize(category) === normalize(activeFilter);
+
+          if (matchesFilter) {
+            totalMatches += 1;
+            const shouldShow = visibleMatches < visibleCount;
+            card.classList.toggle('hidden', !shouldShow);
+            if (shouldShow) {
+              visibleMatches += 1;
+            }
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        loadMoreButton.classList.toggle('hidden', visibleCount >= totalMatches);
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeFilter = button.dataset.filter || 'Todos';
+          visibleCount = pageSize;
+          updateFilterButtons();
+          applyState();
+        });
+      });
+
+      loadMoreButton.addEventListener('click', () => {
+        visibleCount += pageSize;
+        applyState();
+      });
+
+      updateFilterButtons();
+      applyState();
+    });
+  </script>
+</BlogLayout>
+

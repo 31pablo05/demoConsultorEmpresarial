@@ -1,10 +1,12 @@
 import { useState } from 'react';
 
 const OPCIONES = [
-  'Diagnóstico estratégico',
-  'Planificación con foco',
-  'Acompañamiento ejecutivo',
-  'Otro',
+  'Diagnóstico de claridad operativa',
+  'Liberación del tiempo del dueño',
+  'Sistema de gestión vivo',
+  'Rituales de gestión',
+  'Mentoría estratégica',
+  'No sé todavía, quiero una charla',
 ];
 
 export default function ContactoForm() {
@@ -54,7 +56,7 @@ export default function ContactoForm() {
   };
 
   const inputClass =
-    'w-full bg-bg3 border border-line text-text placeholder:text-muted font-sans font-light text-sm px-4 py-3 outline-none focus:border-accent transition-colors duration-200';
+    'w-full bg-bg2 border border-line text-text placeholder:text-muted font-sans font-light text-sm px-4 py-3 outline-none focus:border-accent transition-colors duration-200';
 
   const errorClass = 'text-red-400 text-xs mt-1 font-sans';
 
@@ -81,7 +83,7 @@ export default function ContactoForm() {
           Mensaje enviado.
         </h3>
         <p className="font-sans text-sm font-light text-muted">
-          Gracias por escribirme. Voy a estar en contacto en las próximas 24–48 horas.
+          Gracias por escribirme. Voy a revisar tu situación y te contacto en las próximas 24–48 horas.
         </p>
       </div>
     );
@@ -136,7 +138,7 @@ export default function ContactoForm() {
           className={`${inputClass} appearance-none cursor-pointer ${!form.servicio ? 'text-muted' : ''}`}
         >
           <option value="" disabled>
-            ¿En qué podría ayudarte? *
+            ¿Qué necesitás? *
           </option>
           {OPCIONES.map((op) => (
             <option key={op} value={op} className="bg-bg3 text-text">
@@ -151,7 +153,7 @@ export default function ContactoForm() {
       <div>
         <textarea
           name="mensaje"
-          placeholder="Mensaje *"
+          placeholder="Contame brevemente qué está pasando en tu empresa *"
           rows={5}
           value={form.mensaje}
           onChange={handleChange}

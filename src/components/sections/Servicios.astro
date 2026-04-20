@@ -7,49 +7,109 @@ import { servicios } from '../../data/servicios';
     <!-- Header -->
     <div class="flex flex-col gap-5 mb-16 lg:mb-20">
       <div class="reveal eyebrow">Lo que hago</div>
-      <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text">
-        Servicios de consultoría estratégica
+      <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text max-w-2xl">
+        Servicios diseñados para ordenar y escalar.
       </h2>
     </div>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3" style="gap: 1px; background-color: var(--line);">
-      {servicios.map((servicio, i) => (
+    <!-- First row: 2 cols -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-line mb-px">
+      {servicios.slice(0, 2).map((servicio, i) => (
         <article
-          class={`reveal reveal-delay-${i + 1} group relative card-glow bg-bg2 hover:bg-bg3 transition-colors duration-500 overflow-hidden flex flex-col gap-7 p-10 lg:p-12`}
+          class={`reveal reveal-delay-${i + 1} group relative bg-bg2 hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12`}
         >
           <!-- Number decoration -->
           <span
-            class="absolute top-6 right-6 font-serif font-light leading-none select-none pointer-events-none"
-            style="color: rgba(196,151,78,0.06); font-size: 5.5rem;"
+            class="absolute top-5 right-6 font-serif font-light leading-none select-none pointer-events-none text-[5rem]"
+            style="color: rgba(201,168,76,0.07);"
           >
             {servicio.numero}
           </span>
 
           <!-- Icon -->
-          <div class="text-accent w-5 h-5" set:html={servicio.icono} />
+          <div class="text-accent w-6 h-6" set:html={servicio.icono} />
 
           <!-- Content -->
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-3">
             <h3 class="font-serif text-2xl font-light text-text">
               {servicio.nombre}
             </h3>
+            <p class="font-sans text-xs font-medium tracking-widest uppercase text-accent mb-1">
+              Pilar: {servicio.pilar}
+            </p>
             <p class="font-sans text-sm font-light text-muted leading-loose">
               {servicio.descripcion}
             </p>
           </div>
 
-          <!-- Bottom accent line -->
-          <div
-            class="absolute bottom-0 left-0 h-px bg-accent transition-all duration-500"
-            style="width: 0%;"
-            data-hover-line
-          />
-          <style>{`
-            article:hover [data-hover-line] { width: 100% !important; }
-          `}</style>
+          <!-- Bottom accent line on hover -->
+          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
         </article>
       ))}
     </div>
+
+    <!-- Second row: 2 cols -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-line mb-px">
+      {servicios.slice(2, 4).map((servicio, i) => (
+        <article
+          class={`reveal reveal-delay-${i + 1} group relative bg-bg2 hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12`}
+        >
+          <span
+            class="absolute top-5 right-6 font-serif font-light leading-none select-none pointer-events-none text-[5rem]"
+            style="color: rgba(201,168,76,0.07);"
+          >
+            {servicio.numero}
+          </span>
+
+          <div class="text-accent w-6 h-6" set:html={servicio.icono} />
+
+          <div class="flex flex-col gap-3">
+            <h3 class="font-serif text-2xl font-light text-text">
+              {servicio.nombre}
+            </h3>
+            <p class="font-sans text-xs font-medium tracking-widest uppercase text-accent mb-1">
+              Pilar: {servicio.pilar}
+            </p>
+            <p class="font-sans text-sm font-light text-muted leading-loose">
+              {servicio.descripcion}
+            </p>
+          </div>
+
+          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Third row: 1 col centered -->
+    {servicios[4] && (
+      <div class="flex justify-center">
+        <article
+          class="reveal reveal-delay-1 group relative bg-bg2 hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12 w-full md:w-1/2"
+        >
+          <span
+            class="absolute top-5 right-6 font-serif font-light leading-none select-none pointer-events-none text-[5rem]"
+            style="color: rgba(201,168,76,0.07);"
+          >
+            {servicios[4].numero}
+          </span>
+
+          <div class="text-accent w-6 h-6" set:html={servicios[4].icono} />
+
+          <div class="flex flex-col gap-3">
+            <h3 class="font-serif text-2xl font-light text-text">
+              {servicios[4].nombre}
+            </h3>
+            <p class="font-sans text-xs font-medium tracking-widest uppercase text-accent mb-1">
+              Pilar: {servicios[4].pilar}
+            </p>
+            <p class="font-sans text-sm font-light text-muted leading-loose">
+              {servicios[4].descripcion}
+            </p>
+          </div>
+
+          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
+        </article>
+      </div>
+    )}
   </div>
 </section>
