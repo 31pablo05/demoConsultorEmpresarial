@@ -70,7 +70,7 @@ export default function NavbarScroll({ logoSrc }) {
           {logoSrc ? (
             <img src={logoSrc} alt="Nogolí Consulting" className="h-8 w-auto" />
           ) : (
-            <span className="font-serif text-xl font-light tracking-wide text-accent2">
+            <span className="font-display text-text" style={{fontSize: '22px', letterSpacing: '0.05em'}}>
               Nogolí Consulting
             </span>
           )}
@@ -86,9 +86,9 @@ export default function NavbarScroll({ logoSrc }) {
                 <a
                   href={item.href}
                   onClick={(e) => handleNav(e, item.href)}
-                  className={`font-sans text-sm font-light tracking-wide transition-colors duration-200 ${
+                  className={`font-sans text-sm font-normal tracking-wide transition-colors duration-200 ${
                     isActive
-                      ? 'text-accent2'
+                      ? 'text-accent'
                       : 'text-muted hover:text-text'
                   }`}
                 >
@@ -103,7 +103,7 @@ export default function NavbarScroll({ logoSrc }) {
         <a
           href="#contacto"
           onClick={(e) => handleNav(e, '#contacto')}
-          className="hidden md:inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-light font-sans hover:bg-accent2 transition-all duration-300"
+          className="hidden md:inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-medium font-sans rounded hover:bg-accent2 transition-all duration-300"
         >
           Hablemos
         </a>
@@ -138,8 +138,8 @@ export default function NavbarScroll({ logoSrc }) {
                   <a
                     href={item.href}
                     onClick={(e) => handleNav(e, item.href)}
-                    className={`font-sans text-base font-light transition-colors ${
-                      isActive ? 'text-accent2' : 'text-muted hover:text-text'
+                    className={`font-sans text-base font-normal transition-colors ${
+                      isActive ? 'text-accent' : 'text-muted hover:text-text'
                     }`}
                   >
                     {item.label}
@@ -151,7 +151,7 @@ export default function NavbarScroll({ logoSrc }) {
               <a
                 href="#contacto"
                 onClick={(e) => handleNav(e, '#contacto')}
-                className="inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-light font-sans hover:bg-accent2 transition-all duration-300"
+                className="inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-medium font-sans rounded hover:bg-accent2 transition-all duration-300"
               >
                 Hablemos
               </a>

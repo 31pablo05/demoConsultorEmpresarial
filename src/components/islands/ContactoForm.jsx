@@ -56,7 +56,7 @@ export default function ContactoForm() {
   };
 
   const inputClass =
-    'w-full bg-bg2 border border-line text-text placeholder:text-muted font-sans font-light text-sm px-4 py-3 outline-none focus:border-accent transition-colors duration-200';
+    'w-full bg-bg border border-line rounded-sm text-text placeholder:text-muted font-sans font-light text-sm px-4 py-3 outline-none focus:border-accent transition-colors duration-200';
 
   const errorClass = 'text-red-400 text-xs mt-1 font-sans';
 
@@ -165,7 +165,7 @@ export default function ContactoForm() {
       <button
         type="submit"
         disabled={loading}
-        className="self-start flex items-center gap-3 px-8 py-3 bg-accent text-bg font-sans text-sm font-medium hover:bg-accent2 transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+        className="self-start flex items-center gap-3 px-8 py-3 bg-accent text-bg font-sans text-sm font-medium tracking-[0.1em] rounded-sm hover:bg-accent2 transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {loading ? 'Enviando...' : 'Enviar mensaje'}
         {!loading && (

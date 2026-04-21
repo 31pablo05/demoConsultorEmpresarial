@@ -7,29 +7,33 @@
 
 /* Tailwind v4: design tokens */
 @theme {
-  --color-bg:      #F5EDD8;
-  --color-bg2:     #EDE3C8;
-  --color-bg3:     #E3D8B8;
-  --color-accent:  #C9A84C;
-  --color-accent2: #A8882E;
-  --color-text:    #2C1A0E;
-  --color-muted:   #7A6248;
-  --color-line:    rgba(44,26,14,0.12);
+  --color-bg:      #FFF5EC;
+  --color-bg2:     #F0E6D3;
+  --color-bg3:     #E3D5BE;
+  --color-accent:  #D39945;
+  --color-accent2: #B8822E;
+  --color-text:    #240F07;
+  --color-muted:   #635757;
+  --color-line:    rgba(36,15,7,0.10);
 
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans:  'Outfit', system-ui, sans-serif;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
 }
 
 /* CSS variables for var() usage */
 :root {
-  --bg:      #F5EDD8;
-  --bg2:     #EDE3C8;
-  --bg3:     #E3D8B8;
-  --accent:  #C9A84C;
-  --accent2: #A8882E;
-  --text:    #2C1A0E;
-  --muted:   #7A6248;
-  --line:    rgba(44,26,14,0.12);
+  --bg:      #FFF5EC;
+  --bg2:     #F0E6D3;
+  --bg3:     #E3D5BE;
+  --accent:  #D39945;
+  --accent2: #B8822E;
+  --text:    #240F07;
+  --muted:   #635757;
+  --line:    rgba(36,15,7,0.10);
+  --display: 'Bebas Neue', sans-serif;
+  --serif:   'Lora', Georgia, serif;
+  --sans:    'DM Sans', system-ui, sans-serif;
 }
 
 @layer base {
@@ -50,29 +54,31 @@
     color: var(--text);
     font-family: var(--font-sans);
     font-weight: 300;
-    line-height: 1.75;
+    line-height: 1.8;
   }
 
   h1 {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    line-height: 1.08;
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 0.95;
     color: var(--text);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
   }
 
   h2 {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    line-height: 1.12;
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.0;
     color: var(--text);
-    letter-spacing: -0.015em;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
   }
 
   h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    font-weight: 300;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1.25;
     color: var(--text);
   }
 
@@ -109,8 +115,8 @@
   gap: 0.875rem;
   font-family: var(--font-sans);
   font-size: 0.6875rem;
-  font-weight: 400;
-  letter-spacing: 0.2em;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -167,13 +173,16 @@
   50% { background-position: 100% 50%; }
 }
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent2) 0%, #f0ddb8 40%, #C4974E 70%, var(--accent2) 100%);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent2) 0%, #e8c07a 40%, var(--accent) 70%, var(--accent2) 100%);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradient-pan 6s ease infinite;
-  font-style: italic;
+  text-transform: none;
 }
 
 @keyframes btn-shimmer-sweep {

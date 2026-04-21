@@ -7,7 +7,7 @@ import { servicios } from '../../data/servicios';
     <!-- Header -->
     <div class="flex flex-col gap-5 mb-16 lg:mb-20">
       <div class="reveal eyebrow">Lo que hago</div>
-      <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text max-w-2xl">
+      <h2 class="reveal reveal-delay-1 font-display text-text uppercase max-w-2xl" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
         Servicios diseñados para ordenar y escalar.
       </h2>
     </div>
@@ -16,12 +16,12 @@ import { servicios } from '../../data/servicios';
     <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-line mb-px">
       {servicios.slice(0, 2).map((servicio, i) => (
         <article
-          class={`reveal reveal-delay-${i + 1} group relative bg-bg2 hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12`}
+          class={`reveal reveal-delay-${i + 1} group relative bg-bg hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12`}
         >
           <!-- Number decoration -->
           <span
-            class="absolute top-5 right-6 font-serif font-light leading-none select-none pointer-events-none text-[5rem]"
-            style="color: rgba(201,168,76,0.07);"
+            class="absolute top-5 right-6 font-display leading-none select-none pointer-events-none"
+            style="font-size: 64px; color: var(--accent); opacity: 0.2;"
           >
             {servicio.numero}
           </span>
@@ -31,19 +31,19 @@ import { servicios } from '../../data/servicios';
 
           <!-- Content -->
           <div class="flex flex-col gap-3">
-            <h3 class="font-serif text-2xl font-light text-text">
+            <p class="inline-block font-sans text-[10px] font-medium uppercase tracking-[0.12em] text-accent border px-2 py-0.5 mb-3 w-fit" style="border-color: rgba(211,153,69,0.4);">
+              {servicio.pilar}
+            </p>
+            <h3 class="font-serif text-xl font-bold text-text">
               {servicio.nombre}
             </h3>
-            <p class="font-sans text-xs font-medium tracking-widest uppercase text-accent mb-1">
-              Pilar: {servicio.pilar}
-            </p>
             <p class="font-sans text-sm font-light text-muted leading-loose">
               {servicio.descripcion}
             </p>
           </div>
 
           <!-- Bottom accent line on hover -->
-          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
+          <div class="absolute bottom-0 left-0 h-0.5 bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
         </article>
       ))}
     </div>
@@ -52,11 +52,11 @@ import { servicios } from '../../data/servicios';
     <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-line mb-px">
       {servicios.slice(2, 4).map((servicio, i) => (
         <article
-          class={`reveal reveal-delay-${i + 1} group relative bg-bg2 hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12`}
+          class={`reveal reveal-delay-${i + 1} group relative bg-bg hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12`}
         >
           <span
-            class="absolute top-5 right-6 font-serif font-light leading-none select-none pointer-events-none text-[5rem]"
-            style="color: rgba(201,168,76,0.07);"
+            class="absolute top-5 right-6 font-display leading-none select-none pointer-events-none"
+            style="font-size: 64px; color: var(--accent); opacity: 0.2;"
           >
             {servicio.numero}
           </span>
@@ -64,18 +64,18 @@ import { servicios } from '../../data/servicios';
           <div class="text-accent w-6 h-6" set:html={servicio.icono} />
 
           <div class="flex flex-col gap-3">
-            <h3 class="font-serif text-2xl font-light text-text">
+            <p class="inline-block font-sans text-[10px] font-medium uppercase tracking-[0.12em] text-accent border px-2 py-0.5 mb-3 w-fit" style="border-color: rgba(211,153,69,0.4);">
+              {servicio.pilar}
+            </p>
+            <h3 class="font-serif text-xl font-bold text-text">
               {servicio.nombre}
             </h3>
-            <p class="font-sans text-xs font-medium tracking-widest uppercase text-accent mb-1">
-              Pilar: {servicio.pilar}
-            </p>
             <p class="font-sans text-sm font-light text-muted leading-loose">
               {servicio.descripcion}
             </p>
           </div>
 
-          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
+          <div class="absolute bottom-0 left-0 h-0.5 bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
         </article>
       ))}
     </div>
@@ -84,11 +84,11 @@ import { servicios } from '../../data/servicios';
     {servicios[4] && (
       <div class="flex justify-center">
         <article
-          class="reveal reveal-delay-1 group relative bg-bg2 hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12 w-full md:w-1/2"
+          class="reveal reveal-delay-1 group relative bg-bg hover:bg-bg3 transition-colors duration-400 overflow-hidden flex flex-col gap-6 p-10 lg:p-12 w-full md:w-1/2"
         >
           <span
-            class="absolute top-5 right-6 font-serif font-light leading-none select-none pointer-events-none text-[5rem]"
-            style="color: rgba(201,168,76,0.07);"
+            class="absolute top-5 right-6 font-display leading-none select-none pointer-events-none"
+            style="font-size: 64px; color: var(--accent); opacity: 0.2;"
           >
             {servicios[4].numero}
           </span>
@@ -96,18 +96,18 @@ import { servicios } from '../../data/servicios';
           <div class="text-accent w-6 h-6" set:html={servicios[4].icono} />
 
           <div class="flex flex-col gap-3">
-            <h3 class="font-serif text-2xl font-light text-text">
+            <p class="inline-block font-sans text-[10px] font-medium uppercase tracking-[0.12em] text-accent border px-2 py-0.5 mb-3 w-fit" style="border-color: rgba(211,153,69,0.4);">
+              {servicios[4].pilar}
+            </p>
+            <h3 class="font-serif text-xl font-bold text-text">
               {servicios[4].nombre}
             </h3>
-            <p class="font-sans text-xs font-medium tracking-widest uppercase text-accent mb-1">
-              Pilar: {servicios[4].pilar}
-            </p>
             <p class="font-sans text-sm font-light text-muted leading-loose">
               {servicios[4].descripcion}
             </p>
           </div>
 
-          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
+          <div class="absolute bottom-0 left-0 h-0.5 bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
         </article>
       </div>
     )}

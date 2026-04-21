@@ -32,7 +32,7 @@ const metricas = [
     <!-- Header -->
     <div class="flex flex-col gap-5 mb-16 text-center">
       <div class="reveal eyebrow justify-center">Qué lográs</div>
-      <h2 class="reveal reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-light text-text">
+      <h2 class="reveal reveal-delay-1 font-display text-text uppercase" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
         Resultados concretos, no promesas.
       </h2>
     </div>
@@ -43,17 +43,17 @@ const metricas = [
         <div class="bg-bg2 p-8 lg:p-10 flex flex-col gap-3 hover:bg-bg3 transition-colors duration-300">
           <div class="flex items-baseline gap-2">
             <span
-              class="font-serif text-5xl font-light leading-none"
-              style={m.icon === '↑' ? 'color: var(--accent);' : 'color: var(--accent2);'}
+              class="font-serif text-2xl font-bold leading-none"
+              style="color: var(--accent);"
             >
               {m.icon}
             </span>
             {m.valor && (
-              <span class="font-serif text-3xl font-light text-text">{m.valor}</span>
+              <span class="font-serif text-xl font-bold text-text">{m.valor}</span>
             )}
           </div>
           <p class="font-sans text-xs font-medium tracking-widest uppercase text-muted">{m.direccion}</p>
-          <p class="font-sans text-sm font-light text-text leading-snug">{m.label}</p>
+          <p class="font-serif text-[17px] font-bold text-text leading-snug">{m.label}</p>
         </div>
       ))}
     </div>
