@@ -106,8 +106,15 @@ const year = new Date().getFullYear();
       <p class="font-sans text-xs font-light" style="color: rgba(255,245,236,0.4);">
         &copy; {year} {siteConfig.name}. Todos los derechos reservados.
       </p>
-      <p class="font-sans text-xs font-light" style="color: rgba(255,245,236,0.4);">
-        Construido con <span class="text-accent">Astro</span> + Tailwind
+      <p style="font-family: var(--font-sans); font-size: 11px; font-weight: 400; color: var(--muted); letter-spacing: 0.05em;">
+        Desarrollado por <a
+          href={siteConfig.developer.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color: var(--accent); font-weight: 500; text-decoration: none; transition: color 0.2s;"
+          onmouseover="this.style.color='var(--accent2)'; this.style.textDecoration='underline';"
+          onmouseout="this.style.color='var(--accent)'; this.style.textDecoration='none';"
+        >{siteConfig.developer.name}</a>
       </p>
     </div>
   </div>

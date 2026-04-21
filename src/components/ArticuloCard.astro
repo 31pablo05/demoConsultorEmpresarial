@@ -52,17 +52,20 @@ const patternId = `art-pattern-${post.slug.replace(/[^a-zA-Z0-9-]/g, '')}-${feat
         class="h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
       />
     ) : (
-      <>
-        <svg class="absolute inset-0 h-full w-full opacity-15" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id={patternId} width="28" height="28" patternUnits="userSpaceOnUse">
-              <circle cx="14" cy="14" r="1" style="fill: var(--accent)" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill={`url(#${patternId})`} />
-        </svg>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(221,185,106,0.18),transparent_60%)]"></div>
-      </>
+      <div
+        class:list={['articulo-img-placeholder w-full', featured ? 'h-56 md:h-72' : 'h-44']}
+        style="
+          background-color: var(--bg3);
+          background-image:
+            linear-gradient(45deg, var(--line) 25%, transparent 25%),
+            linear-gradient(-45deg, var(--line) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, var(--line) 75%),
+            linear-gradient(-45deg, transparent 75%, var(--line) 75%);
+          background-size: 20px 20px;
+          background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+          opacity: 0.85;
+        "
+      ></div>
     )}
 
         <span class="absolute left-4 top-4 z-10 w-fit border px-3 py-1 font-sans text-[10px] font-medium uppercase tracking-[0.12em] text-accent" style="border-color: rgba(211,153,69,0.4);">

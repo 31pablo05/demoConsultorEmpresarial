@@ -8,7 +8,11 @@ export const siteConfig = {
   email: "sergio@nogoliconsulting.com",
   whatsapp: "+5491130855891",
   whatsappDisplay: "+54 9 11 3085-5891",
-  linkedin: "linkedin.com/in/sergio-martín-celuch",
+  linkedin: "linkedin.com/in/sergio-martin-celuch",
   linkedinEmpresa: "linkedin.com/company/nogoli-consulting",
   instagram: "",
+  developer: {
+    name: "DevCraft",
+    url: "https://devcraftpablo.online/",
+  },
 };
