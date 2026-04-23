@@ -9,16 +9,16 @@ const sintomas = [
 ];
 ---
 
-<section id="desafio" class="bg-bg2 py-28 md:py-40">
+<section id="desafio" class="bg-cream-mid py-28 md:py-40">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <!-- Header -->
     <div class="flex flex-col gap-5 mb-14 text-center max-w-3xl mx-auto">
       <div class="reveal eyebrow justify-center">El problema que resolvemos</div>
-      <h2 class="reveal reveal-delay-1 font-display text-text uppercase" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+      <h2 class="reveal reveal-delay-1 font-serif text-espresso" style="font-size: clamp(36px, 5vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
         Lo que antes funcionaba,<br />
         hoy no te deja crecer.
       </h2>
-      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light text-muted leading-loose">
+      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light leading-loose" style="color: var(--dark-mid);">
         La organización creció y aparecieron síntomas típicos: sobrecarga del dueño/gerentes,
         decisiones que no suceden a tiempo, compromisos poco visibles, reuniones largas sin cierre,
         retrabajo y proyectos sin visibilidad por hitos, riesgos y responsables.
@@ -28,7 +28,7 @@ const sintomas = [
     <!-- Symptoms grid -->
     <div class="reveal reveal-delay-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
       {sintomas.map((sintoma) => (
-        <div class="flex items-start gap-4 p-5 border border-line bg-bg hover:border-accent/40 transition-colors duration-300">
+        <div class="flex items-start gap-4 p-5 bg-cream hover:bg-warm-white transition-colors duration-300" style="border-left: 4px solid var(--gold-dark);">
           <!-- Warning icon in accent -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -46,13 +46,13 @@ const sintomas = [
             <path d="M12 9v4"/>
             <path d="M12 17h.01"/>
           </svg>
-          <span class="font-sans text-sm font-light text-text leading-snug">{sintoma}</span>
+          <span class="font-sans text-sm font-light leading-snug" style="color: var(--espresso);">{sintoma}</span>
         </div>
       ))}
     </div>
 
     <!-- Closing statement -->
-    <p class="reveal reveal-delay-3 font-serif italic text-lg text-muted text-center mt-14 max-w-2xl mx-auto leading-relaxed">
+    <p class="reveal reveal-delay-3 font-serif italic text-lg text-center mt-14 max-w-2xl mx-auto leading-relaxed" style="color: var(--dark-mid);">
       El desorden no aparece de golpe: crece en silencio mientras la empresa avanza.
     </p>
   </div>

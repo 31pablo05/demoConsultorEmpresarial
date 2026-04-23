@@ -53,11 +53,10 @@ export default function NavbarScroll({ logoSrc }) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-bg/95 backdrop-blur-md border-b border-line shadow-sm'
-          : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream/95 backdrop-blur-md ${
+        scrolled ? 'shadow-sm' : ''
       }`}
+      style={{ borderBottom: '1px solid rgba(200,169,110,0.30)' }}
     >
       <nav className="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -68,9 +67,9 @@ export default function NavbarScroll({ logoSrc }) {
           aria-label="Nogolí Consulting — inicio"
         >
           {logoSrc ? (
-            <img src={logoSrc} alt="Nogolí Consulting" className="h-8 w-auto" />
+            <img src={logoSrc} alt="Nogolí Consulting" className="w-20 h-20 object-contain" />
           ) : (
-            <span className="font-display text-text" style={{fontSize: '22px', letterSpacing: '0.05em'}}>
+            <span className="font-serif text-espresso" style={{fontSize: '20px', letterSpacing: '0.04em', fontWeight: '700'}}>
               Nogolí Consulting
             </span>
           )}
@@ -86,10 +85,10 @@ export default function NavbarScroll({ logoSrc }) {
                 <a
                   href={item.href}
                   onClick={(e) => handleNav(e, item.href)}
-                  className={`font-sans text-sm font-normal tracking-wide transition-colors duration-200 ${
+                  className={`font-sans text-sm font-normal tracking-wide transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-px after:bg-gold-dark after:transition-all after:duration-300 ${
                     isActive
-                      ? 'text-accent'
-                      : 'text-muted hover:text-text'
+                      ? 'text-gold-dark after:w-full'
+                      : 'text-dark-mid hover:text-espresso after:w-0 hover:after:w-full'
                   }`}
                 >
                   {item.label}
@@ -103,7 +102,7 @@ export default function NavbarScroll({ logoSrc }) {
         <a
           href="#contacto"
           onClick={(e) => handleNav(e, '#contacto')}
-          className="hidden md:inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-medium font-sans rounded hover:bg-accent2 transition-all duration-300"
+          className="hidden md:inline-flex items-center px-5 py-2 border border-gold-dark text-gold-dark text-sm font-medium font-sans rounded-sm hover:bg-gold-dark hover:text-cream transition-all duration-200"
         >
           Hablemos
         </a>
@@ -111,7 +110,7 @@ export default function NavbarScroll({ logoSrc }) {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2 text-text"
+          className="md:hidden flex flex-col gap-1.5 p-2 text-espresso"
           aria-label="Abrir menú"
         >
           <span
@@ -128,7 +127,7 @@ export default function NavbarScroll({ logoSrc }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-bg border-t border-line px-6 py-6 shadow-lg">
+        <div className="md:hidden bg-cream border-t px-6 py-6 shadow-lg" style={{borderColor: 'rgba(200,169,110,0.30)'}}>
           <ul className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => {
               const id = item.href.replace('#', '');
@@ -139,7 +138,7 @@ export default function NavbarScroll({ logoSrc }) {
                     href={item.href}
                     onClick={(e) => handleNav(e, item.href)}
                     className={`font-sans text-base font-normal transition-colors ${
-                      isActive ? 'text-accent' : 'text-muted hover:text-text'
+                      isActive ? 'text-gold-dark' : 'text-dark-mid hover:text-espresso'
                     }`}
                   >
                     {item.label}
@@ -151,7 +150,7 @@ export default function NavbarScroll({ logoSrc }) {
               <a
                 href="#contacto"
                 onClick={(e) => handleNav(e, '#contacto')}
-                className="inline-flex items-center px-5 py-2 bg-accent text-bg text-sm font-medium font-sans rounded hover:bg-accent2 transition-all duration-300"
+                className="inline-flex items-center px-5 py-2 border border-gold-dark text-gold-dark text-sm font-medium font-sans rounded-sm hover:bg-gold-dark hover:text-cream transition-all duration-200"
               >
                 Hablemos
               </a>

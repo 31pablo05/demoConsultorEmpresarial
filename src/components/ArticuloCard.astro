@@ -34,11 +34,12 @@ const patternId = `art-pattern-${post.slug.replace(/[^a-zA-Z0-9-]/g, '')}-${feat
   data-category={post.category}
   data-post-index={cardIndex}
   class:list={[
-    'group flex flex-col overflow-hidden border border-line bg-bg2 transition-all duration-300 hover:border-accent/45 hover:bg-bg3',
+    'group flex flex-col overflow-hidden bg-warm-white transition-all duration-300 hover:shadow-md hover:-translate-y-0.5',
     featured ? 'h-full' : '',
     hidden ? 'hidden' : '',
     className,
   ]}
+  style="border: 1px solid rgba(200,169,110,0.25);"
 >
   <div class:list={[
     'relative overflow-hidden bg-bg3',
@@ -55,12 +56,12 @@ const patternId = `art-pattern-${post.slug.replace(/[^a-zA-Z0-9-]/g, '')}-${feat
       <div
         class:list={['articulo-img-placeholder w-full', featured ? 'h-56 md:h-72' : 'h-44']}
         style="
-          background-color: var(--bg3);
+          background-color: var(--cream-mid);
           background-image:
-            linear-gradient(45deg, var(--line) 25%, transparent 25%),
-            linear-gradient(-45deg, var(--line) 25%, transparent 25%),
-            linear-gradient(45deg, transparent 75%, var(--line) 75%),
-            linear-gradient(-45deg, transparent 75%, var(--line) 75%);
+            linear-gradient(45deg, rgba(200,169,110,0.15) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(200,169,110,0.15) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, rgba(200,169,110,0.15) 75%),
+            linear-gradient(-45deg, transparent 75%, rgba(200,169,110,0.15) 75%);
           background-size: 20px 20px;
           background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
           opacity: 0.85;
@@ -68,7 +69,7 @@ const patternId = `art-pattern-${post.slug.replace(/[^a-zA-Z0-9-]/g, '')}-${feat
       ></div>
     )}
 
-        <span class="absolute left-4 top-4 z-10 w-fit border px-3 py-1 font-sans text-[10px] font-medium uppercase tracking-[0.12em] text-accent" style="border-color: rgba(211,153,69,0.4);">
+        <span class="absolute left-4 top-4 z-10 w-fit px-3 py-1 font-sans text-[10px] font-medium uppercase tracking-[0.12em] text-gold-dark" style="background: rgba(200,169,110,0.18); border: 1px solid rgba(168,137,62,0.30);">
       {post.category}
     </span>
   </div>
@@ -77,24 +78,24 @@ const patternId = `art-pattern-${post.slug.replace(/[^a-zA-Z0-9-]/g, '')}-${feat
     'flex flex-1 flex-col gap-3',
     featured ? 'p-8' : 'p-6',
   ]}>
-    <div class="flex items-center gap-2 font-sans text-xs font-light text-muted">
+    <div class="flex items-center gap-2 font-sans text-xs font-light" style="color: var(--dark-mid); opacity: 0.8;">
       <time>{formatDate(post.date)}</time>
       <span>·</span>
       <span>{post.readTime} min de lectura</span>
     </div>
 
     <h2 class:list={[
-      'font-serif font-bold leading-snug text-text transition-colors duration-300 group-hover:text-accent2',
+      'font-serif font-bold leading-snug text-espresso transition-colors duration-300 group-hover:text-gold-dark',
       featured ? 'text-3xl' : 'text-[1.35rem]',
     ]}>
       {post.title}
     </h2>
 
-    <p class="line-clamp-3 flex-1 font-sans text-sm font-light leading-relaxed text-muted">
+    <p class="line-clamp-3 flex-1 font-sans text-sm font-light leading-relaxed" style="color: var(--dark-mid);">
       {post.excerpt}
     </p>
 
-    <span class="mt-2 inline-flex items-center gap-2 font-sans text-sm font-medium text-accent transition-colors duration-300 group-hover:text-accent2">
+    <span class="mt-2 inline-flex items-center gap-2 font-sans text-sm font-medium text-gold-dark transition-colors duration-300 group-hover:text-accent">
       Leer articulo →
     </span>
   </div>

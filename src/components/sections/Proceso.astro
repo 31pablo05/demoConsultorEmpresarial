@@ -2,12 +2,12 @@
 import { proceso } from '../../data/proceso';
 ---
 
-<section id="proceso" class="bg-bg2 py-28 md:py-40">
+<section id="proceso" class="bg-bg py-28 md:py-40">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <!-- Header -->
     <div class="flex flex-col gap-5 mb-20 text-center">
       <div class="reveal eyebrow justify-center">Cómo trabajo</div>
-      <h2 class="reveal reveal-delay-1 font-display text-text uppercase" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+      <h2 class="reveal reveal-delay-1 font-serif text-text" style="font-size: clamp(36px, 5vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
         Un proceso claro, sin sorpresas.
       </h2>
     </div>
@@ -20,8 +20,8 @@ import { proceso } from '../../data/proceso';
       {proceso.map((paso, i) => (
         <div class={`reveal reveal-delay-${i + 1} relative flex flex-col items-center text-center gap-5 px-6 py-8 sm:px-8`}>
           <!-- Circle with number -->
-          <div class="relative z-10 w-20 h-20 lg:w-24 lg:h-24 bg-bg flex items-center justify-center shrink-0" style="border: 1.5px solid var(--accent);">
-            <span class="font-display text-accent" style="font-size: 24px;">{paso.numero}</span>
+          <div class="relative z-10 w-20 h-20 lg:w-24 lg:h-24 bg-bg2 flex items-center justify-center shrink-0" style="border: 1.5px solid var(--accent);">
+            <span class="font-serif text-accent font-bold" style="font-size: 22px;">{paso.numero}</span>
           </div>
 
           <!-- Content -->

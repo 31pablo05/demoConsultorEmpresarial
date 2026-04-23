@@ -6,7 +6,7 @@ const formacion = [
 ];
 ---
 
-<section id="sobre" class="bg-bg py-28 md:py-40">
+<section id="sobre" class="bg-cream-mid py-28 md:py-40">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
@@ -14,18 +14,18 @@ const formacion = [
       <div class="flex flex-col gap-10">
         <div class="flex flex-col gap-6">
           <div class="reveal eyebrow">Quién soy</div>
-          <h2 class="reveal reveal-delay-1 font-display text-text uppercase" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+          <h2 class="reveal reveal-delay-1 font-serif text-espresso" style="font-size: clamp(36px, 5vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
             Un consultor que trabaja dentro,<br />
             <em class="gradient-text" style="font-size: inherit;">no desde afuera.</em>
           </h2>
         </div>
 
         <div class="reveal reveal-delay-2 flex flex-col gap-5">
-          <p class="font-sans text-base font-light text-muted leading-loose">
+          <p class="font-sans text-base font-light leading-loose" style="color: var(--dark-mid);">
             Soy Sergio Celuch, consultor especializado en ayudar a empresas a ordenar
             su operación para que puedan crecer sin sumar burocracia.
           </p>
-          <p class="font-sans text-base font-light text-muted leading-loose">
+          <p class="font-sans text-base font-light leading-loose" style="color: var(--dark-mid);">
             Después de años trabajando en corporaciones, liderando proyectos, supply chain,
             operaciones y equipos en contextos complejos, entendí algo muy simple: muchas
             empresas no pueden crecer porque no logran ordenar sus procesos. Tienen personas
@@ -33,7 +33,7 @@ const formacion = [
             en reuniones improductivas, responsabilidades difusas y decisiones que dependen
             siempre de los mismos.
           </p>
-          <p class="font-sans text-base font-light text-muted leading-loose">
+          <p class="font-sans text-base font-light leading-loose" style="color: var(--dark-mid);">
             A través de Nogolí Consulting acompaño a dueños, directores y líderes a
             transformar ese desorden en una forma de trabajo clara, usable y sostenible,
             sin sumar burocracia.
@@ -41,8 +41,8 @@ const formacion = [
         </div>
 
         <!-- Quote -->
-        <blockquote class="reveal reveal-delay-3 pl-6 py-5 px-6 bg-bg2" style="border-left: 3px solid var(--accent);">
-          <p class="font-serif text-[17px] font-semibold italic text-muted leading-relaxed">
+        <blockquote class="reveal reveal-delay-3 pl-6 py-5 px-6 bg-cream" style="border-left: 3px solid var(--accent);">
+          <p class="font-serif text-[17px] font-semibold italic leading-relaxed" style="color: var(--dark-mid);">
             &ldquo;No se trata de documentar por cumplir, sino de alinear dirección,
             procesos, liderazgo y comunicación.&rdquo;
           </p>
@@ -51,7 +51,7 @@ const formacion = [
         <!-- Formación -->
         <ul class="reveal reveal-delay-3 flex flex-col gap-3">
           {formacion.map((cred) => (
-            <li class="flex items-start gap-4 font-sans text-sm font-light text-muted">
+            <li class="flex items-start gap-4 font-sans text-sm font-light" style="color: var(--dark-mid);">
               <span class="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
               {cred}
             </li>
@@ -67,7 +67,7 @@ const formacion = [
         <!-- Photo -->
         <div class="relative z-10 w-full aspect-3/4 bg-bg3 overflow-hidden">
           <img
-            src="/fotos/sergio-sobre.jpg"
+            src="/imagenes/perfil/SergioMartin44.jpg"
             alt="Sergio Martín Celuch — Nogolí Consulting"
             class="w-full h-full object-cover object-top"
             loading="lazy"
@@ -76,9 +76,9 @@ const formacion = [
         </div>
 
         <!-- Name tag -->
-        <div class="absolute -bottom-5 left-5 z-20 bg-bg border border-line px-5 py-3">
-          <p class="font-serif text-base font-light text-text">Sergio Martín Celuch</p>
-          <p class="font-sans text-[10px] text-muted uppercase tracking-widest">Founder, Nogolí Consulting</p>
+        <div class="absolute -bottom-5 left-5 z-20 bg-cream border border-line px-5 py-3">
+          <p class="font-serif text-base font-semibold text-espresso">Sergio Martín Celuch</p>
+          <p class="font-sans text-[10px] uppercase tracking-widest mt-0.5" style="color: var(--accent);">Founder, Nogolí Consulting</p>
         </div>
       </div>
 

@@ -4,6 +4,10 @@ import typography from '@tailwindcss/typography';
 const config: Config = {
   theme: {
     extend: {
+      fontFamily: {
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        sans:  ['Lato', 'Inter', 'system-ui', 'sans-serif'],
+      },
       typography: {
         blog: {
           css: {

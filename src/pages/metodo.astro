@@ -89,12 +89,12 @@ const diferenciales = [
     <div class="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="/" class="flex items-center">
         <img
-          src="/logo-nogoli.png"
+          src="/imagenes/logo/logonogoli.svg"
           alt="Nogolí Consulting"
-          class="h-8 w-auto"
+          class="w-10 h-10 object-contain"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
         />
-        <span class="font-display text-text hidden" style="font-size: 22px; letter-spacing: 0.05em;">Nogolí Consulting</span>
+        <span class="font-serif text-text hidden" style="font-size: 20px; font-weight: 700; letter-spacing: 0.03em;">Nogolí Consulting</span>
       </a>
       <a
         href="/"
@@ -114,7 +114,7 @@ const diferenciales = [
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl">
           <div class="reveal eyebrow mb-6">Nuestra filosofía de ejecución</div>
-          <h1 class="reveal reveal-delay-1 font-display text-text uppercase mb-8" style="font-size: clamp(56px, 9vw, 110px); line-height: 0.95; letter-spacing: 0.01em; font-weight: 400;">
+          <h1 class="reveal reveal-delay-1 font-serif text-text mb-8" style="font-size: clamp(48px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 900;">
             El Método Nogolí.
           </h1>
           <p class="reveal reveal-delay-2 font-sans text-base md:text-xl font-light text-muted leading-loose max-w-2xl">
@@ -147,7 +147,7 @@ const diferenciales = [
           {['VISIÓN', 'PROCESOS', 'EJECUCIÓN DIARIA'].map((step, i) => (
             <div class="flex flex-col sm:flex-row items-center">
               <div class="flex flex-col items-center gap-2 px-8 py-5 border border-line bg-bg2 min-w-40 text-center">
-                <span class="font-display text-text uppercase" style="font-size: 20px; letter-spacing: 0.01em;">{step}</span>
+                <span class="font-serif text-text font-semibold" style="font-size: 18px; letter-spacing: 0.02em;">{step}</span>
               </div>
               {i < 2 && (
                 <svg class="hidden sm:block rotate-0" width="48" height="2" viewBox="0 0 48 2">
@@ -174,7 +174,7 @@ const diferenciales = [
                 <span class="font-sans text-xs font-medium tracking-widest uppercase text-accent">{pilar.numero}</span>
                 <div class="w-8 h-px bg-accent/50"></div>
               </div>
-              <h2 class="font-display text-text uppercase mb-6" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+              <h2 class="font-serif text-text mb-6" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
                 {pilar.titulo}
               </h2>
               {pilar.descripcion.split('\n\n').map((para) => (
@@ -201,7 +201,7 @@ const diferenciales = [
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="flex flex-col gap-5 mb-14">
           <div class="reveal eyebrow">Por qué es diferente</div>
-          <h2 class="reveal reveal-delay-1 font-display text-text uppercase max-w-2xl" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+          <h2 class="reveal reveal-delay-1 font-serif text-text max-w-2xl" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
             No es consultoría tradicional.
           </h2>
         </div>
@@ -222,7 +222,7 @@ const diferenciales = [
     <section class="bg-bg py-28 md:py-40 border-t border-line">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center gap-8">
         <div class="reveal eyebrow justify-center">El siguiente paso</div>
-        <h2 class="reveal reveal-delay-1 font-display text-text uppercase max-w-2xl" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+        <h2 class="reveal reveal-delay-1 font-serif text-text max-w-2xl" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
           Hablemos sobre tu empresa.
         </h2>
         <p class="reveal reveal-delay-2 font-sans text-base font-light text-muted max-w-xl leading-loose">

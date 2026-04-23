@@ -27,12 +27,12 @@ const metricas = [
 ];
 ---
 
-<section id="resultados" class="bg-bg py-28 md:py-40">
+<section id="resultados" class="bg-cream-mid py-28 md:py-40">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <!-- Header -->
     <div class="flex flex-col gap-5 mb-16 text-center">
       <div class="reveal eyebrow justify-center">Qué lográs</div>
-      <h2 class="reveal reveal-delay-1 font-display text-text uppercase" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+      <h2 class="reveal reveal-delay-1 font-serif text-espresso" style="font-size: clamp(36px, 5vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
         Resultados concretos, no promesas.
       </h2>
     </div>
@@ -40,7 +40,7 @@ const metricas = [
     <!-- Metrics grid -->
     <div class="reveal reveal-delay-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line mb-16">
       {metricas.map((m) => (
-        <div class="bg-bg2 p-8 lg:p-10 flex flex-col gap-3 hover:bg-bg3 transition-colors duration-300">
+        <div class="bg-bg hover:bg-bg2 p-8 lg:p-10 flex flex-col gap-3 transition-colors duration-300" style="border: 1px solid rgba(200,169,110,0.20);">
           <div class="flex items-baseline gap-2">
             <span
               class="font-serif text-2xl font-bold leading-none"
@@ -49,18 +49,18 @@ const metricas = [
               {m.icon}
             </span>
             {m.valor && (
-              <span class="font-serif text-xl font-bold text-text">{m.valor}</span>
+              <span class="font-serif text-xl font-bold text-gold-pale">{m.valor}</span>
             )}
           </div>
-          <p class="font-sans text-xs font-medium tracking-widest uppercase text-muted">{m.direccion}</p>
+          <p class="font-sans text-xs font-medium tracking-widest uppercase" style="color: rgba(232,213,168,0.70);">{m.direccion}</p>
           <p class="font-serif text-[17px] font-bold text-text leading-snug">{m.label}</p>
         </div>
       ))}
     </div>
 
     <!-- Conclusion text -->
-    <div class="reveal reveal-delay-3 max-w-3xl mx-auto text-center">
-      <p class="font-sans text-base md:text-lg font-light text-muted leading-loose">
+    <div class="reveal reveal-delay-3 max-w-3xl mx-auto pl-6 py-5 px-6 bg-cream" style="border-left: 4px solid var(--gold-dark);">
+      <p class="font-sans text-base md:text-lg font-light leading-loose" style="color: var(--dark-mid);">
         Ordenar la ejecución no requiere burocracia: requiere un sistema simple para
         decidir, comprometerse, ejecutar y mejorar. Al convertir coordinación y retrabajo
         en capacidad real de entrega, la organización libera tiempo del liderazgo y queda

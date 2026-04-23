@@ -3,7 +3,7 @@ import ContactoForm from '../islands/ContactoForm.jsx';
 import { siteConfig } from '../../data/siteConfig';
 ---
 
-<section id="contacto" class="bg-bg py-24 md:py-32 border-t border-line">
+<section id="contacto" class="bg-bg py-24 md:py-32" style="border-top: 1px solid rgba(200,149,42,0.15);">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
@@ -11,9 +11,9 @@ import { siteConfig } from '../../data/siteConfig';
       <div class="flex flex-col gap-10">
         <div class="flex flex-col gap-5">
           <div class="reveal eyebrow">Hablemos</div>
-          <h2 class="reveal reveal-delay-1 font-display text-text uppercase" style="font-size: clamp(36px, 5vw, 72px); line-height: 1.0; letter-spacing: 0.01em;">
+          <h2 class="reveal reveal-delay-1 font-serif text-text" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
             ¿Querés ordenar la ejecución<br />
-            <em class="font-serif italic text-accent" style="text-transform: none; font-size: 0.75em;">sin sumar burocracia</em>?
+            <em class="font-serif italic text-accent" style="font-size: 0.85em;">sin sumar burocracia</em>?
           </h2>
           <p class="reveal reveal-delay-2 font-sans text-base font-light text-muted max-w-sm leading-relaxed">
             Te propongo una charla corta. Revisamos tu situación y te digo si
@@ -74,7 +74,7 @@ import { siteConfig } from '../../data/siteConfig';
       </div>
 
       <!-- Right: Form island -->
-      <div class="reveal reveal-delay-2">
+      <div class="reveal reveal-delay-2 bg-bg2 rounded-sm p-6 md:p-8" style="border: 1px solid rgba(200,149,42,0.15);">
         <ContactoForm client:load />
       </div>
 

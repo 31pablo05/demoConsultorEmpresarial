@@ -5,13 +5,13 @@ import { getAllPosts } from '../../lib/posts';
 const articulos = (await getAllPosts()).slice(0, 3);
 ---
 
-<section id="articulos" class="bg-bg2 py-24 md:py-32">
+<section id="articulos" class="bg-cream py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
 
     <div class="reveal flex flex-wrap items-end justify-between gap-6 mb-14">
       <div class="flex flex-col gap-4">
         <div class="eyebrow">Ideas y perspectivas</div>
-        <h2 class="font-display text-text uppercase" style="font-size: clamp(32px, 4vw, 60px); line-height: 1.0; letter-spacing: 0.01em;">&#218;ltimos art&#237;culos</h2>
+        <h2 class="font-serif text-espresso" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.2; letter-spacing: -0.01em;">&#218;ltimos artículos</h2>
       </div>
       <a
         href="/articulos"
