@@ -3,7 +3,7 @@ import ContactoForm from '../islands/ContactoForm.jsx';
 import { siteConfig } from '../../data/siteConfig';
 ---
 
-<section id="contacto" class="bg-bg py-24 md:py-32" style="border-top: 1px solid rgba(200,149,42,0.15);">
+<section id="contacto" class="bg-cream-mid py-24 md:py-32" style="border-top: 1px solid rgba(211,153,69,0.22);">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
@@ -11,11 +11,11 @@ import { siteConfig } from '../../data/siteConfig';
       <div class="flex flex-col gap-10">
         <div class="flex flex-col gap-5">
           <div class="reveal eyebrow">Hablemos</div>
-          <h2 class="reveal reveal-delay-1 font-serif text-text" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
+          <h2 class="reveal reveal-delay-1 font-serif text-espresso" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
             ¿Querés ordenar la ejecución<br />
             <em class="font-serif italic text-accent" style="font-size: 0.85em;">sin sumar burocracia</em>?
           </h2>
-          <p class="reveal reveal-delay-2 font-sans text-base font-light text-muted max-w-sm leading-relaxed">
+          <p class="reveal reveal-delay-2 font-sans text-base font-light max-w-sm leading-relaxed" style="color: var(--dark-mid);">
             Te propongo una charla corta. Revisamos tu situación y te digo si
             el Sprint Organizacional aplica y por dónde empezar.
           </p>
@@ -25,15 +25,15 @@ import { siteConfig } from '../../data/siteConfig';
         <div class="reveal reveal-delay-3 flex flex-col gap-4">
           <!-- Email -->
           <div class="flex items-center gap-4">
-            <div class="w-10 h-10 border border-line bg-bg2 flex items-center justify-center shrink-0">
+            <div class="w-10 h-10 border bg-cream flex items-center justify-center shrink-0" style="border-color: rgba(211,153,69,0.35);">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
                 <rect width="20" height="16" x="2" y="4" rx="2"/>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
               </svg>
             </div>
             <div>
-              <p class="font-sans text-xs font-light text-muted uppercase tracking-widest mb-0.5">Email</p>
-              <a href={`mailto:${siteConfig.email}`} class="font-sans text-sm font-light text-text hover:text-accent transition-colors">
+              <p class="font-sans text-xs font-light uppercase tracking-widest mb-0.5" style="color: var(--dark-mid); opacity: 0.7;">Email</p>
+              <a href={`mailto:${siteConfig.email}`} class="font-sans text-sm font-light text-espresso hover:text-accent transition-colors">
                 {siteConfig.email}
               </a>
             </div>
@@ -41,14 +41,14 @@ import { siteConfig } from '../../data/siteConfig';
 
           <!-- WhatsApp -->
           <div class="flex items-center gap-4">
-            <div class="w-10 h-10 border border-line bg-bg2 flex items-center justify-center shrink-0">
+            <div class="w-10 h-10 border bg-cream flex items-center justify-center shrink-0" style="border-color: rgba(211,153,69,0.35);">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.45 2 2 0 0 1 3.57 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.63a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
             </div>
             <div>
-              <p class="font-sans text-xs font-light text-muted uppercase tracking-widest mb-0.5">WhatsApp</p>
-              <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-text hover:text-accent transition-colors">
+              <p class="font-sans text-xs font-light uppercase tracking-widest mb-0.5" style="color: var(--dark-mid); opacity: 0.7;">WhatsApp</p>
+              <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-espresso hover:text-accent transition-colors">
                 {siteConfig.whatsappDisplay}
               </a>
             </div>
@@ -56,7 +56,7 @@ import { siteConfig } from '../../data/siteConfig';
 
           <!-- LinkedIn -->
           <div class="flex items-center gap-4">
-            <div class="w-10 h-10 border border-line bg-bg2 flex items-center justify-center shrink-0">
+            <div class="w-10 h-10 border bg-cream flex items-center justify-center shrink-0" style="border-color: rgba(211,153,69,0.35);">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                 <rect width="4" height="12" x="2" y="9"/>
@@ -64,8 +64,8 @@ import { siteConfig } from '../../data/siteConfig';
               </svg>
             </div>
             <div>
-              <p class="font-sans text-xs font-light text-muted uppercase tracking-widest mb-0.5">LinkedIn</p>
-              <a href={`https://${siteConfig.linkedin}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-text hover:text-accent transition-colors">
+              <p class="font-sans text-xs font-light uppercase tracking-widest mb-0.5" style="color: var(--dark-mid); opacity: 0.7;">LinkedIn</p>
+              <a href={`https://${siteConfig.linkedin}`} target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-light text-espresso hover:text-accent transition-colors">
                 {siteConfig.linkedin}
               </a>
             </div>
@@ -74,7 +74,7 @@ import { siteConfig } from '../../data/siteConfig';
       </div>
 
       <!-- Right: Form island -->
-      <div class="reveal reveal-delay-2 bg-bg2 rounded-sm p-6 md:p-8" style="border: 1px solid rgba(200,149,42,0.15);">
+      <div class="reveal reveal-delay-2 bg-cream rounded-sm p-6 md:p-8" style="border: 1px solid rgba(211,153,69,0.25);">
         <ContactoForm client:load />
       </div>
 

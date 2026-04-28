@@ -56,7 +56,9 @@ export default function ContactoForm() {
   };
 
   const inputClass =
-    'w-full bg-bg border border-line rounded-sm text-text placeholder:text-muted font-sans font-light text-sm px-4 py-3 outline-none focus:border-accent transition-colors duration-200';
+    'w-full bg-cream-mid border rounded-sm font-sans font-light text-espresso text-sm px-4 py-3 outline-none focus:border-accent transition-colors duration-200 placeholder:text-[rgba(33,12,4,0.40)]';
+
+  const inputStyle = { border: '1px solid rgba(211,153,69,0.35)' };
 
   const errorClass = 'text-red-400 text-xs mt-1 font-sans';
 
@@ -79,10 +81,10 @@ export default function ContactoForm() {
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <h3 className="font-serif text-2xl font-light text-text">
+        <h3 className="font-serif text-2xl font-light text-espresso">
           Mensaje enviado.
         </h3>
-        <p className="font-sans text-sm font-light text-muted">
+        <p className="font-sans text-sm font-light" style={{color: 'var(--dark-mid)'}}>
           Gracias por escribirme. Voy a revisar tu situación y te contacto en las próximas 24–48 horas.
         </p>
       </div>
@@ -101,6 +103,7 @@ export default function ContactoForm() {
             value={form.nombre}
             onChange={handleChange}
             className={inputClass}
+            style={inputStyle}
           />
           {errors.nombre && <p className={errorClass}>{errors.nombre}</p>}
         </div>
@@ -112,6 +115,7 @@ export default function ContactoForm() {
             value={form.empresa}
             onChange={handleChange}
             className={inputClass}
+            style={inputStyle}
           />
         </div>
       </div>
@@ -125,6 +129,7 @@ export default function ContactoForm() {
           value={form.email}
           onChange={handleChange}
           className={inputClass}
+          style={inputStyle}
         />
         {errors.email && <p className={errorClass}>{errors.email}</p>}
       </div>
@@ -135,13 +140,14 @@ export default function ContactoForm() {
           name="servicio"
           value={form.servicio}
           onChange={handleChange}
-          className={`${inputClass} appearance-none cursor-pointer ${!form.servicio ? 'text-muted' : ''}`}
+          className={`${inputClass} appearance-none cursor-pointer`}
+          style={{...inputStyle, color: form.servicio ? 'var(--espresso)' : 'rgba(33,12,4,0.40)'}}
         >
           <option value="" disabled>
             ¿Qué necesitás? *
           </option>
           {OPCIONES.map((op) => (
-            <option key={op} value={op} className="bg-bg3 text-text">
+            <option key={op} value={op} className="bg-cream text-espresso">
               {op}
             </option>
           ))}
@@ -157,8 +163,7 @@ export default function ContactoForm() {
           rows={5}
           value={form.mensaje}
           onChange={handleChange}
-          className={`${inputClass} resize-none`}
-        />
+          className={`${inputClass} resize-none`}          style={inputStyle}        />
         {errors.mensaje && <p className={errorClass}>{errors.mensaje}</p>}
       </div>
 

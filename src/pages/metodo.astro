@@ -82,20 +82,21 @@ const diferenciales = [
   ogImage="/og-image.jpg"
 >
   <!-- Simple navbar for internal page -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-bg/95 backdrop-blur-md border-b border-line">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-line overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="/" class="flex items-center">
         <img
           src="/imagenes/logo/logonogoli.svg"
           alt="Nogolí Consulting"
-          class="w-10 h-10 object-contain"
+          class="w-10 h-10 object-contain shrink-0"
+          style="max-width: 40px; max-height: 40px;"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
         />
-        <span class="font-serif text-text hidden" style="font-size: 20px; font-weight: 700; letter-spacing: 0.03em;">Nogolí Consulting</span>
+        <span class="font-serif text-espresso hidden" style="font-size: 20px; font-weight: 700; letter-spacing: 0.03em;">Nogolí Consulting</span>
       </a>
       <a
         href="/"
-        class="font-sans text-sm font-light text-muted hover:text-text transition-colors flex items-center gap-2"
+        class="font-sans text-sm font-light hover:text-accent transition-colors flex items-center gap-2" style="color: var(--dark-mid);"
       >
         ← Volver al inicio
       </a>
@@ -105,16 +106,16 @@ const diferenciales = [
   <!-- Progress bar -->
   <div id="scroll-progress"></div>
 
-  <main class="pt-16">
+  <main class="pt-20">
     <!-- Hero -->
-    <section class="bg-bg py-28 md:py-40">
+    <section class="bg-cream py-28 md:py-40">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl">
           <div class="reveal eyebrow mb-6">Nuestra filosofía de ejecución</div>
-          <h1 class="reveal reveal-delay-1 font-serif text-text mb-8" style="font-size: clamp(48px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 900;">
+          <h1 class="reveal reveal-delay-1 font-serif text-espresso mb-8" style="font-size: clamp(48px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 900;">
             El Método Nogolí.
           </h1>
-          <p class="reveal reveal-delay-2 font-sans text-base md:text-xl font-light text-muted leading-loose max-w-2xl">
+          <p class="reveal reveal-delay-2 font-sans text-base md:text-xl font-light leading-loose max-w-2xl" style="color: var(--dark-mid);">
             Una forma de trabajo usable, conectada y viva, diseñada para que tu
             operación no dependa siempre de vos. Cuatro pilares que actúan juntos
             para transformar el desorden en capacidad real de entrega.
@@ -124,13 +125,13 @@ const diferenciales = [
     </section>
 
     <!-- Principio rector -->
-    <section class="bg-bg2 py-20">
+    <section class="bg-cream-mid py-20">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 flex justify-center">
         <blockquote class="reveal max-w-2xl border-l-2 border-accent pl-10 py-4">
-          <p class="font-serif text-3xl md:text-4xl font-semibold italic text-text leading-relaxed">
-            "La confianza precede al rendimiento."
+          <p class="font-serif text-3xl md:text-4xl font-semibold italic leading-relaxed" style="color: var(--dark-mid);">
+            “La confianza precede al rendimiento.”
           </p>
-          <footer class="mt-5 font-sans text-xs font-medium tracking-[0.2em] uppercase text-muted">
+          <footer class="mt-5 font-sans text-xs font-medium tracking-[0.2em] uppercase" style="color: var(--accent);">
             — Principio rector del Método Nogolí
           </footer>
         </blockquote>
@@ -138,13 +139,13 @@ const diferenciales = [
     </section>
 
     <!-- Flow diagram -->
-    <section class="bg-bg py-16">
+    <section class="bg-cream py-16">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-0 max-w-3xl mx-auto">
           {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
             <div class="flex flex-col sm:flex-row items-center">
-              <div class="flex flex-col items-center gap-2 px-6 py-5 border border-line bg-bg2 min-w-32 text-center">
-                <span class="font-serif text-text font-semibold" style="font-size: 16px; letter-spacing: 0.02em;">{step}</span>
+              <div class="flex flex-col items-center gap-2 px-6 py-5 min-w-32 text-center bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
+                <span class="font-serif text-espresso font-semibold" style="font-size: 16px; letter-spacing: 0.02em;">{step}</span>
               </div>
               {i < 4 && (
                 <svg class="hidden sm:block rotate-0" width="32" height="2" viewBox="0 0 32 2">
@@ -163,7 +164,7 @@ const diferenciales = [
 
     <!-- 4 Pillars detail -->
     {pilares.map((pilar, idx) => (
-      <section class={`py-24 md:py-32 ${idx % 2 === 0 ? 'bg-bg2' : 'bg-bg'}`}>
+      <section class={`py-24 md:py-32 ${idx % 2 === 0 ? 'bg-cream-mid' : 'bg-cream'}`}>
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div class="reveal">
@@ -171,20 +172,20 @@ const diferenciales = [
                 <span class="font-sans text-xs font-medium tracking-widest uppercase text-accent">{pilar.numero}</span>
                 <div class="w-8 h-px bg-accent/50"></div>
               </div>
-              <h2 class="font-serif text-text mb-6" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
+              <h2 class="font-serif text-espresso mb-6" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
                 {pilar.titulo}
               </h2>
               {pilar.descripcion.split('\n\n').map((para) => (
-                <p class="font-sans text-base font-light text-muted leading-loose mb-4">
+                <p class="font-sans text-base font-light leading-loose mb-4" style="color: var(--dark-mid);">
                   {para}
                 </p>
               ))}
             </div>
             <div class="reveal reveal-delay-1 flex flex-col gap-4 pt-2 lg:pt-16">
               {pilar.items.map((item) => (
-                <div class="flex items-start gap-4 p-5 border border-line bg-bg3 hover:border-accent/40 transition-colors duration-300">
+                <div class="flex items-start gap-4 p-5 bg-cream hover:bg-warm-white transition-colors duration-300" style="border: 1px solid rgba(211,153,69,0.22);">
                   <span class="mt-1 w-2 h-2 rounded-full bg-accent shrink-0"></span>
-                  <span class="font-sans text-sm font-light text-text leading-snug">{item}</span>
+                  <span class="font-sans text-sm font-light text-espresso leading-snug">{item}</span>
                 </div>
               ))}
             </div>
@@ -194,10 +195,10 @@ const diferenciales = [
     ))}
 
     <!-- Cómo opera el Método -->
-    <section class="bg-bg py-28 md:py-40">
+    <section class="bg-cream py-28 md:py-40">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="eyebrow mb-6 reveal">Cómo trabajamos</div>
-        <h2 class="font-serif text-text mb-16 reveal reveal-delay-1" style="font-size: clamp(36px, 5vw, 52px); line-height: 1.2;">
+        <h2 class="font-serif text-espresso mb-16 reveal reveal-delay-1" style="font-size: clamp(36px, 5vw, 52px); line-height: 1.2;">
           Cómo opera el Método Nogolí.
         </h2>
         <div class="flex flex-col gap-0">
@@ -233,8 +234,8 @@ const diferenciales = [
                 <span class="font-serif font-bold leading-none" style={`font-size: 48px; color: var(--accent); opacity: 0.9;`}>{s.paso}</span>
               </div>
               <div class="flex flex-col gap-3">
-                <h3 class="font-serif text-text font-semibold" style="font-size: clamp(20px, 2.5vw, 28px); line-height: 1.2;">{s.titulo}</h3>
-                <p class="font-sans text-base font-light text-muted leading-loose max-w-2xl">{s.descripcion}</p>
+                <h3 class="font-serif text-espresso font-semibold" style="font-size: clamp(20px, 2.5vw, 28px); line-height: 1.2;">{s.titulo}</h3>
+                <p class="font-sans text-base font-light leading-loose max-w-2xl" style="color: var(--dark-mid);">{s.descripcion}</p>
               </div>
             </div>
           ))}
@@ -243,29 +244,29 @@ const diferenciales = [
     </section>
 
     <!-- Diferenciales -->
-    <section class="bg-bg2 py-28 md:py-40">
+    <section class="bg-cream-mid py-28 md:py-40">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="flex flex-col gap-5 mb-14">
           <div class="reveal eyebrow">Por qué es diferente</div>
-          <h2 class="reveal reveal-delay-1 font-serif text-text max-w-2xl" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
+          <h2 class="reveal reveal-delay-1 font-serif text-espresso max-w-2xl" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">
             No es consultoría tradicional.
           </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-line">
           {diferenciales.map((d, i) => (
-            <div class={`reveal reveal-delay-${i + 1} bg-bg2 hover:bg-bg3 transition-colors duration-300 p-8 lg:p-10 flex flex-col gap-4`}>
+            <div class={`reveal reveal-delay-${i + 1} bg-cream hover:bg-warm-white transition-colors duration-300 p-8 lg:p-10 flex flex-col gap-4`}>
               <div class="w-8 h-px bg-accent mb-2"></div>
-              <h3 class="font-serif text-xl font-bold text-text">{d.titulo}</h3>
-              <p class="font-sans text-sm font-light text-muted leading-loose">{d.descripcion}</p>
+              <h3 class="font-serif text-xl font-bold text-espresso">{d.titulo}</h3>
+              <p class="font-sans text-sm font-light leading-loose" style="color: var(--dark-mid);">{d.descripcion}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA final -->
-    <section class="bg-bg py-28 md:py-40 border-t border-line">
+    <!-- CTA final (dark accent closing) -->
+    <section class="bg-espresso py-28 md:py-40 border-t border-line">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center gap-8">
         <div class="reveal eyebrow justify-center">El siguiente paso</div>
         <h2 class="reveal reveal-delay-1 font-serif text-text max-w-2xl" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -0.01em;">

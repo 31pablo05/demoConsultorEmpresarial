@@ -41,41 +41,82 @@ export default function NavbarScroll({ logoSrc }) {
       e.preventDefault();
       const id = href.replace('#', '');
       const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
       setMenuOpen(false);
       return;
     }
-
     setMenuOpen(false);
   };
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream/95 backdrop-blur-md ${
-        scrolled ? 'shadow-sm' : ''
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'bg-cream/98 backdrop-blur-lg'
+          : 'bg-cream/95 backdrop-blur-md'
       }`}
-      style={{ borderBottom: '1px solid rgba(211,153,69,0.30)' }}
+      style={{
+        borderBottom: '1px solid rgba(211,153,69,0.30)',
+        boxShadow: scrolled
+          ? '0 2px 24px rgba(99,87,87,0.13), 0 1px 0 rgba(211,153,69,0.18)'
+          : '0 1px 0 rgba(211,153,69,0.15)',
+      }}
     >
-      <nav className="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Logo */}
+      <nav
+        className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between transition-all duration-500"
+        style={{ height: scrolled ? '64px' : '80px' }}
+      >
+        {/* ── Logo + Brand name ── */}
         <a
           href="#inicio"
           onClick={(e) => handleNav(e, '#inicio')}
-          className="flex items-center"
+          className="flex items-center gap-3 group"
           aria-label="Nogolí Consulting — inicio"
         >
-          {logoSrc ? (
-            <img src={logoSrc} alt="Nogolí Consulting" className="w-20 h-20 object-contain" />
-          ) : (
-            <span className="font-serif text-espresso" style={{fontSize: '20px', letterSpacing: '0.04em', fontWeight: '700'}}>
-              Nogolí Consulting
+          {/* Logo image with entrance animation + hover glow */}
+          <div
+            className="relative shrink-0 transition-all duration-500"
+            style={{ width: scrolled ? '40px' : '52px', height: scrolled ? '40px' : '52px' }}
+          >
+            {logoSrc && (
+              <img
+                src={logoSrc}
+                alt="Nogolí Consulting"
+                className="logo-entrance w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            )}
+            {/* Subtle golden glow on hover */}
+            <div
+              className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              style={{ background: 'radial-gradient(circle, rgba(211,153,69,0.20) 0%, transparent 70%)' }}
+            />
+          </div>
+
+          {/* Brand text — slides out when scrolled */}
+          <div
+            className="brand-entrance flex flex-col leading-none overflow-hidden transition-all duration-500"
+            style={{
+              maxWidth: scrolled ? '0px' : '120px',
+              opacity: scrolled ? 0 : 1,
+              marginLeft: scrolled ? '0px' : undefined,
+            }}
+          >
+            <span
+              className="font-serif text-espresso font-bold whitespace-nowrap"
+              style={{ fontSize: '17px', letterSpacing: '-0.01em' }}
+            >
+              Nogolí
             </span>
-          )}
+            <span
+              className="font-sans text-dark-mid font-light whitespace-nowrap"
+              style={{ fontSize: '9px', letterSpacing: '0.24em', textTransform: 'uppercase', marginTop: '2px' }}
+            >
+              Consulting
+            </span>
+          </div>
         </a>
 
-        {/* Desktop nav */}
+        {/* ── Desktop nav ── */}
         <ul className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => {
             const id = item.href.replace('#', '');
@@ -85,7 +126,8 @@ export default function NavbarScroll({ logoSrc }) {
                 <a
                   href={item.href}
                   onClick={(e) => handleNav(e, item.href)}
-                  className={`font-sans text-sm font-normal tracking-wide transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-px after:bg-gold-dark after:transition-all after:duration-300 ${
+                  className={`font-sans text-sm font-normal tracking-wide transition-all duration-200 relative pb-0.5
+                    after:absolute after:bottom-0 after:left-0 after:h-px after:bg-gold-dark after:transition-all after:duration-300 ${
                     isActive
                       ? 'text-gold-dark after:w-full'
                       : 'text-dark-mid hover:text-espresso after:w-0 hover:after:w-full'
@@ -98,36 +140,64 @@ export default function NavbarScroll({ logoSrc }) {
           })}
         </ul>
 
-        {/* CTA Button */}
+        {/* ── CTA Button ── */}
         <a
           href="#contacto"
           onClick={(e) => handleNav(e, '#contacto')}
-          className="hidden md:inline-flex items-center px-5 py-2 border border-gold-dark text-gold-dark text-sm font-medium font-sans rounded-sm hover:bg-gold-dark hover:text-cream transition-all duration-200"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2 font-sans text-sm font-medium tracking-wide transition-all duration-300 group/cta"
+          style={{
+            border: '1px solid #d39945',
+            color: '#d39945',
+            letterSpacing: '0.06em',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = '#d39945';
+            e.currentTarget.style.color = '#FAF3E4';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = '#d39945';
+          }}
         >
           Hablemos
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="transition-transform duration-200 group-hover/cta:translate-x-0.5"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
 
-        {/* Mobile hamburger */}
+        {/* ── Mobile hamburger ── */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col gap-1.5 p-2 text-espresso"
-          aria-label="Abrir menú"
+          aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
         >
-          <span
-            className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
-          />
-          <span
-            className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}
-          />
-          <span
-            className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}
-          />
+          <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
+          <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
         </button>
       </nav>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-cream border-t px-6 py-6 shadow-lg" style={{borderColor: 'rgba(211,153,69,0.30)'}}>
+      {/* ── Mobile menu — slide-down animation ── */}
+      <div
+        className="md:hidden overflow-hidden transition-all duration-300 ease-in-out"
+        style={{
+          maxHeight: menuOpen ? '400px' : '0px',
+          opacity: menuOpen ? 1 : 0,
+          borderTop: menuOpen ? '1px solid rgba(211,153,69,0.22)' : '1px solid transparent',
+        }}
+      >
+        <div className="bg-cream px-6 py-6">
           <ul className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => {
               const id = item.href.replace('#', '');
@@ -146,18 +216,18 @@ export default function NavbarScroll({ logoSrc }) {
                 </li>
               );
             })}
-            <li>
+            <li className="pt-2" style={{ borderTop: '1px solid rgba(211,153,69,0.18)' }}>
               <a
                 href="#contacto"
                 onClick={(e) => handleNav(e, '#contacto')}
-                className="inline-flex items-center px-5 py-2 border border-gold-dark text-gold-dark text-sm font-medium font-sans rounded-sm hover:bg-gold-dark hover:text-cream transition-all duration-200"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-gold-dark text-gold-dark text-sm font-medium font-sans hover:bg-gold-dark hover:text-cream transition-all duration-200"
               >
-                Hablemos
+                Hablemos →
               </a>
             </li>
           </ul>
         </div>
-      )}
+      </div>
     </header>
   );
 }

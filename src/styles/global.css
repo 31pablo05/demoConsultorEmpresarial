@@ -179,6 +179,24 @@
   100% { background-position: 200% 0%; }
 }
 
+/* Navbar logo entrance */
+@keyframes logoFadeIn {
+  from { opacity: 0; transform: scale(0.82) rotate(-4deg); filter: blur(4px); }
+  to   { opacity: 1; transform: scale(1)   rotate(0deg);  filter: blur(0); }
+}
+.logo-entrance {
+  animation: logoFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Navbar brand text entrance */
+@keyframes brandSlideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.brand-entrance {
+  animation: brandSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
 @keyframes gradient-pan {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
