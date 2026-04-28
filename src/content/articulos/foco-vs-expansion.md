@@ -4,6 +4,7 @@ date: 2025-09-05
 category: Estrategia
 excerpt: "El desorden operativo no aparece en el estado de resultados, pero está presente en cada hora perdida, cada retrabajo y cada decisión que tarda demasiado."
 readTime: 7
+# imageUrl: "/imagenes/articulos/costo-desorden-operativo.jpg"  ← pendiente
 ---
 
 ## Lo que no se mide igual se subestima

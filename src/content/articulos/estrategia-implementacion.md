@@ -4,6 +4,7 @@ date: 2025-10-20
 category: Operaciones
 excerpt: "El problema no es la gente. El problema es el sistema en el que trabajan: roles difusos, compromisos invisibles y decisiones que siempre escalan al mismo lugar."
 readTime: 5
+# imageUrl: "/imagenes/articulos/empresa-no-puede-crecer.jpg"  ← pendiente
 ---
 
 ## La confusión más frecuente
@@ -35,12 +36,6 @@ Cuando una organización define cómo se toman decisiones, cómo se registran co
 No es que antes fueran malas. Es que ahora tienen el contexto necesario para actuar con autonomia y alineación al mismo tiempo.
 
 Eso es exactamente lo que buscamos con el Método Nogolí: no cambiar a las personas, sino darles el sistema que les permita crecer con orden.
-
-El plan lo construye el equipo de dirección con algún consultor. Lo ejecutan las personas que no estuvieron en la sala. Resultado: nadie entiende por qué se tomaron esas decisiones, y nadie se siente dueño del proceso.
-
-**3. No hay mecanismo de revisión**
-
-Los mejores planes tienen algo en común: contemplan cómo van a revisarse a sí mismos. Si no hay una cadencia de revisión periódica, con métricas claras y conversaciones honestas, el plan pierde vigencia en semanas.
 
 ## Lo que hay que hacer diferente
 

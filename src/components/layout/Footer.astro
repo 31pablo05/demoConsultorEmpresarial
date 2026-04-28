@@ -106,16 +106,26 @@ const year = new Date().getFullYear();
       <p class="font-sans text-xs font-light" style="color: rgba(250,243,228,0.40);">
         &copy; {year} {siteConfig.name}. Todos los derechos reservados.
       </p>
-      <p style="font-family: var(--font-sans); font-size: 11px; font-weight: 400; color: var(--muted); letter-spacing: 0.05em;">
-        Desarrollado por <a
-          href={siteConfig.developer.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          style="color: var(--accent); font-weight: 500; text-decoration: none; transition: color 0.2s;"
-          onmouseover="this.style.color='var(--accent2)'; this.style.textDecoration='underline';"
-          onmouseout="this.style.color='var(--accent)'; this.style.textDecoration='none';"
-        >{siteConfig.developer.name}</a>
-      </p>
+      <div class="flex items-center gap-2">
+        <a
+          href="/privacidad"
+          class="font-sans text-xs font-light hover:text-gold-pale transition-colors"
+          style="color: rgba(250,243,228,0.40);"
+        >
+          Política de Privacidad
+        </a>
+        <span style="color: rgba(250,243,228,0.40); font-size: 12px;"> &middot; </span>
+        <p style="font-family: var(--font-sans); font-size: 11px; font-weight: 400; color: var(--muted); letter-spacing: 0.05em;">
+          Desarrollado por <a
+            href={siteConfig.developer.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--accent); font-weight: 500; text-decoration: none; transition: color 0.2s;"
+            onmouseover="this.style.color='var(--accent2)'; this.style.textDecoration='underline';"
+            onmouseout="this.style.color='var(--accent)'; this.style.textDecoration='none';"
+          >{siteConfig.developer.name}</a>
+        </p>
+      </div>
     </div>
   </div>
 </footer>

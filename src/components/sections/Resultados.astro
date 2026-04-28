@@ -1,29 +1,9 @@
 ---
 const metricas = [
-  {
-    icon: '↓',
-    valor: '20–40%',
-    label: 'horas de reunión',
-    direccion: 'Reducción',
-  },
-  {
-    icon: '↓',
-    valor: '',
-    label: 'escalamiento al dueño/gerentes',
-    direccion: 'Reducción',
-  },
-  {
-    icon: '↑',
-    valor: '',
-    label: 'capacidad de entrega',
-    direccion: 'Aumento',
-  },
-  {
-    icon: '↓',
-    valor: '',
-    label: 'retrabajos y urgencias',
-    direccion: 'Reducción',
-  },
+  { icon: '↓', label: 'horas de reunión', direccion: 'Reducción' },
+  { icon: '↓', label: 'escalamiento al dueño/gerentes', direccion: 'Reducción' },
+  { icon: '↑', label: 'capacidad de entrega', direccion: 'Aumento' },
+  { icon: '↓', label: 'retrabajos y urgencias', direccion: 'Reducción' },
 ];
 ---
 
@@ -48,9 +28,6 @@ const metricas = [
             >
               {m.icon}
             </span>
-            {m.valor && (
-              <span class="font-serif text-xl font-bold text-gold-pale">{m.valor}</span>
-            )}
           </div>
           <p class="font-sans text-xs font-medium tracking-widest uppercase" style="color: rgba(250,243,228,0.70);">{m.direccion}</p>
           <p class="font-serif text-[17px] font-bold text-text leading-snug">{m.label}</p>

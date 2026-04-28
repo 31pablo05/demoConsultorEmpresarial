@@ -4,6 +4,7 @@ date: 2025-11-15
 category: Gestión
 excerpt: "Las daily stand-up surgieron en el mundo ágil del software, pero su lógica —revisión rápida, foco en bloqueos y compromisos visibles— aplica a cualquier equipo operativo."
 readTime: 6
+# imageUrl: "/imagenes/articulos/daily-standup-equipos.jpg"  ← pendiente
 ---
 
 ## El origen del problema
