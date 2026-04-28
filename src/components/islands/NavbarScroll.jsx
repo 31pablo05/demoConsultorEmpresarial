@@ -56,7 +56,7 @@ export default function NavbarScroll({ logoSrc }) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream/95 backdrop-blur-md ${
         scrolled ? 'shadow-sm' : ''
       }`}
-      style={{ borderBottom: '1px solid rgba(200,169,110,0.30)' }}
+      style={{ borderBottom: '1px solid rgba(211,153,69,0.30)' }}
     >
       <nav className="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -127,7 +127,7 @@ export default function NavbarScroll({ logoSrc }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-cream border-t px-6 py-6 shadow-lg" style={{borderColor: 'rgba(200,169,110,0.30)'}}>
+        <div className="md:hidden bg-cream border-t px-6 py-6 shadow-lg" style={{borderColor: 'rgba(211,153,69,0.30)'}}>
           <ul className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => {
               const id = item.href.replace('#', '');

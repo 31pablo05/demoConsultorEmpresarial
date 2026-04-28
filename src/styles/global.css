@@ -7,21 +7,21 @@
 
 /* Tailwind v4: design tokens */
 @theme {
-  --color-bg:         #2D3D35;   /* verde grisáceo oscuro del logo */
-  --color-bg2:        #3A4F43;   /* verde grisáceo medio */
-  --color-bg3:        #3A4F43;   /* verde grisáceo — foto placeholder */
-  --color-cream:      #FAF3E4;   /* crema principal — fondo secciones claras */
-  --color-cream-mid:  #F0E6CC;   /* crema medio — alternancia secciones */
+  --color-bg:         #210c04;
+  --color-bg2:        #635757;
+  --color-bg3:        #635757;
+  --color-cream:      #FAF3E4;
+  --color-cream-mid:  #F0E6CC;
   --color-warm-white: #FFFDF8;
-  --color-accent:     #C8A96E;   /* dorado principal del logo */
-  --color-accent2:    #D4BA82;   /* dorado claro — hovers */
-  --color-gold-dark:  #A8893E;   /* dorado oscuro — textos y Sprint bg */
-  --color-gold-pale:  #E8D5A8;   /* dorado muy suave — texto sobre verde */
-  --color-text:       #FAF3E4;   /* crema — texto sobre fondos oscuros */
-  --color-muted:      rgba(232,213,168,0.75);  /* gold-pale al 75% — texto secundario dark */
-  --color-espresso:   #2C1A0E;   /* marrón oscuro del onepage */
-  --color-dark-mid:   #4A3728;   /* marrón medio */
-  --color-line:       rgba(200,169,110,0.30);
+  --color-accent:     #d39945;
+  --color-accent2:    #b87c30;
+  --color-gold-dark:  #d39945;
+  --color-gold-pale:  #F0DFB8;
+  --color-text:       #FAF3E4;
+  --color-muted:      rgba(250,243,228,0.70);
+  --color-espresso:   #210c04;
+  --color-dark-mid:   #635757;
+  --color-line:       rgba(211,153,69,0.22);
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Lato', 'Inter', system-ui, sans-serif;
@@ -29,20 +29,20 @@
 
 /* CSS variables for var() usage */
 :root {
-  --bg:        #2D3D35;
-  --bg2:       #3A4F43;
-  --bg3:       #3A4F43;
+  --bg:        #210c04;
+  --bg2:       #635757;
+  --bg3:       #635757;
   --cream:     #FAF3E4;
   --cream-mid: #F0E6CC;
-  --accent:    #C8A96E;
-  --accent2:   #D4BA82;
-  --gold-dark: #A8893E;
-  --gold-pale: #E8D5A8;
+  --accent:    #d39945;
+  --accent2:   #b87c30;
+  --gold-dark: #d39945;
+  --gold-pale: #F0DFB8;
   --text:      #FAF3E4;
-  --espresso:  #2C1A0E;
-  --dark-mid:  #4A3728;
-  --muted:     rgba(232,213,168,0.75);
-  --line:      rgba(200,169,110,0.30);
+  --espresso:  #210c04;
+  --dark-mid:  #635757;
+  --muted:     rgba(250,243,228,0.70);
+  --line:      rgba(211,153,69,0.22);
   --serif:     'Playfair Display', Georgia, serif;
   --sans:      'Lato', 'Inter', system-ui, sans-serif;
 }
@@ -156,11 +156,11 @@
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #2D3D35; }
-::-webkit-scrollbar-thumb { background: #C8A96E; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #D4BA82; }
+::-webkit-scrollbar-track { background: #210c04; }
+::-webkit-scrollbar-thumb { background: #d39945; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b87c30; }
 
-::selection { background: rgba(200,169,110,0.25); color: #2C1A0E; }
+::selection { background: rgba(211,153,69,0.25); color: #210c04; }
 
 #scroll-progress {
   position: fixed;
@@ -187,7 +187,7 @@
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 700;
-  background: linear-gradient(135deg, #C8A96E 0%, #A8893E 40%, #D4BA82 70%, #C8A96E 100%);
+  background: linear-gradient(135deg, #d39945 0%, #b87c30 40%, #d39945 70%, #b87c30 100%);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -258,7 +258,7 @@
   transition: box-shadow 0.5s ease, background-color 0.35s;
 }
 .card-glow:hover {
-  box-shadow: 0 0 0 1px rgba(200, 169, 110, 0.25),
-              0 8px 48px rgba(200, 169, 110, 0.10),
-              0 0 80px rgba(200, 169, 110, 0.05);
+  box-shadow: 0 0 0 1px rgba(211,153,69,0.25),
+              0 8px 48px rgba(211,153,69,0.10),
+              0 0 80px rgba(211,153,69,0.05);
 }

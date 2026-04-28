@@ -40,7 +40,7 @@ const metricas = [
     <!-- Metrics grid -->
     <div class="reveal reveal-delay-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line mb-16">
       {metricas.map((m) => (
-        <div class="bg-bg hover:bg-bg2 p-8 lg:p-10 flex flex-col gap-3 transition-colors duration-300" style="border: 1px solid rgba(200,169,110,0.20);">
+        <div class="bg-bg hover:bg-bg2 p-8 lg:p-10 flex flex-col gap-3 transition-colors duration-300" style="border: 1px solid rgba(211,153,69,0.20);">
           <div class="flex items-baseline gap-2">
             <span
               class="font-serif text-2xl font-bold leading-none"
@@ -52,7 +52,7 @@ const metricas = [
               <span class="font-serif text-xl font-bold text-gold-pale">{m.valor}</span>
             )}
           </div>
-          <p class="font-sans text-xs font-medium tracking-widest uppercase" style="color: rgba(232,213,168,0.70);">{m.direccion}</p>
+          <p class="font-sans text-xs font-medium tracking-widest uppercase" style="color: rgba(250,243,228,0.70);">{m.direccion}</p>
           <p class="font-serif text-[17px] font-bold text-text leading-snug">{m.label}</p>
         </div>
       ))}

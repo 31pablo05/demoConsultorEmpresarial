@@ -42,7 +42,7 @@ function formatDate(date: Date) {
 }
 ---
 
-<BlogLayout title={`${post.title} - Sergio Valenti`} description={post.excerpt}>
+<BlogLayout title={`${post.title} — Nogolí Consulting`} description={post.excerpt} ogImage={post.imageUrl ?? '/og-image.jpg'}>
   <BlogHeader />
 
   <main class="bg-bg min-h-screen">
