@@ -83,6 +83,8 @@ export default function NavbarScroll({ logoSrc }) {
                 src={logoSrc}
                 alt="Nogolí Consulting"
                 className="logo-entrance w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                width="40"
+                height="40"
               />
             )}
             {/* Subtle golden glow on hover */}

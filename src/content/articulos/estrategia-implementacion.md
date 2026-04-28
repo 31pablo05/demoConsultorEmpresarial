@@ -1,7 +1,7 @@
 ﻿---
 title: "Por qué tu empresa no puede crecer aunque tenga buenas personas"
 date: 2025-10-20
-category: Operaciones
+category: Gestión
 excerpt: "El problema no es la gente. El problema es el sistema en el que trabajan: roles difusos, compromisos invisibles y decisiones que siempre escalan al mismo lugar."
 readTime: 5
 # imageUrl: "/imagenes/articulos/empresa-no-puede-crecer.jpg"  ← pendiente

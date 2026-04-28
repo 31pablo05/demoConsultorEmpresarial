@@ -40,9 +40,43 @@ function formatDate(date: Date) {
     year: 'numeric',
   }).format(date);
 }
+
+const siteUrl = 'https://nogoliconsulting.com';
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.excerpt,
+  "datePublished": post.date.toISOString(),
+  "dateModified": post.date.toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": "Sergio Martín Celuch",
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nogolí Consulting",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/imagenes/logo/logonogoli.svg`
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `${siteUrl}/articulos/${post.slug}`
+  },
+  ...(post.imageUrl ? {
+    "image": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}${post.imageUrl}`
+    }
+  } : {})
+};
 ---
 
 <BlogLayout title={`${post.title} — Nogolí Consulting`} description={post.excerpt} ogImage={post.imageUrl ?? '/og-image.jpg'}>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
   <BlogHeader />
 
   <main class="bg-bg min-h-screen">

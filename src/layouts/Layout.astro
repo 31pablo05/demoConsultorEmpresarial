@@ -17,8 +17,26 @@ const {
   noIndex = false,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://demo-consultor-empresarial.vercel.app');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://nogoliconsulting.com');
 const ogImageAbsolute = new URL(ogImage, canonicalURL.origin).href;
+
+const isHome = Astro.url.pathname === '/';
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sergio Martín Celuch",
+  "jobTitle": "Consultor en Gestión Operacional",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Nogolí Consulting",
+    "url": "https://nogoliconsulting.com"
+  },
+  "url": "https://nogoliconsulting.com",
+  "sameAs": [
+    "https://linkedin.com/in/sergio-martin-celuch",
+    "https://linkedin.com/company/nogoli-consulting"
+  ]
+};
 ---
 
 <!doctype html>
@@ -182,8 +200,18 @@ const ogImageAbsolute = new URL(ogImage, canonicalURL.origin).href;
         }
       });
     </script>
+    <link rel="preload" as="image" href="/imagenes/perfil/SergioMartin50.jpg" fetchpriority="high" />
+    {isHome && (
+      <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    )}
   </head>
   <body>
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[999] focus:px-4 focus:py-2 focus:bg-accent focus:text-espresso focus:font-sans focus:text-sm focus:font-medium"
+    >
+      Saltar al contenido principal
+    </a>
     <div id="scroll-progress"></div>
     <slot />
     <!-- WhatsApp floating button -->
