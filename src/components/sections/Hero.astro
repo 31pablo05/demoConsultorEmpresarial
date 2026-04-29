@@ -2,12 +2,24 @@
 ---
 
 <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-20">
-  <!-- Imagen de fondo — todo el hero -->
+  <!-- Imagen de fondo — mobile -->
   <div
-    class="absolute inset-0"
+    class="absolute inset-0 lg:hidden"
     style="
       z-index: 0;
-      background-image: url('/imagenes/cuesta/nog1.jpg');
+      background-image: url('/imagenes/cuesta/nog3.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(2px) brightness(0.88);
+      transform: scale(1.05);
+    "
+  ></div>
+  <!-- Imagen de fondo — desktop -->
+  <div
+    class="absolute inset-0 hidden lg:block"
+    style="
+      z-index: 0;
+      background-image: url('/imagenes/cuesta/nog4.jpg');
       background-size: cover;
       background-position: center;
       filter: blur(2px) brightness(0.88);
@@ -15,7 +27,7 @@
     "
   ></div>
   <!-- Overlay oscuro semitransparente -->
-  <div class="absolute inset-0" style="z-index: 1; background: rgba(33,12,4,0.55);"></div>
+  <div class="absolute inset-0" style="z-index: 1; background: rgba(33,12,4,0.35);"></div>
 
   <!-- Diagonal pattern (encima del overlay) -->
   <div class="absolute inset-0 pointer-events-none" style="z-index: 2; background-image: url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239e6a28' fill-opacity='0.06'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"></div>
