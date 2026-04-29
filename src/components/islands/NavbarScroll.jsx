@@ -64,7 +64,7 @@ export default function NavbarScroll({ logoSrc }) {
     >
       <nav
         className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between transition-all duration-500"
-        style={{ height: scrolled ? '64px' : '80px' }}
+        style={{ height: scrolled ? '72px' : '96px' }}
       >
         {/* ── Logo + Brand name ── */}
         <a
@@ -76,7 +76,7 @@ export default function NavbarScroll({ logoSrc }) {
           {/* Logo image with entrance animation + hover glow */}
           <div
             className="relative shrink-0 transition-all duration-500"
-            style={{ width: scrolled ? '60px' : '84px', height: scrolled ? '60px' : '84px' }}
+            style={{ width: scrolled ? '64px' : '92px', height: scrolled ? '64px' : '92px' }}
           >
             {logoSrc && (
               <img
@@ -98,20 +98,20 @@ export default function NavbarScroll({ logoSrc }) {
           <div
             className="brand-entrance flex flex-col leading-none overflow-hidden transition-all duration-500"
             style={{
-              maxWidth: scrolled ? '0px' : '120px',
+              maxWidth: scrolled ? '0px' : '160px',
               opacity: scrolled ? 0 : 1,
               marginLeft: scrolled ? '0px' : undefined,
             }}
           >
             <span
               className="font-serif text-espresso font-bold whitespace-nowrap"
-              style={{ fontSize: '17px', letterSpacing: '-0.01em' }}
+              style={{ fontSize: '22px', letterSpacing: '-0.01em' }}
             >
               Nogolí
             </span>
             <span
               className="font-sans text-dark-mid font-light whitespace-nowrap"
-              style={{ fontSize: '9px', letterSpacing: '0.24em', textTransform: 'uppercase', marginTop: '2px' }}
+              style={{ fontSize: '11px', letterSpacing: '0.24em', textTransform: 'uppercase', marginTop: '3px' }}
             >
               Consulting
             </span>
