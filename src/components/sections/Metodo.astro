@@ -49,26 +49,34 @@ const pilares = [
     </div>
 
     <!-- Flow diagram -->
-    <div class="reveal reveal-delay-2 flex flex-col sm:flex-row items-center justify-center gap-0 mb-16 overflow-hidden">
-      {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
-        <div class="flex flex-col sm:flex-row items-center">
-          <div class="flex flex-col items-center gap-2 px-5 py-4 min-w-28 text-center bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
-            <span class="font-sans text-[10px] font-medium tracking-[0.2em] uppercase" style="color: var(--accent);">{String(i + 1).padStart(2,'0')}</span>
-            <span class="font-serif font-semibold text-espresso" style="font-size: 15px; letter-spacing: 0.02em;">{step}</span>
+    <!-- Mobile: flex-wrap badges; Desktop: single row with arrows -->
+    <div class="reveal reveal-delay-2 mb-16">
+      <!-- Mobile badges (wrap) -->
+      <div class="flex sm:hidden flex-wrap justify-center gap-2">
+        {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
+          <div class="flex items-center gap-2 px-3 py-2 bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
+            <span class="font-sans text-[9px] font-bold tracking-widest uppercase" style="color: var(--accent);">{String(i + 1).padStart(2,'0')}</span>
+            <span class="font-serif font-semibold text-espresso text-xs">{step}</span>
           </div>
-          {i < 4 && (
-            <div class="flex items-center sm:flex-row flex-col">
-              <!-- Mobile: vertical arrow -->
-              <div class="sm:hidden w-px h-6 bg-accent/50"></div>
-              <!-- Desktop: horizontal arrow -->
-              <svg class="hidden sm:block" width="28" height="2" viewBox="0 0 28 2">
+        ))}
+      </div>
+      <!-- Desktop row with arrows -->
+      <div class="hidden sm:flex flex-row items-center justify-center gap-0">
+        {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
+          <div class="flex flex-row items-center">
+            <div class="flex flex-col items-center gap-2 px-5 py-4 min-w-28 text-center bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
+              <span class="font-sans text-[10px] font-medium tracking-[0.2em] uppercase" style="color: var(--accent);">{String(i + 1).padStart(2,'0')}</span>
+              <span class="font-serif font-semibold text-espresso" style="font-size: 15px; letter-spacing: 0.02em;">{step}</span>
+            </div>
+            {i < 4 && (
+              <svg width="28" height="2" viewBox="0 0 28 2">
                 <line x1="0" y1="1" x2="24" y2="1" stroke="var(--accent)" stroke-width="1.5"/>
                 <polyline points="18,0 24,1 18,2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
               </svg>
-            </div>
-          )}
-        </div>
-      ))}
+            )}
+          </div>
+        ))}
+      </div>
     </div>
 
     <!-- Principle blockquote -->
@@ -84,7 +92,7 @@ const pilares = [
     <!-- 4 Pillars grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-line mb-14">
       {pilares.map((pilar, i) => (
-        <article class={`reveal reveal-delay-${i + 1} group relative bg-cream-mid hover:bg-[#E8DCCA] transition-colors duration-300 p-10 lg:p-12 flex flex-col gap-5`} style="border-left: 3px solid var(--accent);">
+        <article class={`reveal reveal-delay-${i + 1} group relative bg-cream-mid hover:bg-[#E8DCCA] transition-colors duration-300 p-6 sm:p-10 lg:p-12 flex flex-col gap-5`} style="border-left: 3px solid var(--accent);">
           <!-- Number background decoration -->
           <span
             class="absolute top-4 right-6 font-serif font-bold leading-none select-none pointer-events-none"

@@ -141,20 +141,27 @@ const diferenciales = [
     <!-- Flow diagram -->
     <section class="bg-cream py-16">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-0 max-w-3xl mx-auto">
+        <!-- Mobile badges (wrap) -->
+        <div class="reveal flex sm:hidden flex-wrap justify-center gap-2">
           {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
-            <div class="flex flex-col sm:flex-row items-center">
+            <div class="flex items-center gap-2 px-3 py-2 bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
+              <span class="font-sans text-[9px] font-bold tracking-widest uppercase" style="color: var(--accent);">{String(i + 1).padStart(2,'0')}</span>
+              <span class="font-serif font-semibold text-espresso text-xs">{step}</span>
+            </div>
+          ))}
+        </div>
+        <!-- Desktop row with arrows -->
+        <div class="reveal hidden sm:flex flex-row items-center justify-center gap-0 max-w-3xl mx-auto">
+          {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
+            <div class="flex flex-row items-center">
               <div class="flex flex-col items-center gap-2 px-6 py-5 min-w-32 text-center bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
                 <span class="font-serif text-espresso font-semibold" style="font-size: 16px; letter-spacing: 0.02em;">{step}</span>
               </div>
               {i < 4 && (
-                <svg class="hidden sm:block rotate-0" width="32" height="2" viewBox="0 0 32 2">
+                <svg width="32" height="2" viewBox="0 0 32 2">
                   <line x1="0" y1="1" x2="28" y2="1" stroke="var(--accent)" stroke-width="1.5"/>
                   <polyline points="22,0 28,1 22,2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
                 </svg>
-              )}
-              {i < 4 && (
-                <div class="sm:hidden w-px h-6 bg-accent/50"></div>
               )}
             </div>
           ))}

@@ -60,9 +60,9 @@ const formacion = [
       </div>
 
       <!-- Right: Photo -->
-      <div class="reveal reveal-delay-2 relative">
-        <!-- Decorative border offset -->
-        <div class="absolute -top-4 -right-4 w-full h-full border border-accent/25 z-0"></div>
+      <div class="reveal reveal-delay-2 relative pb-0 lg:pb-0">
+        <!-- Decorative border offset (solo desktop) -->
+        <div class="hidden lg:block absolute -top-4 -right-4 w-full h-full border border-accent/25 z-0"></div>
 
         <!-- Photo -->
         <div class="relative z-10 w-full aspect-3/4 bg-bg3 overflow-hidden">
@@ -78,7 +78,7 @@ const formacion = [
         </div>
 
         <!-- Name tag -->
-        <div class="absolute -bottom-5 left-5 z-20 bg-cream border border-line px-5 py-3">
+        <div class="hidden lg:block absolute -bottom-5 left-5 z-20 bg-cream border border-line px-5 py-3">
           <p class="font-serif text-base font-semibold text-espresso">Sergio Martín Celuch</p>
           <p class="font-sans text-[10px] uppercase tracking-widest mt-0.5" style="color: var(--accent);">Founder, Nogolí Consulting</p>
         </div>
