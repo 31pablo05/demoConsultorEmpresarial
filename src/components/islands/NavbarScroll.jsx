@@ -76,7 +76,7 @@ export default function NavbarScroll({ logoSrc }) {
           {/* Logo image with entrance animation + hover glow */}
           <div
             className="relative shrink-0 transition-all duration-500"
-            style={{ width: scrolled ? '40px' : '52px', height: scrolled ? '40px' : '52px' }}
+            style={{ width: scrolled ? '52px' : '68px', height: scrolled ? '52px' : '68px' }}
           >
             {logoSrc && (
               <img
