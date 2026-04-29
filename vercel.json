@@ -27,7 +27,7 @@
       ]
     },
     {
-      "source": "/logonogoli.svg",
+      "source": "/imagenes/logo/nuevologonog.svg",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=604800" },
         { "key": "Content-Type", "value": "image/svg+xml" }
