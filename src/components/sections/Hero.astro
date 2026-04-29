@@ -1,33 +1,8 @@
 ---
 ---
 
-<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-20">
-  <!-- Imagen de fondo — mobile -->
-  <div
-    class="absolute inset-0 lg:hidden"
-    style="
-      z-index: 0;
-      background-image: url('/imagenes/cuesta/nog3.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: blur(2px) brightness(0.88);
-      transform: scale(1.05);
-    "
-  ></div>
-  <!-- Imagen de fondo — desktop -->
-  <div
-    class="absolute inset-0 hidden lg:block"
-    style="
-      z-index: 0;
-      background-image: url('/imagenes/cuesta/nog4.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: blur(2px) brightness(0.88);
-      transform: scale(1.05);
-    "
-  ></div>
-  <!-- Overlay oscuro semitransparente -->
-  <div class="absolute inset-0" style="z-index: 1; background: rgba(33,12,4,0.35);"></div>
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-20 bg-cream">
+
 
   <!-- Diagonal pattern (encima del overlay) -->
   <div class="absolute inset-0 pointer-events-none" style="z-index: 2; background-image: url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239e6a28' fill-opacity='0.06'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"></div>
@@ -47,7 +22,7 @@
       </div>
 
       <!-- Headline -->
-      <h1 class="reveal reveal-delay-1 font-serif" style="color: #FAF3E4; font-size: clamp(48px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 900;">
+      <h1 class="reveal reveal-delay-1 font-serif" style="color: #210c04; font-size: clamp(48px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 900;">
         Ordenar la ejecuci&oacute;n<br />
         para <em class="gradient-text" style="font-size: inherit;">crecer.</em>
       </h1>
@@ -87,7 +62,7 @@
     <!-- 3 · Subheading + CTAs + Stats (debajo de la foto en mobile; columna izquierda row 2 en desktop) -->
     <div class="flex flex-col gap-8 mt-8 lg:mt-0">
       <!-- Subheading -->
-      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light max-w-md leading-loose" style="color: rgba(250,243,228,0.80);">
+      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light max-w-md leading-loose" style="color: rgba(33,12,4,0.70);">
         Nogolí Consulting ayuda a organizaciones a ordenar su ejecución y crecer,
         sin sumar burocracia, transformando fricción interna y retrabajo en
         capacidad real de entrega.
@@ -103,7 +78,7 @@
         </a>
         <a
           href="#metodo"
-          class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide border transition-all duration-300" style="color: #FAF3E4; border-color: rgba(250,243,228,0.60);" onmouseover="this.style.background='rgba(250,243,228,0.15)'" onmouseout="this.style.background=''"
+          class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide border transition-all duration-300" style="color: #210c04; border-color: rgba(33,12,4,0.40);" onmouseover="this.style.background='rgba(33,12,4,0.06)'" onmouseout="this.style.background=''"
         >
           Conocé el Método →
         </a>
@@ -111,11 +86,11 @@
 
       <!-- Stats -->
       <div class="reveal reveal-delay-4 flex items-center gap-3 flex-wrap">
-        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(250,243,228,0.75); border-color: rgba(211,153,69,0.50);">3 años</span>
+        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">3 años</span>
         <span style="color: var(--accent); font-size: 10px;">|</span>
-        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(250,243,228,0.75); border-color: rgba(211,153,69,0.50);">PyMEs y grandes empresas</span>
+        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">PyMEs y grandes empresas</span>
         <span style="color: var(--accent); font-size: 10px;">|</span>
-        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(250,243,228,0.75); border-color: rgba(211,153,69,0.50);">Buenos Aires</span>
+        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">Buenos Aires</span>
       </div>
     </div>
 
