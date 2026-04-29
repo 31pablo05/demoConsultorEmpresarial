@@ -1,31 +1,81 @@
 ---
 ---
 
-<section id="inicio" class="relative min-h-screen flex items-center bg-cream overflow-hidden pt-20">
-  <!-- Diagonal pattern -->
-  <div class="absolute inset-0 pointer-events-none" style="background-image: url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239e6a28' fill-opacity='0.06'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"></div>
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+  <!-- Imagen de fondo — todo el hero -->
+  <div
+    class="absolute inset-0"
+    style="
+      z-index: 0;
+      background-image: url('/imagenes/cuesta/nog1.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(2px) brightness(0.88);
+      transform: scale(1.05);
+    "
+  ></div>
+  <!-- Overlay oscuro semitransparente -->
+  <div class="absolute inset-0" style="z-index: 1; background: rgba(33,12,4,0.55);"></div>
+
+  <!-- Diagonal pattern (encima del overlay) -->
+  <div class="absolute inset-0 pointer-events-none" style="z-index: 2; background-image: url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239e6a28' fill-opacity='0.06'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"></div>
   <!-- Radial glows -->
-  <div class="absolute inset-0 pointer-events-none">
+  <div class="absolute inset-0 pointer-events-none" style="z-index: 2;">
     <div class="absolute top-1/3 right-0 w-md h-112 rounded-full" style="background: radial-gradient(circle, rgba(211,153,69,0.10) 0%, transparent 70%);"></div>
     <div class="absolute bottom-1/4 left-1/4 w-72 h-72 rounded-full" style="background: radial-gradient(circle, rgba(211,153,69,0.07) 0%, transparent 70%);"></div>
   </div>
 
-  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 w-full pt-16 pb-10 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
-    <!-- Left: Text -->
-    <div class="flex flex-col gap-8">
+  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 w-full pt-16 pb-10 lg:py-24 flex flex-col lg:grid lg:grid-cols-2 lg:gap-20 lg:items-center" style="z-index: 3;">
+
+    <!-- 1 · Eyebrow + Title -->
+    <div class="flex flex-col gap-4 lg:gap-8">
       <!-- Eyebrow -->
       <div class="reveal eyebrow">
         Consultor en Gestión Operacional
       </div>
 
       <!-- Headline -->
-      <h1 class="reveal reveal-delay-1 font-serif text-espresso" style="font-size: clamp(48px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 900;">
+      <h1 class="reveal reveal-delay-1 font-serif" style="color: #FAF3E4; font-size: clamp(48px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 900;">
         Ordenar la ejecuci&oacute;n<br />
         para <em class="gradient-text" style="font-size: inherit;">crecer.</em>
       </h1>
+    </div>
 
+    <!-- 2 · Foto (entre título y texto en mobile; columna derecha en desktop) -->
+    <div class="reveal reveal-delay-2 relative flex justify-center lg:justify-end mt-8 lg:mt-0 lg:row-span-2">
+      <div class="relative w-full max-w-sm lg:max-w-none lg:w-auto lg:overflow-visible overflow-hidden">
+        <!-- Offset decorative border (solo desktop) -->
+        <div class="hidden lg:block absolute -top-4 -right-4 w-full h-full border-2 border-accent/40 z-0"></div>
+
+        <!-- Hero image -->
+        <div class="relative z-10 w-full aspect-[4/5] lg:w-105 lg:h-135 lg:aspect-auto overflow-hidden bg-bg2">
+          <img
+            src="/imagenes/perfil/SergioMartin50.jpg"
+            alt="Sergio Martín Celuch — Nogolí Consulting"
+            class="w-full h-full object-cover object-top"
+            loading="eager"
+            fetchpriority="high"
+            width="840"
+            height="1050"
+          />
+          <!-- Warm tint overlay -->
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(33,12,4,0.15) 0%, transparent 60%);"></div>
+        </div>
+
+        <!-- Floating info card (solo desktop) -->
+        <div class="hidden lg:block absolute -bottom-6 -left-10 z-20 bg-bg px-6 py-4" style="border: 1px solid rgba(211,153,69,0.30);">
+          <p class="font-serif text-sm font-light text-text leading-snug">
+            &ldquo;Ordenar la ejecución<br />para crecer.&rdquo;
+          </p>
+          <p class="font-sans text-[10px] text-muted uppercase tracking-widest mt-2">Nogolí Consulting</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 · Subheading + CTAs + Stats (debajo de la foto en mobile; columna izquierda row 2 en desktop) -->
+    <div class="flex flex-col gap-8 mt-8 lg:mt-0">
       <!-- Subheading -->
-      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light max-w-md leading-loose" style="color: var(--dark-mid);">
+      <p class="reveal reveal-delay-2 font-sans text-base md:text-lg font-light max-w-md leading-loose" style="color: rgba(250,243,228,0.80);">
         Nogolí Consulting ayuda a organizaciones a ordenar su ejecución y crecer,
         sin sumar burocracia, transformando fricción interna y retrabajo en
         capacidad real de entrega.
@@ -41,7 +91,7 @@
         </a>
         <a
           href="#metodo"
-          class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide text-espresso border border-espresso hover:bg-espresso hover:text-cream transition-all duration-300"
+          class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide border transition-all duration-300" style="color: #FAF3E4; border-color: rgba(250,243,228,0.60);" onmouseover="this.style.background='rgba(250,243,228,0.15)'" onmouseout="this.style.background=''"
         >
           Conocé el Método →
         </a>
@@ -49,44 +99,14 @@
 
       <!-- Stats -->
       <div class="reveal reveal-delay-4 flex items-center gap-3 flex-wrap">
-        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: var(--dark-mid); border-color: rgba(211,153,69,0.40);">3 años</span>
-        <span class="text-accent" style="font-size: 10px;">|</span>
-        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: var(--dark-mid); border-color: rgba(211,153,69,0.40);">PyMEs y grandes empresas</span>
-        <span class="text-accent" style="font-size: 10px;">|</span>
-        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: var(--dark-mid); border-color: rgba(211,153,69,0.40);">Buenos Aires</span>
+        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(250,243,228,0.75); border-color: rgba(211,153,69,0.50);">3 años</span>
+        <span style="color: var(--accent); font-size: 10px;">|</span>
+        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(250,243,228,0.75); border-color: rgba(211,153,69,0.50);">PyMEs y grandes empresas</span>
+        <span style="color: var(--accent); font-size: 10px;">|</span>
+        <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(250,243,228,0.75); border-color: rgba(211,153,69,0.50);">Buenos Aires</span>
       </div>
     </div>
 
-    <!-- Right: Photo -->
-    <div class="reveal reveal-delay-2 relative flex justify-center lg:justify-end">
-      <div class="relative w-full max-w-sm lg:max-w-none lg:w-auto">
-        <!-- Offset decorative border -->
-        <div class="hidden lg:block absolute -top-4 -right-4 w-full h-full border-2 border-accent/40 z-0"></div>
-
-        <!-- Hero image -->
-        <div class="relative z-10 w-full h-72 sm:h-96 lg:w-105 lg:h-135 overflow-hidden bg-bg2">
-          <img
-            src="/imagenes/perfil/SergioMartin50.jpg"
-            alt="Sergio Martín Celuch — Nogolí Consulting"
-            class="w-full h-full object-cover object-center"
-            loading="eager"
-            fetchpriority="high"
-            width="840"
-            height="1050"
-          />
-          <!-- Warm tint overlay -->
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(33,12,4,0.15) 0%, transparent 60%);"></div>
-        </div>
-
-        <!-- Floating info card -->
-        <div class="hidden lg:block absolute -bottom-6 -left-10 z-20 bg-bg px-6 py-4" style="border: 1px solid rgba(211,153,69,0.30);">
-          <p class="font-serif text-sm font-light text-text leading-snug">
-            &ldquo;Ordenar la ejecución<br />para crecer.&rdquo;
-          </p>
-          <p class="font-sans text-[10px] text-muted uppercase tracking-widest mt-2">Nogolí Consulting</p>
-        </div>
-      </div>
-    </div>
   </div>
 
 
