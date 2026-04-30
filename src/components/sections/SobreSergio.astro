@@ -58,39 +58,45 @@ const formacion = [
           ))}
         </ul>
 
-        <!-- Stats -->
-        <div class="reveal reveal-delay-4 flex items-center gap-3 flex-wrap">
-          <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">3 años</span>
+      </div>
+
+      <!-- Right: Photo + Stats -->
+      <div class="reveal reveal-delay-2 flex flex-col gap-8">
+
+        <!-- Photo wrapper -->
+        <div class="relative pb-0 lg:pb-0">
+          <!-- Decorative border offset (solo desktop) -->
+          <div class="hidden lg:block absolute -top-4 -right-4 w-full h-full border border-accent/25 z-0"></div>
+
+          <!-- Photo -->
+          <div class="relative z-10 w-full aspect-3/4 bg-bg3 overflow-hidden">
+            <img
+              src="/imagenes/perfil/SergioMartin44.jpg"
+              alt="Sergio Martín Celuch — Nogolí Consulting"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+              width="800"
+              height="1067"
+            />
+            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(44,26,14,0.12) 0%, transparent 60%);"></div>
+          </div>
+
+          <!-- Name tag -->
+          <div class="hidden lg:block absolute -bottom-5 left-5 z-20 bg-cream border border-line px-5 py-3">
+            <p class="font-serif text-base font-semibold text-espresso">Sergio Martín Celuch</p>
+            <p class="font-sans text-[10px] uppercase tracking-widest mt-0.5" style="color: var(--accent);">Founder, Nogolí Consulting</p>
+          </div>
+        </div>
+
+        <!-- Stats below photo -->
+        <div class="reveal reveal-delay-4 flex items-center gap-3 flex-wrap lg:mt-6">
+          <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">10 años</span>
           <span style="color: var(--accent); font-size: 10px;">|</span>
           <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">PyMEs y grandes empresas</span>
           <span style="color: var(--accent); font-size: 10px;">|</span>
           <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">Buenos Aires</span>
         </div>
-      </div>
 
-      <!-- Right: Photo -->
-      <div class="reveal reveal-delay-2 relative pb-0 lg:pb-0">
-        <!-- Decorative border offset (solo desktop) -->
-        <div class="hidden lg:block absolute -top-4 -right-4 w-full h-full border border-accent/25 z-0"></div>
-
-        <!-- Photo -->
-        <div class="relative z-10 w-full aspect-3/4 bg-bg3 overflow-hidden">
-          <img
-            src="/imagenes/perfil/SergioMartin44.jpg"
-            alt="Sergio Martín Celuch — Nogolí Consulting"
-            class="w-full h-full object-cover object-top"
-            loading="lazy"
-            width="800"
-            height="1067"
-          />
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(44,26,14,0.12) 0%, transparent 60%);"></div>
-        </div>
-
-        <!-- Name tag -->
-        <div class="hidden lg:block absolute -bottom-5 left-5 z-20 bg-cream border border-line px-5 py-3">
-          <p class="font-serif text-base font-semibold text-espresso">Sergio Martín Celuch</p>
-          <p class="font-sans text-[10px] uppercase tracking-widest mt-0.5" style="color: var(--accent);">Founder, Nogolí Consulting</p>
-        </div>
       </div>
 
     </div>
