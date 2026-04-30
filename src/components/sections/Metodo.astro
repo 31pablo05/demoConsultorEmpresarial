@@ -1,31 +1,77 @@
 ---
 const pilares = [
   {
-    numero: '01',
+    id: 'pilar-1',
+    procesos: [{ num: '01', label: 'DIRECCIÓN' }],
     titulo: 'Dirección y Norte Estratégico',
     descripcion:
-      'Alineamos prioridades, criterios y rumbo para que la organización sepa hacia dónde ir.',
+      'Bajamos el tiempo operativo de la Dirección para que pueda enfocarse en el Norte estratégico de la empresa.',
+    detalle: [
+      'Muchas organizaciones tienen visión, pero no tienen dirección operativa. La visión dice hacia dónde ir; la dirección dice cómo orientar las decisiones cotidianas para llegar ahí.',
+      'En esta capa del Método trabajamos en sincronizar el pensamiento del liderazgo con la realidad del equipo. Definimos criterios rectores: aquellas reglas de decisión que, cuando están claras, permiten que cada persona en la organización pueda actuar con autonomía y alineación al mismo tiempo.',
+      'El resultado es un norte compartido que no vive solo en la cabeza del dueño, sino que circula en la organización y orienta el trabajo de todos.',
+    ],
+    items: [
+      'Definición de criterios rectores y prioridades reales',
+      'Sincronización entre visión del liderazgo y operación',
+      'Prioridades que el equipo puede usar sin consultar en cada paso',
+    ],
     icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" x2="12" y1="8" y2="8"/><line x1="3.95" x2="8.54" y1="6.06" y2="14"/><line x1="10.88" x2="15.46" y1="21.94" y2="14"/></svg>`,
   },
   {
-    numero: '02',
+    id: 'pilar-2',
+    procesos: [
+      { num: '02', label: 'PROCESOS' },
+      { num: '03', label: 'RESPONSABILIDADES' },
+    ],
     titulo: 'Traducción Organizacional',
     descripcion:
       'Convertimos esa dirección en procesos, procedimientos, instructivos y formularios que se usen de verdad.',
+    detalle: [
+      'El norte estratégico necesita traducirse en herramientas concretas que el equipo pueda usar. No documentos que cumplan un requisito formal, sino procesos, instructivos y formularios que se usan de verdad porque son entendibles, prácticos y útiles.',
+      'En esta capa diseñamos la arquitectura operativa de la organización: quién hace qué, cómo se documenta, qué se registra y qué no. El criterio siempre es el mismo: si no lo van a usar, no lo diseñamos.',
+      'La traducción organizacional es la diferencia entre tener un organigrama bonito y tener una estructura que funciona.',
+    ],
+    items: [
+      'Diseño de procesos usables, no documentos formales',
+      'Instructivos y formularios que el equipo adopta de forma natural',
+      'Definición clara de roles, responsabilidades y flujos de trabajo',
+    ],
     icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>`,
   },
   {
-    numero: '03',
+    id: 'pilar-3',
+    procesos: [{ num: '04', label: 'COORDINACIÓN' }],
     titulo: 'Confianza y Liderazgo',
     descripcion:
       'Diseñamos una forma de trabajo donde las personas puedan participar, alertar, proponer y sostener acuerdos.',
+    detalle: [
+      'El liderazgo que controla todo no puede escalar. La organización queda atrapada en la capacidad de atención de una persona: el dueño, el gerente, o el líder de cada área.',
+      'En esta capa trabajamos la transición del control vertical hacia la confianza operativa. No se trata de soltar sin preparar, sino de construir las condiciones para que el equipo pueda actuar con autonomía real.',
+      'Los líderes dejan de vigilar para empezar a guiar. Y el equipo deja de esperar instrucciones para empezar a tomar iniciativa dentro de un marco claro.',
+    ],
+    items: [
+      'Desarrollo de autonomía con alineación en el equipo',
+      'Transición del liderazgo operativo al liderazgo estratégico',
+      'Creación de espacios de claridad y participación real',
+    ],
     icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
   },
   {
-    numero: '04',
+    id: 'pilar-4',
+    procesos: [{ num: '05', label: 'EJECUCIÓN' }],
     titulo: 'Comunicación y Coordinación',
     descripcion:
       'Creamos rituales de gestión simples y sostenibles para que la operación avance con claridad, sin depender siempre de las mismas personas.',
+    detalle: [
+      'Creamos rituales de gestión que ordenan la ejecución cotidiana y eliminan fricción.',
+      'Diseñamos rutinas concretas de coordinación —reuniones diarias, semanales, seguimientos y mensajes— con responsables claros y compromisos visibles, para evitar el desgaste, el burnout y la falta de seguimiento.',
+    ],
+    items: [
+      'Rituales de coordinación simples y con propósito claro',
+      'Sistema de registro de compromisos y seguimiento de avance',
+      'Comunicación que reduce escalamientos y urgencias evitables',
+    ],
     icono: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
   },
 ];
@@ -48,38 +94,7 @@ const pilares = [
       </p>
     </div>
 
-    <!-- Flow diagram -->
-    <!-- Mobile: flex-wrap badges; Desktop: single row with arrows -->
-    <div class="reveal reveal-delay-2 mb-16">
-      <!-- Mobile badges (wrap) -->
-      <div class="flex sm:hidden flex-wrap justify-center gap-2">
-        {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
-          <div class="flex items-center gap-2 px-3 py-2 bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
-            <span class="font-sans text-[9px] font-bold tracking-widest uppercase" style="color: var(--accent);">{String(i + 1).padStart(2,'0')}</span>
-            <span class="font-serif font-semibold text-espresso text-xs">{step}</span>
-          </div>
-        ))}
-      </div>
-      <!-- Desktop row with arrows -->
-      <div class="hidden sm:flex flex-row items-center justify-center gap-0">
-        {['DIRECCIÓN', 'PROCESOS', 'RESPONSABILIDADES', 'COORDINACIÓN', 'EJECUCIÓN'].map((step, i) => (
-          <div class="flex flex-row items-center">
-            <div class="flex flex-col items-center gap-2 px-5 py-4 min-w-28 text-center bg-cream-mid" style="border: 1px solid rgba(211,153,69,0.40);">
-              <span class="font-sans text-[10px] font-medium tracking-[0.2em] uppercase" style="color: var(--accent);">{String(i + 1).padStart(2,'0')}</span>
-              <span class="font-serif font-semibold text-espresso" style="font-size: 15px; letter-spacing: 0.02em;">{step}</span>
-            </div>
-            {i < 4 && (
-              <svg width="28" height="2" viewBox="0 0 28 2">
-                <line x1="0" y1="1" x2="24" y2="1" stroke="var(--accent)" stroke-width="1.5"/>
-                <polyline points="18,0 24,1 18,2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-              </svg>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <!-- Principle blockquote -->
+    <!-- Principle blockquote (BEFORE flow diagram) -->
     <blockquote class="reveal reveal-delay-2 pl-8 py-5 px-6 mb-16 max-w-2xl bg-cream-mid" style="border-left: 3px solid var(--accent);">
       <p class="font-serif text-2xl md:text-3xl font-semibold italic leading-relaxed" style="color: var(--dark-mid);">
         &ldquo;La confianza precede al rendimiento.&rdquo;
@@ -89,35 +104,134 @@ const pilares = [
       </footer>
     </blockquote>
 
-    <!-- 4 Pillars grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-line mb-14">
+    <!-- Unified: Process flow → connections → pillar cards -->
+
+    <!-- MOBILE: proceso label + línea punteada + card, apilados -->
+    <div class="lg:hidden flex flex-col gap-8 mb-14">
       {pilares.map((pilar, i) => (
-        <article class={`reveal reveal-delay-${i + 1} group relative bg-cream-mid hover:bg-[#E8DCCA] transition-colors duration-300 p-6 sm:p-10 lg:p-12 flex flex-col gap-5`} style="border-left: 3px solid var(--accent);">
-          <!-- Number background decoration -->
-          <span
-            class="absolute top-4 right-6 font-serif font-bold leading-none select-none pointer-events-none"
-            style="font-size: 40px; color: var(--accent); opacity: 0.25;"
-          >
-            {pilar.numero}
-          </span>
-
-          <!-- Icon -->
-          <div class="text-accent" set:html={pilar.icono} />
-
-          <!-- Content -->
-          <div class="flex flex-col gap-3">
-            <h3 class="font-serif text-lg font-bold text-espresso">
-              {pilar.titulo}
-            </h3>
-            <p class="font-sans text-sm font-light leading-loose" style="color: var(--dark-mid);">
-              {pilar.descripcion}
-            </p>
+        <div class={`reveal reveal-delay-${i + 1} flex flex-col`}>
+          <div class="flex flex-col gap-1 self-start">
+            {pilar.procesos.map((p) => (
+              <div class="flex items-center gap-3 px-4 py-3" style="background: var(--bg2);">
+                <span class="font-sans text-[10px] font-bold tracking-widest uppercase" style="color: var(--accent);">{p.num}</span>
+                <span class="font-serif text-xs font-semibold tracking-wide" style="color: var(--cream);">{p.label}</span>
+              </div>
+            ))}
           </div>
-
-          <!-- Bottom accent line on hover -->
-          <div class="absolute bottom-0 left-0 h-px bg-accent w-0 group-hover:w-full transition-all duration-500"></div>
-        </article>
+          <div style="padding-left: 20px; height: 28px;">
+            <svg width="2" height="28"><line x1="1" y1="0" x2="1" y2="28" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/></svg>
+          </div>
+          <article
+            class="flex flex-col gap-4 p-6 cursor-pointer hover:brightness-110 transition-all"
+            style="background: var(--bg2); border-left: 3px solid var(--accent);"
+            data-modal={pilar.id} role="button" tabindex="0" aria-haspopup="dialog"
+          >
+            <div style="color: var(--accent);" set:html={pilar.icono} />
+            <div class="flex flex-col gap-2">
+              <h3 class="font-serif text-base font-bold leading-snug" style="color: var(--cream);">{pilar.titulo}</h3>
+              <p class="font-sans text-sm font-light leading-loose" style="color: rgba(250,243,228,0.75);">{pilar.descripcion}</p>
+            </div>
+            <span class="font-sans text-[10px] tracking-widest uppercase" style="color: var(--accent);">Ver más →</span>
+          </article>
+        </div>
       ))}
+    </div>
+
+    <!-- DESKTOP: grid de 5 columnas — fila procesos + conectores + fila pilares -->
+    <div
+      class="hidden lg:grid mb-14 reveal reveal-delay-2"
+      style="grid-template-columns: repeat(5, 1fr); grid-template-rows: auto 56px auto; column-gap: 2px;"
+    >
+      <!-- Fila 1: bloques de proceso -->
+      <div class="flex flex-col items-center gap-2 px-4 py-4 text-center bg-cream-mid" style="grid-row: 1; grid-column: 1; border: 1px solid rgba(211,153,69,0.40);">
+        <span style="font-size: 10px; letter-spacing: 0.2em; color: var(--accent); font-weight: 500;">01</span>
+        <span class="font-serif font-semibold text-espresso" style="font-size: 12px; letter-spacing: 0.02em;">DIRECCIÓN</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 px-4 py-4 text-center bg-cream-mid" style="grid-row: 1; grid-column: 2; border: 1px solid rgba(211,153,69,0.40);">
+        <span style="font-size: 10px; letter-spacing: 0.2em; color: var(--accent); font-weight: 500;">02</span>
+        <span class="font-serif font-semibold text-espresso" style="font-size: 12px; letter-spacing: 0.02em;">PROCESOS</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 px-4 py-4 text-center bg-cream-mid" style="grid-row: 1; grid-column: 3; border: 1px solid rgba(211,153,69,0.40);">
+        <span style="font-size: 10px; letter-spacing: 0.2em; color: var(--accent); font-weight: 500;">03</span>
+        <span class="font-serif font-semibold text-espresso" style="font-size: 12px; letter-spacing: 0.02em; word-break: break-word;">RESPONSABILIDADES</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 px-4 py-4 text-center bg-cream-mid" style="grid-row: 1; grid-column: 4; border: 1px solid rgba(211,153,69,0.40);">
+        <span style="font-size: 10px; letter-spacing: 0.2em; color: var(--accent); font-weight: 500;">04</span>
+        <span class="font-serif font-semibold text-espresso" style="font-size: 12px; letter-spacing: 0.02em;">COORDINACIÓN</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 px-4 py-4 text-center bg-cream-mid" style="grid-row: 1; grid-column: 5; border: 1px solid rgba(211,153,69,0.40);">
+        <span style="font-size: 10px; letter-spacing: 0.2em; color: var(--accent); font-weight: 500;">05</span>
+        <span class="font-serif font-semibold text-espresso" style="font-size: 12px; letter-spacing: 0.02em;">EJECUCIÓN</span>
+      </div>
+
+      <!-- Fila 2: conectores SVG -->
+      <!-- Col 1: línea vertical (DIRECCIÓN → Pilar 1) -->
+      <div style="grid-row: 2; grid-column: 1; display: flex; justify-content: center;">
+        <svg width="2" height="56"><line x1="1" y1="0" x2="1" y2="56" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/></svg>
+      </div>
+      <!-- Cols 2-3: bracket en Y convergente (PROCESOS + RESPONSABILIDADES → Pilar 2) -->
+      <div style="grid-row: 2; grid-column: 2 / 4;">
+        <svg width="100%" height="56" preserveAspectRatio="none" viewBox="0 0 200 56">
+          <line x1="50" y1="0" x2="50" y2="28" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <line x1="150" y1="0" x2="150" y2="28" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <line x1="50" y1="28" x2="150" y2="28" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <line x1="100" y1="28" x2="100" y2="56" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+      <!-- Col 4: línea vertical (COORDINACIÓN → Pilar 3) -->
+      <div style="grid-row: 2; grid-column: 4; display: flex; justify-content: center;">
+        <svg width="2" height="56"><line x1="1" y1="0" x2="1" y2="56" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/></svg>
+      </div>
+      <!-- Col 5: línea vertical (EJECUCIÓN → Pilar 4) -->
+      <div style="grid-row: 2; grid-column: 5; display: flex; justify-content: center;">
+        <svg width="2" height="56"><line x1="1" y1="0" x2="1" y2="56" stroke="#d39945" stroke-width="1.5" stroke-dasharray="4 4"/></svg>
+      </div>
+
+      <!-- Fila 3: cards de pilares alineados bajo sus procesos -->
+      <!-- Pilar 1: col 1 (bajo DIRECCIÓN) -->
+      <article
+        class="flex flex-col gap-3 p-5 cursor-pointer group/card hover:brightness-110 transition-all"
+        style="grid-row: 3; grid-column: 1; background: var(--bg2); border-left: 3px solid var(--accent);"
+        data-modal="pilar-1" role="button" tabindex="0" aria-haspopup="dialog"
+      >
+        <div style="color: var(--accent);" set:html={pilares[0].icono} />
+        <h3 class="font-serif text-sm font-bold leading-snug" style="color: var(--cream);">{pilares[0].titulo}</h3>
+        <p class="font-sans text-xs font-light leading-loose" style="color: rgba(250,243,228,0.75);">{pilares[0].descripcion}</p>
+        <span class="mt-auto font-sans text-[10px] tracking-widest uppercase" style="color: var(--accent);">Ver más →</span>
+      </article>
+      <!-- Pilar 2: cols 2-3 (bajo PROCESOS + RESPONSABILIDADES) -->
+      <article
+        class="flex flex-col gap-3 p-5 cursor-pointer group/card hover:brightness-110 transition-all"
+        style="grid-row: 3; grid-column: 2 / 4; background: var(--bg2); border-left: 3px solid var(--accent);"
+        data-modal="pilar-2" role="button" tabindex="0" aria-haspopup="dialog"
+      >
+        <div style="color: var(--accent);" set:html={pilares[1].icono} />
+        <h3 class="font-serif text-sm font-bold leading-snug" style="color: var(--cream);">{pilares[1].titulo}</h3>
+        <p class="font-sans text-xs font-light leading-loose" style="color: rgba(250,243,228,0.75);">{pilares[1].descripcion}</p>
+        <span class="mt-auto font-sans text-[10px] tracking-widest uppercase" style="color: var(--accent);">Ver más →</span>
+      </article>
+      <!-- Pilar 3: col 4 (bajo COORDINACIÓN) -->
+      <article
+        class="flex flex-col gap-3 p-5 cursor-pointer group/card hover:brightness-110 transition-all"
+        style="grid-row: 3; grid-column: 4; background: var(--bg2); border-left: 3px solid var(--accent);"
+        data-modal="pilar-3" role="button" tabindex="0" aria-haspopup="dialog"
+      >
+        <div style="color: var(--accent);" set:html={pilares[2].icono} />
+        <h3 class="font-serif text-sm font-bold leading-snug" style="color: var(--cream);">{pilares[2].titulo}</h3>
+        <p class="font-sans text-xs font-light leading-loose" style="color: rgba(250,243,228,0.75);">{pilares[2].descripcion}</p>
+        <span class="mt-auto font-sans text-[10px] tracking-widest uppercase" style="color: var(--accent);">Ver más →</span>
+      </article>
+      <!-- Pilar 4: col 5 (bajo EJECUCIÓN) -->
+      <article
+        class="flex flex-col gap-3 p-5 cursor-pointer group/card hover:brightness-110 transition-all"
+        style="grid-row: 3; grid-column: 5; background: var(--bg2); border-left: 3px solid var(--accent);"
+        data-modal="pilar-4" role="button" tabindex="0" aria-haspopup="dialog"
+      >
+        <div style="color: var(--accent);" set:html={pilares[3].icono} />
+        <h3 class="font-serif text-sm font-bold leading-snug" style="color: var(--cream);">{pilares[3].titulo}</h3>
+        <p class="font-sans text-xs font-light leading-loose" style="color: rgba(250,243,228,0.75);">{pilares[3].descripcion}</p>
+        <span class="mt-auto font-sans text-[10px] tracking-widest uppercase" style="color: var(--accent);">Ver más →</span>
+      </article>
     </div>
 
     <!-- CTA -->
@@ -132,3 +246,171 @@ const pilares = [
 
   </div>
 </section>
+
+<!-- Modales de pilares -->
+{pilares.map((pilar) => (
+  <dialog
+    id={pilar.id}
+    class="pilar-modal"
+    aria-labelledby={`${pilar.id}-titulo`}
+    aria-modal="true"
+  >
+    <div class="pilar-modal-inner">
+      <!-- Header -->
+      <div class="pilar-modal-header">
+        <div class="flex items-center gap-3">
+          <div style="color: var(--accent);" set:html={pilar.icono} />
+          <div>
+            <p class="font-sans text-[10px] font-bold tracking-widest uppercase mb-1" style="color: var(--accent);">
+              {pilar.procesos.map(p => p.num + ' · ' + p.label).join(' + ')}
+            </p>
+            <h3 id={`${pilar.id}-titulo`} class="font-serif text-xl font-bold leading-tight" style="color: var(--cream);">
+              {pilar.titulo}
+            </h3>
+          </div>
+        </div>
+        <button class="pilar-modal-close" aria-label="Cerrar" data-close>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="pilar-modal-body">
+        {pilar.detalle.map((para) => (
+          <p class="font-sans text-sm font-light leading-loose" style="color: rgba(250,243,228,0.85);">{para}</p>
+        ))}
+        <ul class="pilar-modal-items">
+          {pilar.items.map((item) => (
+            <li class="flex items-start gap-3">
+              <span style="margin-top: 6px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; display: block;"></span>
+              <span class="font-sans text-sm font-light" style="color: var(--cream);">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </dialog>
+))}
+
+<style>
+  .pilar-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(33, 12, 4, 0.7);
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+    border: none;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .pilar-modal[open] {
+    display: flex;
+  }
+  .pilar-modal::backdrop {
+    display: none;
+  }
+  .pilar-modal-inner {
+    background: var(--bg2);
+    border-left: 3px solid var(--accent);
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    animation: modal-in 0.22s ease;
+  }
+  @keyframes modal-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .pilar-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(211,153,69,0.25);
+  }
+  .pilar-modal-close {
+    flex-shrink: 0;
+    padding: 0.25rem;
+    color: rgba(250,243,228,0.5);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .pilar-modal-close:hover { color: var(--accent); }
+  .pilar-modal-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .pilar-modal-items {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-top: 1px solid rgba(211,153,69,0.2);
+    padding-top: 1rem;
+  }
+</style>
+
+<script>
+  function initPilarModals() {
+    const triggers = document.querySelectorAll('[data-modal]');
+    const modals   = document.querySelectorAll('.pilar-modal');
+
+    triggers.forEach((trigger) => {
+      const open = () => {
+        const id = (trigger as HTMLElement).dataset.modal;
+        const modal = document.getElementById(id!) as HTMLDialogElement | null;
+        if (!modal) return;
+        modal.showModal();
+        document.body.style.overflow = 'hidden';
+      };
+      trigger.addEventListener('click', open);
+      trigger.addEventListener('keydown', (e) => {
+        if ((e as KeyboardEvent).key === 'Enter' || (e as KeyboardEvent).key === ' ') {
+          e.preventDefault();
+          open();
+        }
+      });
+    });
+
+    modals.forEach((modal) => {
+      const dlg = modal as HTMLDialogElement;
+      // Close on backdrop click
+      dlg.addEventListener('click', (e) => {
+        if (e.target === dlg) close(dlg);
+      });
+      // Close button
+      dlg.querySelectorAll('[data-close]').forEach((btn) => {
+        btn.addEventListener('click', () => close(dlg));
+      });
+      // Close on Escape
+      dlg.addEventListener('cancel', () => {
+        document.body.style.overflow = '';
+      });
+    });
+
+    function close(dlg: HTMLDialogElement) {
+      dlg.close();
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Works on first load and after Astro view transitions
+  document.addEventListener('astro:page-load', initPilarModals);
+  initPilarModals();
+</script>
