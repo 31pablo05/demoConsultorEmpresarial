@@ -5,11 +5,11 @@ const NAV_ITEMS = [
   { label: 'Método', href: '#metodo' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Sobre mí', href: '#sobre' },
-  { label: 'Artículos', href: '/articulos' },
   { label: 'Contacto', href: '#contacto' },
+  { label: 'Artículos', href: '/articulos' },
 ];
 
-const SECTION_IDS = ['inicio', 'metodo', 'servicios', 'sobre', 'articulos', 'contacto'];
+const SECTION_IDS = ['inicio', 'metodo', 'servicios', 'sobre', 'contacto', 'articulos'];
 
 export default function NavbarScroll({ logoSrc }) {
   const [scrolled, setScrolled] = useState(false);
