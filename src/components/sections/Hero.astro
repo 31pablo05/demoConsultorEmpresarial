@@ -32,8 +32,8 @@
         </p>
       </div>
 
-      <!-- CTAs -->
-      <div class="reveal reveal-delay-2 flex flex-wrap gap-4 items-center">
+      <!-- CTAs (desktop only — mobile version is below the photo) -->
+      <div class="reveal reveal-delay-2 hidden lg:flex flex-wrap gap-4 items-center">
         <a
           href="#contacto"
           class="btn-shimmer inline-flex items-center gap-2 px-8 py-4 bg-gold-dark text-cream font-sans text-sm font-medium tracking-wide hover:bg-accent transition-colors duration-300"
@@ -72,6 +72,22 @@
         </div>
       </div>
     </div>
+
+    <!-- CTAs (mobile only — shown below photo) -->
+    <div class="lg:hidden reveal reveal-delay-2 flex flex-wrap gap-4 items-center mt-8">
+        <a
+          href="#contacto"
+          class="btn-shimmer inline-flex items-center gap-2 px-8 py-4 bg-gold-dark text-cream font-sans text-sm font-medium tracking-wide hover:bg-accent transition-colors duration-300"
+        >
+          Hablemos
+        </a>
+        <a
+          href="#metodo"
+          class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide border transition-all duration-300" style="color: #210c04; border-color: rgba(33,12,4,0.40);" onmouseover="this.style.background='rgba(33,12,4,0.06)'" onmouseout="this.style.background=''"
+        >
+          Conocé el Método →
+        </a>
+      </div>
 
   </div>
 
