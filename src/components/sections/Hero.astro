@@ -14,32 +14,44 @@
 
   <div class="relative max-w-6xl mx-auto px-6 lg:px-8 w-full pt-16 pb-10 lg:py-24 flex flex-col lg:grid lg:grid-cols-2 lg:gap-20 lg:items-center" style="z-index: 3;">
 
-    <!-- 1 · Eyebrow + Title + Subtitle -->
-    <div class="flex flex-col gap-4 lg:gap-6">
-      <!-- Eyebrow -->
-      <div class="reveal eyebrow">
-        Consultor en Gestión Operacional
-      </div>
+    <!-- 1 · Title + Subtitle + CTAs -->
+    <div class="flex flex-col gap-8 lg:gap-10">
 
       <!-- Headline -->
-      <h1 class="reveal reveal-delay-1 font-serif" style="color: #210c04; font-size: clamp(26px, 4vw, 52px); line-height: 1.15; letter-spacing: -0.02em; font-weight: 900;">
-        Ayudamos a due&ntilde;os y directores a ordenar la operaci&oacute;n<br class="hidden lg:block" />
-        para que la empresa <em class="gradient-text" style="font-size: inherit;">funcione y crezca.</em>
-      </h1>
+      <div class="flex flex-col gap-4">
+        <h1 class="reveal font-serif" style="color: #210c04; font-size: clamp(42px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 900;">
+          Orden sin burocracia.
+        </h1>
+        <div class="reveal" style="width: 48px; height: 3px; background: var(--accent);"></div>
+      </div>
 
       <!-- Subheading -->
-      <div class="reveal reveal-delay-2 flex flex-col gap-1 max-w-md">
-        <p class="font-sans text-base md:text-lg font-semibold leading-loose" style="color: rgba(33,12,4,0.85);">
-          Tu empresa cambi&oacute;. Tu forma de trabajar, no.
-        </p>
-        <p class="font-sans text-base md:text-lg font-semibold leading-loose" style="color: rgba(33,12,4,0.85);">
-          &ldquo;Lo que antes funcionaba, hoy no te deja crecer.&rdquo;
+      <div class="reveal reveal-delay-1 max-w-md">
+        <p class="font-sans text-lg md:text-xl font-semibold leading-snug" style="color: rgba(33,12,4,0.85);">
+          Tu empresa cambi&oacute;.<br />Tu forma de trabajar, no.
         </p>
       </div>
+
+      <!-- CTAs -->
+      <div class="reveal reveal-delay-2 flex flex-wrap gap-4 items-center">
+        <a
+          href="#contacto"
+          class="btn-shimmer inline-flex items-center gap-2 px-8 py-4 bg-gold-dark text-cream font-sans text-sm font-medium tracking-wide hover:bg-accent transition-colors duration-300"
+        >
+          Hablemos
+        </a>
+        <a
+          href="#metodo"
+          class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide border transition-all duration-300" style="color: #210c04; border-color: rgba(33,12,4,0.40);" onmouseover="this.style.background='rgba(33,12,4,0.06)'" onmouseout="this.style.background=''"
+        >
+          Conocé el Método →
+        </a>
+      </div>
+
     </div>
 
-    <!-- 2 · Foto (entre título y texto en mobile; columna derecha en desktop) -->
-    <div class="reveal reveal-delay-2 relative flex justify-center lg:justify-end mt-8 lg:mt-0 lg:row-span-2">
+    <!-- 2 · Foto -->
+    <div class="reveal reveal-delay-1 relative flex justify-center lg:justify-end mt-10 lg:mt-0">
       <div class="relative w-full max-w-sm lg:max-w-none lg:w-auto lg:overflow-visible overflow-hidden">
         <!-- Offset decorative border (solo desktop) -->
         <div class="hidden lg:block absolute -top-4 -right-4 w-full h-full border-2 border-accent/40 z-0"></div>
@@ -58,30 +70,7 @@
           <!-- Warm tint overlay -->
           <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(33,12,4,0.15) 0%, transparent 60%);"></div>
         </div>
-
-
       </div>
-    </div>
-
-    <!-- 3 · CTAs (debajo de la foto en mobile; columna izquierda row 2 en desktop) -->
-    <div class="flex flex-col gap-8 mt-8 lg:mt-0">
-      <!-- CTAs -->
-      <div class="reveal reveal-delay-3 flex flex-wrap gap-4 items-center">
-        <a
-          href="#contacto"
-          class="btn-shimmer inline-flex items-center gap-2 px-8 py-4 bg-gold-dark text-cream font-sans text-sm font-medium tracking-wide hover:bg-accent transition-colors duration-300"
-        >
-          Hablemos
-        </a>
-        <a
-          href="#metodo"
-          class="inline-flex items-center gap-2 px-8 py-4 font-sans text-sm font-light tracking-wide border transition-all duration-300" style="color: #210c04; border-color: rgba(33,12,4,0.40);" onmouseover="this.style.background='rgba(33,12,4,0.06)'" onmouseout="this.style.background=''"
-        >
-          Conocé el Método →
-        </a>
-      </div>
-
-
     </div>
 
   </div>
