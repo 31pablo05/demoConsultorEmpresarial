@@ -3,13 +3,12 @@ import { useState, useEffect } from 'react';
 const NAV_ITEMS = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Método', href: '#metodo' },
-  { label: 'Servicios', href: '#servicios' },
   { label: 'Sobre mí', href: '#sobre' },
   { label: 'Contacto', href: '#contacto' },
   { label: 'Artículos', href: '/articulos' },
 ];
 
-const SECTION_IDS = ['inicio', 'metodo', 'servicios', 'sobre', 'contacto', 'articulos'];
+const SECTION_IDS = ['inicio', 'metodo', 'sobre', 'contacto', 'articulos'];
 
 export default function NavbarScroll({ logoSrc }) {
   const [scrolled, setScrolled] = useState(false);
