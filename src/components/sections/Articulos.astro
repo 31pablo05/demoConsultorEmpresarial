@@ -2,7 +2,7 @@
 import ArticuloCard from '../ArticuloCard.astro';
 import { getAllPosts } from '../../lib/posts';
 
-const articulos = (await getAllPosts()).slice(0, 3);
+const articulos = (await getAllPosts()).slice(0, 2);
 ---
 
 <section id="articulos" class="bg-cream py-24 md:py-32">

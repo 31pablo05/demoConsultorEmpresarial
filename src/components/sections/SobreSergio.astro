@@ -21,11 +21,11 @@ const formacion = [
         </div>
 
         <div class="reveal reveal-delay-2 flex flex-col gap-5">
-          <p class="font-sans text-base font-light leading-loose" style="color: var(--dark-mid);">
+          <p class="font-sans text-base font-normal md:font-light leading-loose" style="color: var(--espresso);">
             Soy Sergio Celuch, consultor especializado en ayudar a empresas a ordenar
             su operación para que puedan crecer sin sumar burocracia.
           </p>
-          <p class="font-sans text-base font-light leading-loose" style="color: var(--dark-mid);">
+          <p class="font-sans text-base font-normal md:font-light leading-loose" style="color: var(--espresso);">
             Después de años trabajando en corporaciones, liderando proyectos, supply chain,
             operaciones y equipos en contextos complejos, entendí algo muy simple: muchas
             empresas no pueden crecer porque no logran ordenar sus procesos. Tienen personas
@@ -33,23 +33,23 @@ const formacion = [
             en reuniones improductivas, responsabilidades difusas y decisiones que dependen
             siempre de los mismos.
           </p>
-          <p class="font-sans text-base font-light leading-loose" style="color: var(--dark-mid);">
+          <p class="font-sans text-base font-normal md:font-light leading-loose" style="color: var(--espresso);">
             A través de Nogolí Consulting acompaño a dueños, directores y líderes a
             transformar ese desorden en una forma de trabajo clara, usable y sostenible,
             sin sumar burocracia.
           </p>
         </div>
 
-        <!-- Quote -->
-        <blockquote class="reveal reveal-delay-3 pl-6 py-5 px-6 bg-cream" style="border-left: 3px solid var(--accent);">
+        <!-- Quote (desktop only) -->
+        <blockquote class="hidden lg:block reveal reveal-delay-3 pl-6 py-5 px-6 bg-cream" style="border-left: 3px solid var(--accent);">
           <p class="font-serif text-[17px] font-semibold italic leading-relaxed" style="color: var(--dark-mid);">
             &ldquo;No se trata de documentar por cumplir, sino de alinear dirección,
             procesos, liderazgo y comunicación.&rdquo;
           </p>
         </blockquote>
 
-        <!-- Formación -->
-        <ul class="reveal reveal-delay-3 flex flex-col gap-3">
+        <!-- Formación (desktop only) -->
+        <ul class="hidden lg:flex reveal reveal-delay-3 flex-col gap-3">
           {formacion.map((cred) => (
             <li class="flex items-start gap-4 font-sans text-sm font-light" style="color: var(--dark-mid);">
               <span class="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
@@ -96,6 +96,27 @@ const formacion = [
           <span style="color: var(--accent); font-size: 10px;">|</span>
           <span class="font-sans text-xs font-medium tracking-[0.12em] uppercase border px-4 py-2" style="color: rgba(33,12,4,0.65); border-color: rgba(211,153,69,0.50);">Buenos Aires</span>
         </div>
+
+      </div>
+
+      <!-- Mobile-only: Quote + Formación (after photo) -->
+      <div class="lg:hidden flex flex-col gap-8">
+
+        <blockquote class="reveal reveal-delay-3 pl-6 py-5 px-6 bg-cream" style="border-left: 3px solid var(--accent);">
+          <p class="font-serif text-[17px] font-semibold italic leading-relaxed" style="color: var(--dark-mid);">
+            &ldquo;No se trata de documentar por cumplir, sino de alinear dirección,
+            procesos, liderazgo y comunicación.&rdquo;
+          </p>
+        </blockquote>
+
+        <ul class="reveal reveal-delay-3 flex flex-col gap-3">
+          {formacion.map((cred) => (
+            <li class="flex items-start gap-4 font-sans text-sm font-normal" style="color: var(--espresso);">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+              {cred}
+            </li>
+          ))}
+        </ul>
 
       </div>
 
