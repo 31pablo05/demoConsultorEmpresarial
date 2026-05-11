@@ -220,8 +220,9 @@ export default function NavbarScroll({ logoSrc }) {
             })}
             <li className="pt-2" style={{ borderTop: '1px solid rgba(211,153,69,0.18)' }}>
               <a
-                href="#contacto"
-                onClick={(e) => handleNav(e, '#contacto')}
+                href="https://wa.me/5491130855891?text=Hola%20Sergio%2C%20te%20contacto%20desde%20tu%20web.%20Me%20gustar%C3%ADa%20agendar%20una%20charla%20para%20ver%20c%C3%B3mo%20pod%C3%A9s%20ayudarme%20a%20ordenar%20la%20operaci%C3%B3n%20de%20mi%20empresa."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-gold-dark text-gold-dark text-sm font-medium font-sans hover:bg-gold-dark hover:text-cream transition-all duration-200"
               >
                 Hablemos →
