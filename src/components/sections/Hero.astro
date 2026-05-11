@@ -12,7 +12,7 @@
     <div class="absolute bottom-1/4 left-1/4 w-72 h-72 rounded-full" style="background: radial-gradient(circle, rgba(211,153,69,0.07) 0%, transparent 70%);"></div>
   </div>
 
-  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 w-full pt-16 pb-10 lg:py-24 flex flex-col lg:grid lg:grid-cols-2 lg:gap-20 lg:items-center" style="z-index: 3;">
+  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 w-full pt-16 pb-10 lg:py-24 flex flex-col lg:grid lg:grid-cols-[55%_45%] lg:gap-12 lg:items-center" style="z-index: 3;">
 
     <!-- 1 · Title + Subtitle + CTAs -->
     <div class="flex flex-col gap-8 lg:gap-10">
@@ -20,7 +20,7 @@
       <!-- Headline -->
       <div class="flex flex-col gap-4">
         <h1 class="reveal font-serif" style="color: #210c04; font-size: clamp(42px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 900;">
-          Orden sin burocracia.
+          Orden,<br />Sin burocracia
         </h1>
         <div class="reveal" style="width: 48px; height: 3px; background: var(--accent);"></div>
       </div>
@@ -28,9 +28,13 @@
       <!-- Subheading -->
       <div class="reveal reveal-delay-1 max-w-md">
         <p class="font-sans text-lg md:text-xl font-semibold leading-snug" style="color: rgba(33,12,4,0.85);">
-          Tu empresa cambi&oacute;.<br />Tu forma de trabajar, no.
+          ¿Cansado de que el día a día no te deje liderar tu empresa?
         </p>
       </div>
+
+      <p class="reveal reveal-delay-2 font-sans text-base font-light leading-loose max-w-md" style="color: rgba(33,12,4,0.80);">Entrenamos a tu empresa para construir un sistema en el que puedas confiar: procesos simples, roles claros y expectativas concretas que se sostienen en el trabajo cotidiano.</p>
+
+      <p class="reveal reveal-delay-3 font-sans text-base font-light leading-loose max-w-md" style="color: rgba(33,12,4,0.80);">Así liberamos el tiempo de la dirección para que vuelva a enfocarse en lo que nadie más puede hacer: pensar el futuro de la empresa.</p>
 
       <!-- CTAs (desktop only — mobile version is below the photo) -->
       <div class="reveal reveal-delay-2 hidden lg:flex flex-wrap gap-4 items-center">
@@ -51,24 +55,21 @@
     </div>
 
     <!-- 2 · Foto -->
-    <div class="reveal reveal-delay-1 relative flex justify-center lg:justify-end mt-10 lg:mt-0">
+    <div class="reveal reveal-delay-1 relative flex justify-center lg:justify-end lg:self-stretch mt-10 lg:mt-0">
       <div class="relative w-full max-w-sm lg:max-w-none lg:w-auto lg:overflow-visible overflow-hidden">
-        <!-- Offset decorative border (solo desktop) -->
-        <div class="hidden lg:block absolute -top-4 -right-4 w-full h-full border-2 border-accent/40 z-0"></div>
-
         <!-- Hero image -->
-        <div class="relative z-10 w-full aspect-[4/5] lg:w-105 lg:h-135 lg:aspect-auto overflow-hidden bg-bg2">
+          <div class="relative z-10 w-full aspect-[3/4] lg:w-full lg:h-full lg:aspect-auto overflow-hidden bg-bg2" style="min-height: 500px;">
           <img
             src="/imagenes/perfil/sergio6.jpg"
             alt="Sergio Martín Celuch — Nogolí Consulting"
-            class="w-full h-full object-cover object-top"
+            class="w-full h-full object-cover object-bottom"
             loading="eager"
             fetchpriority="high"
             width="840"
             height="1050"
           />
           <!-- Warm tint overlay -->
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(33,12,4,0.15) 0%, transparent 60%);"></div>
+          <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(33,12,4,0.18) 0%, transparent 35%), linear-gradient(to top, rgba(255,245,236,0.12) 0%, transparent 40%);"></div>
         </div>
       </div>
     </div>
