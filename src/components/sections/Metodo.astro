@@ -32,6 +32,14 @@
     </div>
 
     <div class="hidden lg:block reveal mb-4">
+      <!-- ═══ "El proceso" collapsible box ═══ -->
+      <div style="border:1px solid rgba(211,153,69,0.2);border-radius:4px;overflow:hidden;">
+        <button onclick="toggleProceso()" class="proceso-header w-full flex flex-col items-center justify-center gap-1 px-6 py-4 cursor-pointer" style="background:var(--cream-mid);border:none;">
+          <span class="font-serif font-bold" style="font-size:1.65rem;letter-spacing:-0.01em;color:var(--accent);">El proceso</span>
+          <span class="proceso-arrow font-sans text-xl leading-none" style="color:var(--accent);transition:transform 0.25s;">▾</span>
+        </button>
+        <div id="proceso-content" style="max-height:0;overflow:hidden;transition:max-height 0.45s ease;">
+          <div class="px-6 pb-6 pt-2">
       <div class="phase-flow relative flex items-start justify-center gap-0">
         <!-- horizontal line behind circles -->
         <div class="absolute" style="top:26px;left:0;right:0;height:1px;background:var(--accent);opacity:0.2;pointer-events:none;"></div>
@@ -214,10 +222,22 @@
         </div>
       </div>
 
+          </div><!-- inner padding wrapper -->
+        </div><!-- proceso-content -->
+      </div><!-- proceso box -->
     </div><!-- end desktop flow -->
 
     <!-- ═══ MOBILE: Vertical journey ═══ -->
     <div class="lg:hidden flex flex-col gap-0 reveal mb-4">
+
+      <!-- El proceso collapsible box (mobile) -->
+      <div style="border:1px solid rgba(211,153,69,0.2);border-radius:4px;overflow:hidden;margin-bottom:4px;">
+        <button onclick="toggleProcesoMobile()" class="proceso-header-mobile w-full flex flex-col items-center justify-center gap-1 px-4 py-3 cursor-pointer" style="background:var(--cream-mid);border:none;">
+          <span class="font-serif font-bold" style="font-size:1.35rem;letter-spacing:-0.01em;color:var(--accent);">El proceso</span>
+          <span class="proceso-arrow-mobile font-sans text-lg leading-none" style="color:var(--accent);transition:transform 0.25s;">▾</span>
+        </button>
+        <div id="proceso-content-mobile" style="max-height:0;overflow:hidden;transition:max-height 0.45s ease;">
+          <div class="pt-4 px-2 pb-2">
 
       <!-- Step 1 -->
       <div class="step-item relative" style="padding-left:36px;padding-bottom:28px;">
@@ -238,11 +258,6 @@
             <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Relevamiento de procesos y reuniones</span>
             <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Lectura de fricciones del equipo</span>
           </div>
-          <div style="border-top:1px solid var(--line);margin:6px 0;"></div>
-          <span class="font-sans uppercase tracking-widest block mb-1" style="font-size:10px;color:var(--dark-mid);">Pilares activos</span>
-          <div class="flex flex-wrap gap-1">
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-1')">Liberación del tiempo directivo</span>
-          </div>
         </div>
       </div>
 
@@ -261,15 +276,16 @@
           <div style="border-top:1px solid var(--line);margin:6px 0;"></div>
           <span class="font-sans uppercase tracking-widest block mb-1" style="font-size:10px;color:var(--dark-mid);">Herramientas</span>
           <div class="flex flex-wrap gap-1 mb-2">
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Diseño del sistema operativo</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Definición de roles y responsabilidades</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Plan de implementación por prioridad</span>
-          </div>
-          <div style="border-top:1px solid var(--line);margin:6px 0;"></div>
-          <span class="font-sans uppercase tracking-widest block mb-1" style="font-size:10px;color:var(--dark-mid);">Pilares activos</span>
-          <div class="flex flex-wrap gap-1">
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-1')">Liberación del tiempo directivo</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-2')">Traducción Organizacional</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Definición de objetivos y tiempos a liberar</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Priorización de procesos y rituales</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Diseño del plan de implementación</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Reuniones diarias y semanales de gestión</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Espacios de seguimiento y revisión</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Automatización de tareas clave</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Coaching individual o de equipo</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Psico para sociedades de pareja</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Psico para sociedades familiares</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Dinámicas de grupo</span>
           </div>
         </div>
       </div>
@@ -289,17 +305,18 @@
           <div style="border-top:1px solid var(--line);margin:6px 0;"></div>
           <span class="font-sans uppercase tracking-widest block mb-1" style="font-size:10px;color:var(--dark-mid);">Herramientas</span>
           <div class="flex flex-wrap gap-1 mb-2">
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Sprint I</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Diseño de procesos</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Redacción de procedimientos</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Comunicación Efectiva</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Instructivos de trabajo</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Formularios y registros</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Reuniones diarias</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Reuniones semanales</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Tablero Kanban</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Seguimiento de compromisos</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Sprint Organizacional</span>
             <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Consolidación</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Sistema Vivo ISO 9001</span>
-          </div>
-          <div style="border-top:1px solid var(--line);margin:6px 0;"></div>
-          <span class="font-sans uppercase tracking-widest block mb-1" style="font-size:10px;color:var(--dark-mid);">Pilares activos</span>
-          <div class="flex flex-wrap gap-1">
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-1')">Liberación del tiempo directivo</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-2')">Traducción Organizacional</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-3')">Confianza y Liderazgo</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-4')">Comunicación y Coordinación</span>
+            <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">ISO 9001 Vivo</span>
           </div>
         </div>
       </div>
@@ -322,14 +339,12 @@
             <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Auditorías livianas</span>
             <span class="font-sans text-[10px] text-espresso px-2 py-1 rounded-sm" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);">Rituales de mejora</span>
           </div>
-          <div style="border-top:1px solid var(--line);margin:6px 0;"></div>
-          <span class="font-sans uppercase tracking-widest block mb-1" style="font-size:10px;color:var(--dark-mid);">Pilares activos</span>
-          <div class="flex flex-wrap gap-1">
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-3')">Confianza y Liderazgo</span>
-            <span class="font-sans text-[10px] text-espresso px-2 py-1 cursor-pointer" style="background:var(--cream-mid);border:1px solid rgba(211,153,69,0.25);border-bottom:2px solid var(--accent);border-radius:3px;" onclick="openMobileModal('m-pilar-4')">Comunicación y Coordinación</span>
-          </div>
         </div>
       </div>
+
+          </div><!-- inner padding wrapper -->
+        </div><!-- proceso-content-mobile -->
+      </div><!-- proceso box mobile -->
 
       <!-- Red de contención (mobile) -->
       <p class="font-serif italic text-sm text-center mt-4 mb-2" style="color: var(--dark-mid);">Cada empresa entra en la etapa que corresponde a su realidad.</p>
@@ -569,6 +584,10 @@
 </section>
 
 <style>
+  /* Proceso box header hover */
+  .proceso-header:hover { background: var(--cream) !important; }
+  .proceso-header-mobile:hover { background: var(--cream) !important; }
+
   /* Phase node hover */
   .phase-node .phase-hint { opacity: 0; transition: opacity 0.2s; }
   .phase-node:hover .phase-hint { opacity: 1; }
@@ -667,7 +686,37 @@
     document.body.style.overflow = '';
   }
 
+  function toggleProcesoMobile() {
+    const content = document.getElementById('proceso-content-mobile') as HTMLElement | null;
+    const arrow   = document.querySelector('.proceso-arrow-mobile') as HTMLElement | null;
+    if (!content) return;
+    const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+    if (isOpen) {
+      content.style.maxHeight = '0';
+      if (arrow) arrow.style.transform = 'rotate(0deg)';
+    } else {
+      content.style.maxHeight = '3000px';
+      if (arrow) arrow.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  function toggleProceso() {
+    const content = document.getElementById('proceso-content') as HTMLElement | null;
+    const arrow   = document.querySelector('.proceso-arrow') as HTMLElement | null;
+    if (!content) return;
+    const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+    if (isOpen) {
+      content.style.maxHeight = '0';
+      if (arrow) arrow.style.transform = 'rotate(0deg)';
+    } else {
+      content.style.maxHeight = '3000px';
+      if (arrow) arrow.style.transform = 'rotate(180deg)';
+    }
+  }
+
   // Expose to inline onclick handlers
+  (window as any).toggleProcesoMobile = toggleProcesoMobile;
+  (window as any).toggleProceso = toggleProceso;
   (window as any).toggleFase = toggleFase;
   (window as any).togglePilar = togglePilar;
   (window as any).toggleStep = toggleStep;
