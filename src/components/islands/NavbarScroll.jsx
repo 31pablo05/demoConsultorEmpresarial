@@ -40,6 +40,11 @@ export default function NavbarScroll({ logoSrc }) {
     if (href.startsWith('#')) {
       e.preventDefault();
       const id = href.replace('#', '');
+      // If not on the homepage, navigate there with the hash
+      if (window.location.pathname !== '/') {
+        window.location.href = '/' + href;
+        return;
+      }
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
       setMenuOpen(false);
