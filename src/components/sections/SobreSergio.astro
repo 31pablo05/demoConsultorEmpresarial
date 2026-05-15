@@ -2,7 +2,14 @@
 const formacion = [
   'Licenciado en Organización Industrial — UTN',
   'MBA — UTN',
-  'Inglés B1 — Wall Street Institute',
+];
+
+// TODO: confirm exact numbers and sectors with client
+const contexto = [
+  '+15 proyectos de implementación',
+  'Industrias: alimentaria, servicios, manufactura, retail',
+  'Empresas de 10 a 200 personas',
+  'Buenos Aires y AMBA',
 ];
 ---
 
@@ -54,6 +61,15 @@ const formacion = [
             </li>
           ))}
         </ul>
+
+        <!-- Contexto/credentials (desktop only) -->
+        <div class="hidden lg:flex reveal reveal-delay-3 flex-wrap gap-2">
+          {contexto.map((item) => (
+            <span class="font-sans text-xs px-3 py-1.5 inline-block" style="border: 1px solid rgba(211,153,69,0.35); background: var(--cream); color: var(--espresso);">
+              {item}
+            </span>
+          ))}
+        </div>
 
       </div>
 
@@ -114,6 +130,15 @@ const formacion = [
             </li>
           ))}
         </ul>
+
+        <!-- Contexto/credentials (mobile only) -->
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-2">
+          {contexto.map((item) => (
+            <span class="font-sans text-xs px-3 py-1.5 inline-block" style="border: 1px solid rgba(211,153,69,0.35); background: var(--cream); color: var(--espresso);">
+              {item}
+            </span>
+          ))}
+        </div>
 
       </div>
 

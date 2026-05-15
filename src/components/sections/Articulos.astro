@@ -1,5 +1,6 @@
 ﻿---
 import ArticuloCard from '../ArticuloCard.astro';
+import NewsletterForm from '../islands/NewsletterForm.jsx';
 import { getAllPosts } from '../../lib/posts';
 
 const articulos = (await getAllPosts()).slice(0, 2);
@@ -41,6 +42,17 @@ const articulos = (await getAllPosts()).slice(0, 2);
         </div>
       </div>
     )}
+
+    <!-- Newsletter subscription block -->
+    <div class="reveal mt-20 mx-auto text-center" style="max-width: 480px;">
+      <h3 class="font-serif text-espresso mb-3" style="font-size: clamp(22px, 3vw, 28px); line-height: 1.2; letter-spacing: -0.01em;">
+        Recibí los próximos artículos
+      </h3>
+      <p class="font-sans text-sm font-light mb-6" style="color: var(--dark-mid);">
+        Sin spam. Solo contenido sobre gestión y operaciones.
+      </p>
+      <NewsletterForm client:load />
+    </div>
   </div>
 </section>
 
